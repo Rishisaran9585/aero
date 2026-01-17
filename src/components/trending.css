@@ -1,0 +1,39 @@
+.trending-card {
+    position: relative;
+    height: 420px;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.5s;
+}
+
+.trending-card:hover {
+    border-color: rgba(234, 179, 8, 0.5);
+    /* Brand secondary color */
+}
+
+.trending-card.featured {
+    height: 500px;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+    right: 25px;
+    z-index: 2;
+}
+
+.cta {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+}
+
+.trending-card:hover .cta {
+    border-bottom-color: #EAB308;
+}
