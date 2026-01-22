@@ -2,53 +2,147 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { useState, ReactNode } from "react";
+import { Hotel, Plane, Ship, Bus, Palmtree, Waves, Search } from "lucide-react";
+import "./PageHeader.css";
 
 interface PageHeaderProps {
     title: string | ReactNode;
     subtitle?: string;
     image: string;
-    highlight?: string;
-    isLarge?: boolean;
+    scriptText?: string;
+    showSearch?: boolean;
+    showCategories?: boolean;
 }
 
-export default function PageHeader({ title, subtitle, image, highlight, isLarge }: PageHeaderProps) {
-    return (
-        <section className={`relative ${isLarge ? 'h-screen' : 'h-[70vh]'} min-h-[600px] flex items-center justify-center overflow-hidden`}>
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src={image}
-                    alt={typeof title === 'string' ? title : 'Page header image'}
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                {/* Premium Dark Gradient Overlay - Lightened */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute inset-0 bg-black/10" />
-            </div>
+const categories = [
+    { icon: Hotel, label: "Hotels", id: "hotels" },
+    { icon: Bus, label: "Car Rentals", id: "car-rentals" },
+    { icon: Plane, label: "Flights", id: "flights" },
+    { icon: Palmtree, label: "Trips", id: "trips" },
+    { icon: Ship, label: "Cruises", id: "cruises" },
+    { icon: Waves, label: "Activities", id: "activities" },
+];
 
-            <div className="relative z-10 container mx-auto px-4 text-center text-white">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    {highlight && (
-                        <div className="flex items-center justify-center gap-4 mb-4 opacity-80">
-                            <div className="h-[1px] w-8 bg-secondary" />
-                            <span className="text-secondary font-bold tracking-[0.3em] uppercase text-xs">{highlight}</span>
-                            <div className="h-[1px] w-8 bg-secondary" />
+export default function PageHeader({
+    title,
+    subtitle,
+    image,
+    scriptText = "the world",
+    showSearch = true,
+    showCategories = true
+}: PageHeaderProps) {
+    const [activeCategory, setActiveCategory] = useState("activities");
+
+    return (
+        <div className="page-header-container">
+            <section className="page-header-hero">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src={image}
+                        alt={typeof title === 'string' ? title : 'Page header image'}
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-black/30" />
+                </div>
+
+                {/* Main Content */}
+                <div className="relative z-10 container mx-auto px-4 text-center text-white flex flex-col items-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="flex flex-col items-center w-full"
+                    >
+                        <h1 className="text-7xl md:text-[10rem] font-bold mb-0 text-white uppercase tracking-tighter filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)] leading-none">
+                            {title}
+                        </h1>
+
+                        <span className="page-header-script">
+                            {scriptText}
+                        </span>
+
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="page-header-cta"
+                        >
+                            EXPLORE NOW
+                        </motion.button>
+                    </motion.div>
+                </div>
+
+                {/* Service Category Bar */}
+                {showCategories && (
+                    <div className="page-header-categories-wrapper">
+                        <div className="page-header-categories">
+                            {categories.map((cat) => (
+                                <div
+                                    key={cat.id}
+                                    className={`category-item ${activeCategory === cat.id ? 'active' : ''}`}
+                                    onClick={() => setActiveCategory(cat.id)}
+                                >
+                                    <cat.icon className="category-icon" />
+                                    <span className="category-label">{cat.label}</span>
+                                    {activeCategory === cat.id && (
+                                        <motion.div
+                                            layoutId="category-active"
+                                            className="category-active-bg"
+                                        />
+                                    )}
+                                </div>
+                            ))}
                         </div>
-                    )}
-                    <h1 className={`${isLarge ? 'text-7xl md:text-[10rem]' : 'text-6xl md:text-9xl'} font-serif font-bold mb-6 text-white drop-shadow-2xl`}>{title}</h1>
-                    {subtitle && (
-                        <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 font-light leading-relaxed">
-                            {subtitle}
-                        </p>
-                    )}
-                </motion.div>
-            </div>
-        </section>
+                    </div>
+                )}
+            </section>
+
+            {/* Search Section Below Hero */}
+            {showSearch && (
+                <section className="page-header-search-section">
+                    <div className="search-container">
+                        <div className="search-field">
+                            <label>Destination</label>
+                            <input type="text" placeholder="Keyword Search" />
+                        </div>
+                        <div className="search-field">
+                            <label>Check In</label>
+                            <input type="text" placeholder="YYYY-MM-DD" onFocus={(e) => e.target.type = 'date'} onBlur={(e) => e.target.type = 'text'} />
+                        </div>
+                        <div className="search-field">
+                            <label>Check Out</label>
+                            <input type="text" placeholder="YYYY-MM-DD" onFocus={(e) => e.target.type = 'date'} onBlur={(e) => e.target.type = 'text'} />
+                        </div>
+                        <div className="search-field">
+                            <div className="grid grid-cols-2 gap-2">
+                                <div className="flex flex-col gap-2">
+                                    <label>Adults</label>
+                                    <select defaultValue="01">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <label>Children</label>
+                                    <select defaultValue="00">
+                                        <option>00</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button className="btn-large-search">
+                            SEARCH
+                        </button>
+                    </div>
+                </section>
+            )}
+        </div>
     );
 }

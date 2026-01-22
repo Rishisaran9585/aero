@@ -11,28 +11,28 @@ const reviews = [
         name: "Sarah Jenkins",
         role: "UK Traveler",
         text: "The desert safari was the highlight of our trip! Aerosafe organized everything perfectly, from the luxury Land Cruiser pickup to the VIP dinner at the camp.",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+        image: "https://i.pravatar.cc/200?img=47",
         size: "large"
     },
     {
         name: "Rajesh Kumar",
         role: "Chennai, India",
         text: "Exceptional service! Obtaining visas for my entire family was so smooth, and the hotel recommendations were spot on. Truly a premium experience.",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+        image: "https://i.pravatar.cc/200?img=12",
         size: "small"
     },
     {
         name: "Elena Rodriguez",
         role: "Spain",
         text: "We booked the private yacht tour and it was magical. The captain was friendly and the views of the Marina were breathtaking. Highly recommend Aerosafe.",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+        image: "https://i.pravatar.cc/200?img=32",
         size: "medium"
     },
     {
         name: "David Chen",
         role: "Hong Kong",
         text: "Efficiency at its best. The luxury fleet is impeccable and the drivers are very professional. Our business trip in Dubai was seamless thanks to Aerosafe.",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
+        image: "https://i.pravatar.cc/200?img=15",
         size: "small"
     },
 ];
@@ -113,7 +113,7 @@ const TestimonialCard = ({ review, index }: { review: typeof reviews[0], index: 
 
 export default function Testimonials() {
     return (
-        <section className="py-20 bg-black relative overflow-hidden">
+        <section className="py-[30px] bg-black relative overflow-hidden">
             {/* Artistic Background Elements */}
             <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px]" />
             <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-white/5 rounded-full blur-[150px]" />

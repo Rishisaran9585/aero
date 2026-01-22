@@ -10,7 +10,9 @@ import { Textarea } from "@/components/ui/textarea";
 import Testimonials from "@/components/Testimonials";
 import FlowingMenu from "@/components/FlowingMenu";
 import TrendingCollections from "@/components/TrendingCollections";
+import TrendingDestination from "@/components/TrendingDestination";
 import StatsSection from "@/components/StatsSection";
+import Hero from "@/components/Hero";
 
 // --- Components ---
 
@@ -60,81 +62,11 @@ export default function Home() {
     return (
         <div className="bg-black text-white selection:bg-secondary selection:text-black font-sans overflow-x-hidden">
 
-            {/* ---------------- SECTION 1: HERO (Redesigned "Mountains" Style) ---------------- */}
-            <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
-                {/* Background Video */}
-                <div className="absolute inset-0 z-0">
-                    <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="object-cover w-full h-full select-none"
-                        poster="https://images.unsplash.com/photo-1547234935-80c7142ee969?q=80&w=1920&auto=format&fit=crop"
-                    >
-                        <source src="/assets/hero-bg.mp4" type="video/mp4" />
-                    </video>
-
-                    {/* Sophisticated Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
-                    <div className="absolute inset-0 bg-black/40" />
-                </div>
-
-                {/* Navigation Elements (Visual only, distinct from fixed Navbar) */}
-                {/* Socials - Right Vertical */}
-                <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-8 z-20 mix-blend-overlay">
-                    <span className="text-white/80 text-[10px] uppercase tracking-[0.3em] -rotate-90 hover:text-white cursor-pointer transition-colors">Facebook</span>
-                    <span className="text-white/80 text-[10px] uppercase tracking-[0.3em] -rotate-90 hover:text-white cursor-pointer transition-colors">Instagram</span>
-                    <span className="text-white/80 text-[10px] uppercase tracking-[0.3em] -rotate-90 hover:text-white cursor-pointer transition-colors">Twitter</span>
-                </div>
-
-                {/* Scroll Indicator - Bottom Right */}
-                <div className="absolute bottom-12 right-12 hidden md:flex flex-col items-center gap-4 z-20">
-                    <span className="text-white text-[10px] uppercase tracking-[0.2em] -rotate-90 block mb-8">Scroll</span>
-                    <div className="h-16 w-[1px] bg-white/50" />
-                </div>
-
-                {/* Pagination Dots - Bottom Center */}
-                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-4 z-20">
-                    <div className="h-2 w-2 rounded-full bg-white cursor-pointer" />
-                    <div className="h-2 w-2 rounded-full bg-white/30 hover:bg-white transition-colors cursor-pointer" />
-                    <div className="h-2 w-2 rounded-full bg-white/30 hover:bg-white transition-colors cursor-pointer" />
-                </div>
-
-                {/* Centered Main Content */}
-                <div className="relative z-10 text-center flex flex-col items-center max-w-5xl px-4">
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-white/90 text-xl md:text-2xl font-light tracking-widest mb-2 font-sans"
-                    >
-                        The call of the
-                    </motion.p>
-
-                    <motion.h1
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, delay: 0.4 }}
-                        className="text-[15vw] md:text-[12rem] font-black text-white leading-none tracking-tighter uppercase font-sans drop-shadow-2xl mix-blend-overlay"
-                    >
-                        DUBAI
-                    </motion.h1>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                    >
-                        <Button variant="link" className="text-white hover:text-secondary text-sm md:text-base font-bold tracking-[0.2em] uppercase mt-8 group">
-                            See Whole Series <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                        </Button>
-                    </motion.div>
-                </div>
-            </section>
+            {/* ---------------- SECTION 1: REDESIGNED HERO ---------------- */}
+            <Hero />
 
             {/* ---------------- SECTION 2: HIGHLIGHTS (Scrolling Carousel) ---------------- */}
-            <section className="bg-black py-20 border-b border-white/5 overflow-hidden">
+            <section className="bg-black py-[30px] border-b border-white/5 overflow-hidden">
                 <div className="container mx-auto px-4 mb-8">
                     <p className="text-secondary text-xs font-bold uppercase tracking-[0.2em]">Featured Experiences</p>
                 </div>
@@ -169,7 +101,7 @@ export default function Home() {
             </section>
 
             {/* ---------------- SECTION 3: ABOUT THE TOUR (Timeline) ---------------- */}
-            <section className="py-20 bg-black relative">
+            <section className="py-[30px] bg-black relative">
                 <div className="container mx-auto px-4">
                     {/* Section Heading */}
                     <div className="flex items-center gap-4 mb-20 justify-center">
@@ -258,52 +190,9 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ---------------- SECTION 3: WHAT'S INCLUDED (Flowing Menu) ---------------- */}
-            <section className="py-20 bg-black border-y border-white/5">
-                <div className="container mx-auto px-4 mb-20">
-                    <div className="flex items-center gap-4">
-                        <h2 className="text-3xl tracking-[0.2em] font-light uppercase text-white/90">What's Included</h2>
-                        <div className="h-[1px] flex-1 bg-white/10" />
-                    </div>
-                </div>
+            {/* ---------------- SECTION 4: TRENDING DESTINATION (As per design) ---------------- */}
+            <TrendingDestination />
 
-                <div className="h-[600px] relative border-y border-white/10">
-                    <FlowingMenu
-                        items={[
-                            {
-                                link: '#',
-                                text: 'Expert Guides',
-                                image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80'
-                            },
-                            {
-                                link: '#',
-                                text: 'Luxury Fleet',
-                                image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80'
-                            },
-                            {
-                                link: '#',
-                                text: 'Visa Support',
-                                image: 'https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?auto=format&fit=crop&w=800&q=80'
-                            },
-                            {
-                                link: '#',
-                                text: '24/7 Support',
-                                image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'
-                            }
-                        ]}
-                        speed={20}
-                        textColor="#fff"
-                        marqueeBgColor="#EAB308" // Brand secondary color
-                        marqueeTextColor="#000"
-                    />
-                </div>
-            </section>
-
-            {/* ---------------- NEW SECTION: TRENDING COLLECTIONS (Redesigned) ---------------- */}
-            <TrendingCollections />
-
-            {/* ---------------- NEW SECTION: STATS (Redesigned) ---------------- */}
-            <StatsSection />
 
             {/* ---------------- NEW SECTION: TESTIMONIALS ---------------- */}
             <Testimonials />

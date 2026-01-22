@@ -7,6 +7,7 @@ import { Clock, Star, Shield, Zap } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
 import LuxuryPackageCard from "@/components/LuxuryPackageCard";
 import CircularGallery from "@/components/CircularGallery";
+import AerosafeAdvantage from "@/components/AerosafeAdvantage";
 import { motion } from "framer-motion";
 
 const packages = [
@@ -35,15 +36,13 @@ export default function PackagesPage() {
     return (
         <div className="bg-black min-h-screen text-white">
             <PageHeader
-                title="Curated Holidays"
-                subtitle="Explore the best of Dubai with our meticulously crafted holiday experiences."
+                title="PACKAGES"
+                scriptText="curated holidays"
                 image="https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?auto=format&fit=crop&w=1920&q=80"
-                highlight="Your Dream Vacation"
-                isLarge={true}
             />
 
             {/* Interactive Gallery */}
-            <section className="py-24 bg-black overflow-hidden">
+            <section className="py-[30px] bg-black overflow-hidden">
                 <div className="container mx-auto px-4 mb-12 text-center">
                     <span className="text-secondary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Wonderful Place For You</span>
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Tour Categories</h2>
@@ -61,7 +60,7 @@ export default function PackagesPage() {
             </section>
 
             {/* Popular Destinations Accordion */}
-            <section className="py-24 bg-black relative overflow-hidden">
+            <section className="py-[30px] bg-black relative overflow-hidden">
                 <div className="container mx-auto px-4 mb-20 text-center">
                     <span className="text-secondary font-serif italic text-3xl mb-1 block opacity-90">Top Destination</span>
                     <h2 className="text-5xl md:text-7xl font-serif font-bold text-white tracking-tight">Popular Destination</h2>
@@ -72,11 +71,11 @@ export default function PackagesPage() {
                     <div className="flex flex-col md:flex-row gap-4 h-[650px]">
                         {[
                             { name: "Burj Khalifa", image: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?q=80&w=1200&auto=format&fit=crop" },
-                            { name: "Palm Jumeirah", image: "https://images.unsplash.com/photo-1544249155-523194090288?q=80&w=1200&auto=format&fit=crop" },
-                            { name: "Museum of Future", image: "https://images.unsplash.com/photo-1618331812910-001dd9a15c16?q=80&w=1200&auto=format&fit=crop" },
-                            { name: "Dubai Marina", image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop" },
-                            { name: "Global Village", image: "https://images.unsplash.com/photo-1511527661048-7fe73d05a9a4?q=80&w=1200&auto=format&fit=crop" },
-                            { name: "Adventure Hub", image: "https://images.unsplash.com/photo-1521312302124-6101b05fed3a?q=80&w=1200&auto=format&fit=crop" },
+                            { name: "Palm Jumeirah", image: "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=1200&q=80" },
+                            { name: "Museum of Future", image: "https://images.unsplash.com/photo-1618331812910-001dd9a15c16?auto=format&fit=crop&w=1200&q=80" },
+                            { name: "Dubai Marina", image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80" },
+                            { name: "Global Village", image: "https://images.unsplash.com/photo-1511527661048-7fe73d05a9a4?auto=format&fit=crop&w=1200&q=80" },
+                            { name: "Adventure Hub", image: "https://images.unsplash.com/photo-1521312302124-6101b05fed3a?auto=format&fit=crop&w=1200&q=80" },
                         ].map((dest, i) => (
                             <motion.div
                                 key={i}
@@ -107,65 +106,11 @@ export default function PackagesPage() {
                 </div>
             </section>
 
-            {/* Why Book With Us Section */}
-            <section className="py-32 container mx-auto px-4 border-t border-white/5 relative">
-                <div className="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none">
-                    <Image src="https://images.unsplash.com/photo-1512453979798-5ea904ac6605?q=80&w=800&auto=format&fit=crop" alt="Decoration" fill className="object-cover" />
-                </div>
-
-                <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="mb-24 max-w-3xl relative"
-                >
-                    <div className="absolute -left-10 top-0 bottom-0 w-1.5 bg-gradient-to-b from-secondary to-transparent opacity-40 hidden md:block" />
-                    <span className="text-secondary text-xs font-bold uppercase tracking-[0.6em] mb-6 block drop-shadow-sm">
-                        Aerosafe Advantage
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-white leading-[1.2] tracking-tight">
-                        Why Choose Aerosafe for <br />
-                        <span className="text-secondary italic font-serif">Your Dubai</span> Journey?
-                    </h2>
-                    <p className="text-gray-400 text-xl font-light leading-relaxed max-w-2xl border-l border-white/10 pl-8 md:ml-2">
-                        We don't just plan holidays; we craft <span className="text-white font-normal italic">lifelong memories</span> with unmatched precision and a level of luxury service that defines modern royalty.
-                    </p>
-                </motion.div>
-
-                {/* Modern Why Book With Us Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {extras.map((ex, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
-                            className="group relative p-10 rounded-[2rem] border border-white/5 bg-gradient-to-b from-white/10 to-transparent backdrop-blur-sm hover:border-secondary/20 transition-all duration-500 hover:-translate-y-2"
-                        >
-                            {/* Background Numbering */}
-                            <span className="absolute top-6 right-8 text-7xl font-serif font-bold text-white/[0.03] pointer-events-none group-hover:text-secondary/[0.05] transition-colors duration-500">
-                                0{i + 1}
-                            </span>
-
-                            <div className="relative z-10">
-                                <div className="h-16 w-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20 group-hover:bg-secondary group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-500">
-                                    <ex.icon className="h-7 w-7 text-secondary group-hover:text-black transition-colors duration-500" />
-                                </div>
-                                <h4 className="text-xl font-bold mb-3 text-white group-hover:text-secondary transition-colors duration-500">{ex.title}</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed font-light">{ex.desc}</p>
-                            </div>
-
-                            {/* Hover Decorative Line */}
-                            <div className="absolute bottom-0 left-10 right-10 h-0.5 bg-gradient-to-r from-transparent via-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-                        </motion.div>
-                    ))}
-                </div>
-            </section>
+            {/* ---------------- SECTION: AEROSAFE ADVANTAGE (Redesigned) ---------------- */}
+            <AerosafeAdvantage />
 
             {/* Premium Customizable CTA */}
-            <section className="relative py-24 overflow-hidden border-y border-white/10 group">
+            <section className="relative py-[30px] overflow-hidden border-y border-white/10 group">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1920&auto=format&fit=crop"

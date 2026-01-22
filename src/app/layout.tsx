@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
+import { Poppins, Playfair_Display, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -13,6 +13,12 @@ const fontSans = Poppins({
 
 const fontSerif = Playfair_Display({
   variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const fontScript = Dancing_Script({
+  variable: "--font-script",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -33,7 +39,8 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background text-foreground font-sans antialiased",
           fontSans.variable,
-          fontSerif.variable
+          fontSerif.variable,
+          fontScript.variable
         )}
       >
         <Navbar />

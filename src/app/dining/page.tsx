@@ -10,16 +10,14 @@ export default function DiningPage() {
     return (
         <div className="bg-black min-h-screen text-white">
             <PageHeader
-                title="PLÉNITUDE"
-                subtitle="Experience culinary artistry where every dish tells a story. Our commitment to excellence ensures each visit becomes a cherished memory."
+                title="DINING"
+                scriptText="exquisite taste"
                 image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
-                highlight="Fine Dining"
-                isLarge={true}
             />
 
             {/* Exquisite Gastronomy Section */}
             <section className="bg-black text-white">
-                <div className="max-w-[90rem] mx-auto px-4 pt-24 pb-24">
+                <div className="max-w-[90rem] mx-auto px-4 py-[30px]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14 items-start">
                         <h2 className="lg:col-span-7 text-5xl md:text-6xl font-serif font-light tracking-[0.06em] text-gray-300 leading-[1.05]">
                             EXQUISITE
@@ -90,7 +88,7 @@ export default function DiningPage() {
 
             {/* Prepared to Perfection Section */}
             <section className="bg-black text-white">
-                <div className="max-w-7xl mx-auto px-4 pt-28 pb-24">
+                <div className="max-w-7xl mx-auto px-4 py-[30px]">
                     <motion.div
                         initial="hidden"
                         whileInView="show"
@@ -184,20 +182,6 @@ export default function DiningPage() {
                     </motion.div>
                 </div>
             </section>
-
-            {/* Journey Section */}
-            <section className="px-8 py-20 bg-black text-center border-t border-white/5">
-                <div className="max-w-7xl mx-auto">
-                    <h3 className="text-2xl font-serif mb-8 text-white">LET'S START YOUR JOURNEY</h3>
-                    <div className="flex justify-center mb-8">
-                        <div className="w-16 h-16 border-2 border-secondary rounded-full flex items-center justify-center">
-                            <span className="text-xl font-bold text-white">1</span>
-                        </div>
-                    </div>
-                    <ArrowUp className="h-6 w-6 mx-auto text-gray-400" />
-                </div>
-            </section>
-
         </div>
     );
 }

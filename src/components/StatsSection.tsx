@@ -98,7 +98,7 @@ const StatCard = ({ stat, index }: { stat: typeof stats[0], index: number }) => 
 
 export default function StatsSection() {
     return (
-        <section className="py-20 bg-[#05070A] relative">
+        <section className="py-[30px] bg-[#05070A] relative">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
                     {stats.map((stat, i) => (

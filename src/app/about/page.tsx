@@ -8,14 +8,12 @@ export default function AboutPage() {
     return (
         <div className="bg-black min-h-screen text-white">
             <PageHeader
-                title="Our Story"
-                subtitle="Bridging cultures and creating memories since 2010. A legacy of excellence in Dubai tourism."
+                title="ABOUT"
+                scriptText="our story"
                 image="/assets/abu_dhabi.jpg"
-                highlight="Who We Are"
-                isLarge={true}
             />
 
-            <section className="py-24 container mx-auto px-4">
+            <section className="py-[30px] container mx-auto px-4 relative">
                 <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
                     <div className="lg:w-1/2 relative h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
                         <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Team" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />

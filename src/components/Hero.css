@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* Base layers */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+}
+
+.hero-left {
+    position: relative;
+    width: 45%;
+    /* Reset to balanced width for content */
+    height: 100%;
+    z-index: 10;
+    /* Above video */
+    padding: 8rem 4rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.hero-right {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-video-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    /* Reduced darkness */
+    z-index: 1;
+}
+
+/* Wavy Separator */
+.hero-waves {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 15rem;
+    z-index: 2;
+    transform: translateX(50%);
+    pointer-events: none;
+}
+
+
+/* Left Content */
+.hero-content-stack {
+    margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    color: #fff;
+    /* Reverted to white */
+    text-transform: uppercase;
+    margin-top: 0;
+    opacity: 0.9;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    /* Reverted to white */
+    line-height: 1.2;
+    margin-top: 0.8rem;
+    max-width: 480px;
+    z-index: 5;
+}
+
+.hero-logo-container {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+}
+
+.hero-logo-box {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #1a4a44;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-popular-section {
+    margin-top: 1.5rem;
+    /* Reduced from 2rem to move cards up */
+    position: relative;
+    z-index: 10;
+}
+
+.hero-section-label {
+    color: #fff;
+    /* Reverted to white */
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero-popular-grid {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 1.2rem;
+    padding: 0.5rem;
+    width: 10.5rem;
+    /* Reduced to fit better */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+    background: #fff;
+}
+
+/* Greece card overlaps the wavy part */
+.hero-card-2 {
+    margin-left: 0.5rem;
+}
+
+.hero-card-img-wrapper {
+    width: 100%;
+    height: 120px;
+    /* Fixed height for consistency */
+    border-radius: 0.8rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-card-info {
+    padding: 0.8rem 0.2rem 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 85px;
+    /* Ensure enough space for 2-line titles while keeping stats aligned */
+}
+
+.hero-card-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1a365d;
+}
+
+.hero-card-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #4a5568;
+    margin-top: auto;
+    /* Push to bottom of flex container */
+}
+
+
+/* Search Bar */
+.hero-search-wrapper {
+    position: absolute;
+    bottom: 3rem;
+    left: 4rem;
+    right: 4rem;
+    z-index: 20;
+}
+
+.hero-search-bar {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-search-field {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hero-search-field:last-of-type {
+    border-right: none;
+}
+
+.hero-search-icon {
+    color: #4a5568;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hero-search-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-search-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+}
+
+.hero-search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2d3748;
+    width: 100%;
+    padding: 0;
+    font-family: inherit;
+}
+
+.hero-search-input::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+}
+
+.hero-btn-search {
+    background: #d89f6b;
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.hero-btn-search:hover {
+    transform: scale(1.02);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .hero-container {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .hero-left {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-search-bar {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .hero-search-field {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+}

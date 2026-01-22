@@ -12,16 +12,14 @@ export default function ContactPage() {
     return (
         <div className="bg-black min-h-screen text-white">
             <PageHeader
-                title="Get in Touch"
-                subtitle="Ready to plan your Dubai getaway? Our experts are just a message away."
+                title="CONTACT"
+                scriptText="let's connect"
                 image="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=1920&q=80"
-                highlight="Contact Us"
-                isLarge={true}
             />
 
             {/* Hero Content Section */}
-            <section className="py-20 container mx-auto px-4">
-                <motion.div 
+            <section className="py-[30px] container mx-auto px-4">
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -33,14 +31,14 @@ export default function ContactPage() {
                         <span className="text-secondary"> Dream Journey</span>
                     </h2>
                     <p className="text-xl text-gray-400 leading-relaxed font-light max-w-3xl mx-auto">
-                        Our travel experts are ready to craft your perfect Dubai experience. 
+                        Our travel experts are ready to craft your perfect Dubai experience.
                         Reach out and let's turn your travel dreams into reality.
                     </p>
                 </motion.div>
             </section>
 
             {/* Main Contact Section */}
-            <section className="py-24 bg-gradient-to-b from-transparent to-white/5">
+            <section className="py-5 bg-gradient-to-b from-transparent to-white/5">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                         {/* Contact Form */}
@@ -64,45 +62,45 @@ export default function ContactPage() {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <label className="text-sm font-bold uppercase tracking-widest text-gray-500">Full Name</label>
-                                            <Input 
-                                                placeholder="John Doe" 
-                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all" 
+                                            <Input
+                                                placeholder="John Doe"
+                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all"
                                             />
                                         </div>
                                         <div className="space-y-2">
                                             <label className="text-sm font-bold uppercase tracking-widest text-gray-500">Email Address</label>
-                                            <Input 
-                                                placeholder="john@example.com" 
-                                                type="email" 
-                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all" 
+                                            <Input
+                                                placeholder="john@example.com"
+                                                type="email"
+                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all"
                                             />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <label className="text-sm font-bold uppercase tracking-widest text-gray-500">Phone Number</label>
-                                            <Input 
-                                                placeholder="+971 50 000 0000" 
-                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all" 
+                                            <Input
+                                                placeholder="+971 50 000 0000"
+                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all"
                                             />
                                         </div>
                                         <div className="space-y-2">
                                             <label className="text-sm font-bold uppercase tracking-widest text-gray-500">Subject</label>
-                                            <Input 
-                                                placeholder="Holiday Enquiry" 
-                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all" 
+                                            <Input
+                                                placeholder="Holiday Enquiry"
+                                                className="bg-white/5 border-white/10 text-white h-12 rounded-xl focus:border-secondary focus:ring-0 transition-all"
                                             />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold uppercase tracking-widest text-gray-500">Message</label>
-                                        <Textarea 
-                                            placeholder="Tell us about your travel plans..." 
-                                            className="min-h-[140px] bg-white/5 border-white/10 text-white rounded-xl focus:border-secondary focus:ring-0 transition-all resize-none" 
+                                        <Textarea
+                                            placeholder="Tell us about your travel plans..."
+                                            className="min-h-[140px] bg-white/5 border-white/10 text-white rounded-xl focus:border-secondary focus:ring-0 transition-all resize-none"
                                         />
                                     </div>
-                                    <Button 
-                                        size="lg" 
+                                    <Button
+                                        size="lg"
                                         className="w-full h-14 bg-secondary text-black hover:bg-white font-bold tracking-widest uppercase rounded-xl transition-all hover:scale-[1.02] flex items-center gap-3"
                                     >
                                         <Send className="h-5 w-5" />
@@ -172,7 +170,7 @@ export default function ContactPage() {
             </section>
 
             {/* Map Section */}
-            <section className="py-24 bg-gradient-to-b from-transparent to-white/5">
+            <section className="py-5 bg-gradient-to-b from-transparent to-white/5">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -207,7 +205,7 @@ export default function ContactPage() {
                                     className="rounded-3xl"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
-                                
+
                                 {/* Map Markers Overlay */}
                                 <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 pointer-events-none">
                                     <motion.div
@@ -217,7 +215,7 @@ export default function ContactPage() {
                                     />
                                     <div className="w-8 h-8 bg-secondary/30 rounded-full absolute -inset-2 animate-ping" />
                                 </div>
-                                
+
                                 <div className="absolute top-1/2 left-1/3 pointer-events-none">
                                     <motion.div
                                         animate={{ scale: [1, 1.2, 1] }}
@@ -226,7 +224,7 @@ export default function ContactPage() {
                                     />
                                     <div className="w-6 h-6 bg-primary/30 rounded-full absolute -inset-1.5 animate-ping" />
                                 </div>
-                                
+
                                 <div className="absolute top-2/3 left-2/3 pointer-events-none">
                                     <motion.div
                                         animate={{ scale: [1, 1.2, 1] }}
@@ -279,16 +277,14 @@ export default function ContactPage() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                                    className={`p-6 rounded-3xl border transition-all duration-300 hover:scale-[1.02] ${
-                                        location.primary 
-                                            ? 'bg-gradient-to-b from-secondary/10 to-transparent border-secondary/30' 
-                                            : 'bg-gradient-to-b from-white/5 to-transparent border-white/10'
-                                    }`}
+                                    className={`p-6 rounded-3xl border transition-all duration-300 hover:scale-[1.02] ${location.primary
+                                        ? 'bg-gradient-to-b from-secondary/10 to-transparent border-secondary/30'
+                                        : 'bg-gradient-to-b from-white/5 to-transparent border-white/10'
+                                        }`}
                                 >
                                     <div className="flex items-start gap-4">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                                            location.primary ? 'bg-secondary/20' : 'bg-white/10'
-                                        }`}>
+                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${location.primary ? 'bg-secondary/20' : 'bg-white/10'
+                                            }`}>
                                             <location.icon className={`h-6 w-6 ${location.primary ? 'text-secondary' : 'text-secondary'}`} />
                                         </div>
                                         <div className="flex-1">
@@ -323,7 +319,7 @@ export default function ContactPage() {
             </section>
 
             {/* Global Network Section - Redesigned */}
-            <section className="py-24 bg-gradient-to-b from-transparent to-white/5">
+            <section className="py-5 bg-gradient-to-b from-transparent to-white/5">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -349,7 +345,7 @@ export default function ContactPage() {
                             {
                                 region: "South Asia",
                                 countries: "India, Sri Lanka, Maldives",
-                                offices: "8 Offices", 
+                                offices: "8 Offices",
                                 icon: "🕌"
                             },
                             {
