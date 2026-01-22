@@ -76,16 +76,29 @@ export default function Footer() {
                         {/* Left Side: Logo & Info */}
                         <div className="lg:col-span-6 space-y-10">
                             <div className="space-y-8">
-                                <Link href="/" className="inline-block -ml-2">
-                                    <div className="relative h-10 w-44 md:h-14 md:w-56 transition-transform duration-500 hover:scale-105">
-                                        <Image
-                                            src="/assets/logo-new.png"
-                                            alt="Aerosafe Logo"
-                                            fill
-                                            className="object-contain object-left brightness-0 invert"
-                                        />
-                                    </div>
-                                </Link>
+                                <div className="flex items-center gap-8 -ml-2">
+                                    <Link href="/" className="inline-block">
+                                        <div className="relative h-10 w-36 md:h-14 md:w-48 transition-transform duration-500 hover:scale-105">
+                                            <Image
+                                                src="/assets/logo-new.png"
+                                                alt="Aerosafe Logo"
+                                                fill
+                                                className="object-contain object-left brightness-0 invert"
+                                            />
+                                        </div>
+                                    </Link>
+                                    <div className="w-px h-8 bg-white/20"></div>
+                                    <Link href="https://firstdreamdestinations.com/" target="_blank" className="inline-block ml-8">
+                                        <div className="relative h-10 w-32 md:h-12 md:w-40 transition-transform duration-500 hover:scale-105">
+                                            <Image
+                                                src="/first-dream-logo.png"
+                                                alt="First Dream Destinations Logo"
+                                                fill
+                                                className="object-contain object-left"
+                                            />
+                                        </div>
+                                    </Link>
+                                </div>
 
                                 <div className="text-gray-400 text-sm leading-relaxed max-w-sm space-y-1 font-light opacity-50">
                                     <p>Business Bay, Vision Tower,</p>

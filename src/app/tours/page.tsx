@@ -36,7 +36,7 @@ export default function ToursPage() {
             />
 
             {/* ---------------- SECTION 1: THE STORY (DISCOVERY) ---------------- */}
-            <section className="py-[30px] relative overflow-hidden">
+            <section className="pt-20 pb-[30px] relative overflow-hidden">
                 <div className="container mx-auto px-4 lg:pl-12 xl:pl-16">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-start mb-20">
                         {/* Vertical Title */}
