@@ -19,9 +19,9 @@ const itinerary = [
 
 const thumbnails = [
     "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80",
-    "/assets/Burj_Al_Arab.png",
+    "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80",
     "https://images.unsplash.com/photo-1534050359349-f2136930263b?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&w=600&q=80",
     "https://images.unsplash.com/photo-1551279076-5895781a7b14?auto=format&fit=crop&w=600&q=80",
     "https://images.unsplash.com/photo-1526431288437-3a4974533058?auto=format&fit=crop&w=600&q=80",
 ];

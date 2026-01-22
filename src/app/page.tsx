@@ -17,8 +17,8 @@ import Hero from "@/components/Hero";
 // --- Components ---
 
 const highlightCards = [
-    { title: "Desert Safari", img: "/assets/desert-safari-card.jpg", subtitle: "Adventure" },
-    { title: "Burj Khalifa", img: "https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?auto=format&fit=crop&w=600&q=80", subtitle: "Iconic" },
+    { title: "Desert Safari", img: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=600&q=80", subtitle: "Adventure" },
+    { title: "Burj Khalifa", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&w=600&q=80", subtitle: "Iconic" },
     { title: "Palm Jumeirah", img: "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=600&q=80", subtitle: "Luxury" },
     { title: "Yacht Cruise", img: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=600&q=80", subtitle: "Relax" },
     { title: "Old Souk", img: "https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=600&q=80", subtitle: "Culture" },

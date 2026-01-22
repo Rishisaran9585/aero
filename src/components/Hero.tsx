@@ -73,7 +73,7 @@ const Hero = () => {
                     loop
                     playsInline
                     className="hero-video-bg"
-                    poster="https://images.unsplash.com/photo-1547234935-80c7142ee969?q=80&w=1920&auto=format&fit=crop"
+                    poster="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1920&auto=format&fit=crop"
                 >
                     <source src="/assets/hero-bg.mp4" type="video/mp4" />
                 </video>

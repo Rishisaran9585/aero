@@ -34,8 +34,8 @@ const features = [
 ];
 
 const destinations = [
-    { id: 1, img: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80" },
-    { id: 2, img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" },
+    { id: 1, img: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=800&q=80" },
+    { id: 2, img: "https://images.unsplash.com/photo-1512453979798-5ea904ac6605?auto=format&fit=crop&w=800&q=80" },
 ];
 
 export default function TrendingDestination() {

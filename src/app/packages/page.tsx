@@ -11,13 +11,13 @@ import AerosafeAdvantage from "@/components/AerosafeAdvantage";
 import { motion } from "framer-motion";
 
 const packages = [
-    { name: "Dubai Essentials", duration: "4 Days / 3 Nights", image: "https://images.unsplash.com/photo-1512453979798-5ea904ac6605?q=80&w=1200&auto=format&fit=crop", features: ["City Tour", "Desert Safari", "Dhow Cruise", "Airport Transfers"], price: "AED 1,200" },
-    { name: "Family Fun", duration: "5 Days / 4 Nights", image: "https://images.unsplash.com/photo-1511527661048-7fe73d05a9a4?q=80&w=1200&auto=format&fit=crop", features: ["Dubai Parks & Resorts", "Miracle Garden", "Global Village", "Family Dinner"], price: "AED 1,800" },
-    { name: "Luxury Escape", duration: "6 Days / 5 Nights", image: "https://images.unsplash.com/photo-1618331812910-001dd9a15c16?q=80&w=1200&auto=format&fit=crop", features: ["Burj Al Arab Tea", "Helicopter Tour", "Yacht Cruise", "5-Star Stay"], price: "AED 5,500" },
+    { name: "Dubai Essentials", duration: "4 Days / 3 Nights", image: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?q=80&w=1200&auto=format&fit=crop", features: ["City Tour", "Desert Safari", "Dhow Cruise", "Airport Transfers"], price: "AED 1,200" },
+    { name: "Family Fun", duration: "5 Days / 4 Nights", image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop", features: ["Dubai Parks & Resorts", "Miracle Garden", "Global Village", "Family Dinner"], price: "AED 1,800" },
+    { name: "Luxury Escape", duration: "6 Days / 5 Nights", image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop", features: ["Burj Al Arab Tea", "Helicopter Tour", "Yacht Cruise", "5-Star Stay"], price: "AED 5,500" },
     { name: "Abu Dhabi Explorer", duration: "1 Day Trip", image: "https://images.unsplash.com/photo-1544249155-523194090288?q=80&w=1200&auto=format&fit=crop", features: ["Sheikh Zayed Mosque", "Louvre Abu Dhabi", "Ferrari World", "Emirates Palace"], price: "AED 450" },
-    { name: "Adventure Unlimited", duration: "3 Days / 2 Nights", image: "https://images.unsplash.com/photo-1521312302124-6101b05fed3a?q=80&w=1200&auto=format&fit=crop", features: ["Skydive Dubai", "Deep Dive Dubai", "Quad Biking", "Hatta Hiking"], price: "AED 3,200" },
-    { name: "Cultural Heritage", duration: "2 Days / 1 Night", image: "https://images.unsplash.com/photo-1577083288073-40892c0860a4?q=80&w=1200&auto=format&fit=crop", features: ["Museum of the Future", "Al Fahidi District", "Gold & Spice Souk", "Heritage Dinner"], price: "AED 850" },
-    { name: "Desert Romance", duration: "2 Days / 1 Night", image: "https://images.unsplash.com/photo-1509233725247-49e657c54213?q=80&w=1200&auto=format&fit=crop", features: ["Private Dune Dinner", "Night Stargazing", "Overnight Camp", "Falconry Show"], price: "AED 2,100" },
+    { name: "Adventure Unlimited", duration: "3 Days / 2 Nights", image: "https://images.unsplash.com/photo-1555505011-15372558444c?q=80&w=1200&auto=format&fit=crop", features: ["Skydive Dubai", "Deep Dive Dubai", "Quad Biking", "Hatta Hiking"], price: "AED 3,200" },
+    { name: "Cultural Heritage", duration: "2 Days / 1 Night", image: "https://images.unsplash.com/photo-1526431288437-3a4974533058?q=80&w=1200&auto=format&fit=crop", features: ["Museum of the Future", "Al Fahidi District", "Gold & Spice Souk", "Heritage Dinner"], price: "AED 850" },
+    { name: "Desert Romance", duration: "2 Days / 1 Night", image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=1200&auto=format&fit=crop", features: ["Private Dune Dinner", "Night Stargazing", "Overnight Camp", "Falconry Show"], price: "AED 2,100" },
 ];
 
 const galleryItems = packages.map(pkg => ({

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUp } from "lucide-react";
+import DeliverySection from "@/components/DeliverySection";
 
 export default function DiningPage() {
     return (
@@ -36,27 +37,27 @@ export default function DiningPage() {
                         <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 sm:gap-4 items-center">
                             {[
                                 {
-                                    url: "https://images.unsplash.com/photo-1505253716367-af7846067605?auto=format&fit=crop&w=700&q=80",
+                                    url: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80",
                                     h: "h-56 sm:h-80",
                                     offset: "sm:-translate-y-10",
                                 },
                                 {
-                                    url: "https://images.unsplash.com/photo-1542835900-cd224393b07e?auto=format&fit=crop&w=700&q=80",
+                                    url: "https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=700&q=80",
                                     h: "h-64 sm:h-96",
                                     offset: "sm:translate-y-10",
                                 },
                                 {
-                                    url: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80",
+                                    url: "https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80",
                                     h: "h-72 sm:h-[28rem]",
                                     offset: "sm:-translate-y-14",
                                 },
                                 {
-                                    url: "https://images.unsplash.com/photo-1512132411229-c30386d47bff?auto=format&fit=crop&w=700&q=80",
+                                    url: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=80",
                                     h: "h-64 sm:h-96",
                                     offset: "sm:translate-y-10",
                                 },
                                 {
-                                    url: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=700&q=80",
+                                    url: "https://images.unsplash.com/photo-1551218808-94e220e0349a?auto=format&fit=crop&w=800&q=80",
                                     h: "h-56 sm:h-80",
                                     offset: "sm:-translate-y-10",
                                 },
@@ -182,6 +183,10 @@ export default function DiningPage() {
                     </motion.div>
                 </div>
             </section>
+
+            {/* Delivery Section */}
+            <DeliverySection />
         </div>
     );
 }
+

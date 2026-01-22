@@ -16,44 +16,44 @@ interface Upgrade {
 
 const upgrades: Upgrade[] = [
     {
-        title: "Finland, Jämsä",
-        desc: "Experience the northern lights in a glass igloo.",
-        img: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=800&q=80",
-        rating: 4,
-        slots: 7,
-        location: "Finland"
-    },
-    {
-        title: "Norway, Svolv",
-        desc: "Majestic fjords and mountain views.",
-        img: "https://images.unsplash.com/photo-1510006851064-e6056cd0e3a8?auto=format&fit=crop&w=800&q=80",
+        title: "Dubai, Al Marmoom",
+        desc: "Experience heritage and stargazing in the pristine desert reserve.",
+        img: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=800&q=80",
         rating: 5,
-        slots: 20,
-        location: "Norway"
+        slots: 7,
+        location: "Dubai"
     },
     {
-        title: "Iceland, Reykjavik",
-        desc: "Volcanic landscapes and hot springs.",
-        img: "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?auto=format&fit=crop&w=800&q=80",
+        title: "Abu Dhabi, Liwa Oasis",
+        desc: "Deep desert exploration in the legendary Empty Quarter.",
+        img: "https://images.unsplash.com/photo-1512453979798-5ea904ac6605?auto=format&fit=crop&w=800&q=80",
         rating: 5,
         slots: 12,
-        location: "Iceland"
+        location: "Abu Dhabi"
     },
     {
-        title: "Dubai, Al Khayma",
-        desc: "Premium desert camp with authentic heritage.",
-        img: "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?auto=format&fit=crop&w=800&q=80",
+        title: "Ras Al Khaimah, Jebel Jais",
+        desc: "Mountain adventures and the world's longest zipline.",
+        img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+        rating: 5,
+        slots: 20,
+        location: "RAK"
+    },
+    {
+        title: "Dubai, Palm Jumeirah",
+        desc: "Private yacht cruises and sunset skyline views.",
+        img: "https://images.unsplash.com/photo-1596436889106-be35e843f974?auto=format&fit=crop&w=800&q=80",
         rating: 5,
         slots: 5,
         location: "Dubai"
     },
     {
-        title: "Abu Dhabi, Liwa",
-        desc: "Deep desert exploration in the Empty Quarter.",
-        img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80",
+        title: "Sharjah, Desert Park",
+        desc: "Cultural discovery and wildlife conservation tours.",
+        img: "https://images.unsplash.com/photo-1534050359349-f2136930263b?auto=format&fit=crop&w=800&q=80",
         rating: 4,
         slots: 10,
-        location: "Abu Dhabi"
+        location: "Sharjah"
     }
 ];
 

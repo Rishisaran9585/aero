@@ -9,15 +9,15 @@ import AdventureCarousel from "@/components/AdventureCarousel";
 
 export default function SafariPage() {
     return (
-        <div className="bg-black min-h-screen text-white">
+        <div className="bg-black min-h-screen text-white overflow-x-hidden">
             <PageHeader
                 title="SAFARI"
                 scriptText="desert adventure"
-                image="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80"
+                image="https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1920&q=80"
             />
 
             {/* Featured Images Section with Overlapping Cards */}
-            <section className="py-[30px] container mx-auto px-4 relative">
+            <section className="py-[30px] container mx-auto px-4 relative overflow-hidden">
                 <div className="relative h-96 lg:h-[500px] mb-20">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center justify-items-center h-full">
                         {/* Left Image */}
@@ -28,7 +28,7 @@ export default function SafariPage() {
                             className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl transform -rotate-6 z-10"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=400&q=80"
+                                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
                                 alt="Desert Adventure"
                                 fill
                                 className="object-cover"
@@ -43,7 +43,7 @@ export default function SafariPage() {
                             className="relative w-full h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl z-20 transform scale-110"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=400&q=80"
+                                src="https://images.unsplash.com/photo-1512453979798-5ea904ac6605?auto=format&fit=crop&w=800&q=80"
                                 alt="Safari Sunset"
                                 fill
                                 className="object-cover"
@@ -58,7 +58,7 @@ export default function SafariPage() {
                             className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl transform rotate-6 z-10"
                         >
                             <Image
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                                src="https://images.unsplash.com/photo-1506466014040-4203ae68326e?auto=format&fit=crop&w=800&q=80"
                                 alt="Dune Experience"
                                 fill
                                 className="object-cover"
@@ -70,7 +70,7 @@ export default function SafariPage() {
 
 
             {/* Destinations Section */}
-            <section className="py-[30px] border-t border-white/5">
+            <section className="py-[30px] border-t border-white/5 overflow-hidden">
                 <div className="container mx-auto px-4">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-16">
                         Popular Destinations
@@ -78,10 +78,10 @@ export default function SafariPage() {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
                         {[
-                            { name: "Dubai", img: "https://images.unsplash.com/photo-1512453979798-5ea904ac6605?auto=format&fit=crop&w=400&q=80" },
-                            { name: "Abu Dhabi", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400&q=80" },
-                            { name: "Sharjah", img: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=400&q=80" },
-                            { name: "Al Ain", img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=400&q=80" },
+                            { name: "Dubai", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&w=400&q=80" },
+                            { name: "Abu Dhabi", img: "https://images.unsplash.com/photo-1544249155-523194090288?auto=format&fit=crop&w=400&q=80" },
+                            { name: "Sharjah", img: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=400&q=80" },
+                            { name: "Al Ain", img: "https://images.unsplash.com/photo-1512453979798-5ea904ac6605?auto=format&fit=crop&w=400&q=80" },
                         ].map((destination, i) => (
                             <motion.div
                                 key={i}

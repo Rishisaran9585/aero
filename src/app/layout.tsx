@@ -44,7 +44,7 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        <main className="flex-1 w-full min-h-screen">
+        <main className="flex-1 w-full min-h-screen overflow-x-hidden">
           {children}
         </main>
         <Footer />

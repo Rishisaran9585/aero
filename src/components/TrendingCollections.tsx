@@ -9,14 +9,14 @@ const collections = [
         title: "Dubai Essentials",
         days: "5 Days",
         price: "AED 1,200",
-        image: "/assets/visa.jpg",
+        image: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=500&q=80",
     },
     {
         id: 2,
         title: "Luxury Escape",
         days: "7 Days",
         price: "AED 5,500",
-        image: "/assets/Burj_Al_Arab.png",
+        image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80",
         featured: true,
     },
     {
@@ -24,14 +24,14 @@ const collections = [
         title: "Abu Dhabi Explorer",
         days: "Day Trip",
         price: "AED 450",
-        image: "/assets/abu_dhabi.jpg",
+        image: "https://images.unsplash.com/photo-1544249155-523194090288?w=500&q=80",
     },
     {
         id: 4,
         title: "Desert Romance",
         days: "2 Days",
         price: "AED 2,100",
-        image: "/assets/desert-safari-card.jpg",
+        image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?w=500&q=80",
     },
 ];
 

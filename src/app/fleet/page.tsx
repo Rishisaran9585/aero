@@ -184,7 +184,7 @@ export default function FleetPage() {
     ];
 
     return (
-        <div className="bg-black min-h-screen text-white overflow-hidden">
+        <div className="bg-black min-h-screen text-white overflow-x-hidden">
             <PageHeader
                 title="FLEET"
                 scriptText="luxury comfort"
