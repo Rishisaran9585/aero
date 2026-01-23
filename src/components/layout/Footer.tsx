@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 const footerLinks = {
     explore: [
@@ -94,16 +95,16 @@ export default function Footer() {
                                                 src="/first-dream-logo.png"
                                                 alt="First Dream Destinations Logo"
                                                 fill
-                                                className="object-contain object-left"
+                                                className="object-contain object-left brightness-0 invert"
                                             />
                                         </div>
                                     </Link>
                                 </div>
 
-                                <div className="text-gray-400 text-sm leading-relaxed max-w-sm space-y-1 font-light opacity-50">
-                                    <p>Business Bay, Vision Tower,</p>
-                                    <p>Suite 1502, Dubai, UAE</p>
-                                    <p>United Arab Emirates</p>
+                                <div className="text-gray-400 text-sm leading-relaxed max-w-lg space-y-1 font-light opacity-50">
+                                    <p>
+                                        Aerosafe Travel & Tourism L.L.C is your trusted partner for seamless travel experiences. From bespoke tours to luxury packages, we craft journeys that redefine comfort and adventure.
+                                    </p>
                                 </div>
                             </div>
 
@@ -158,6 +159,59 @@ export default function Footer() {
                                             </li>
                                         ))}
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {/* Our Offices Section */}
+                    <div className="pt-8 pb-8 mb-10">
+                        {/* Section Header */}
+                        <div className="flex items-center justify-center gap-4 mb-16">
+                            <div className="h-px w-24 md:w-32 bg-white/10"></div>
+                            <span className="text-secondary text-[11px] font-bold uppercase tracking-[0.3em]">Our Offices</span>
+                            <div className="h-px w-24 md:w-32 bg-white/10"></div>
+                        </div>
+
+                        {/* Offices Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 max-w-7xl mx-auto">
+                            {/* Dubai HQ */}
+                            <div className="space-y-6 md:pl-10 border-l border-white/5 md:border-none">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <MapPin className="w-5 h-5 text-secondary" />
+                                    <h4 className="text-secondary text-lg font-medium tracking-wide">Dubai HQ</h4>
+                                </div>
+                                <div className="space-y-1 pl-8">
+                                    <p className="text-gray-400 text-sm font-light">Auto Center Building</p>
+                                    <p className="text-gray-400 text-sm font-light">Office A102, 22A St</p>
+                                    <p className="text-gray-400 text-sm font-light">Port Saeed, Dubai – UAE</p>
+                                </div>
+                            </div>
+
+                            {/* Chennai Office */}
+                            <div className="space-y-6 md:border-l border-white/10 md:pl-10">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <MapPin className="w-5 h-5 text-secondary" />
+                                    <h4 className="text-secondary text-lg font-medium tracking-wide">Chennai Office</h4>
+                                </div>
+                                <div className="space-y-1 pl-8">
+                                    <p className="text-gray-400 text-sm font-light">Plot No. 145-A</p>
+                                    <p className="text-gray-400 text-sm font-light">Alapakkam Block, VI St</p>
+                                    <p className="text-gray-400 text-sm font-light">Chennai – 600116, India</p>
+                                </div>
+                            </div>
+
+                            {/* Trivandrum Office */}
+                            <div className="space-y-6 md:border-l border-white/10 md:pl-10">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <MapPin className="w-5 h-5 text-secondary" />
+                                    <h4 className="text-secondary text-lg font-medium tracking-wide">Trivandrum Office</h4>
+                                </div>
+                                <div className="space-y-1 pl-8">
+                                    <p className="text-gray-400 text-sm font-light whitespace-nowrap">TC49/103(2) HASNA, Navachethana Lane,</p>
+                                    <p className="text-gray-400 text-sm font-light whitespace-nowrap">Old Karakkamandapam, Memom P.O.,</p>
+                                    <p className="text-gray-400 text-sm font-light whitespace-nowrap">Trivandrum, Kerala, India – 695020</p>
                                 </div>
                             </div>
                         </div>
