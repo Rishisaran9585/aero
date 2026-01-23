@@ -142,4 +142,8 @@
     .hero-mask {
         mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     }
+
+    .font-script {
+        font-family: var(--font-script), cursive;
+    }
 }

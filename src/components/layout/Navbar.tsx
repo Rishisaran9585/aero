@@ -10,16 +10,15 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const navLinks = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/home1" },
     { name: "Packages", href: "/packages" },
+    { name: "International Tours", href: "/international-tours" },
+    { name: "UAE Tours", href: "/uae-tours" },
+    { name: "Desert Safari", href: "/desert-safari" },
     { name: "Fleet", href: "/fleet" },
-    { name: "Visa", href: "/visa" },
-    { name: "Hotels", href: "/hotels" },
-    { name: "Tours", href: "/tours" },
-    { name: "Safari", href: "/safari" },
-    { name: "Dining", href: "/dining" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Visa Services", href: "/visa" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -33,19 +32,16 @@ export default function Navbar() {
     return (
         <motion.header
             className={cn(
-                "fixed left-0 right-0 z-50 transition-all duration-500 ease-in-out",
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out",
                 isScrolled
-                    ? "top-4 mx-4 md:mx-8 bg-black/80 backdrop-blur-lg py-3 px-6 rounded-2xl border border-white/10 shadow-2xl"
-                    : "top-0 bg-transparent py-6"
+                    ? "bg-black/80 backdrop-blur-lg py-4 border-b border-white/10 shadow-xl"
+                    : "bg-transparent py-6"
             )}
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-            <div className={cn(
-                "container mx-auto flex items-center justify-between",
-                !isScrolled && "px-4"
-            )}>
+            <div className="container mx-auto px-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 z-50 shrink-0">
                     <div className="relative h-14 w-44 md:h-18 md:w-56 transition-transform hover:scale-105">
