@@ -1,0 +1,246 @@
+.cinematic-showcase-section {
+    padding: 120px 0;
+    background: #000;
+    perspective: 2000px;
+}
+
+.accent-label {
+    display: block;
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.6em;
+    margin-bottom: 25px;
+}
+
+.showcase-title {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+}
+
+.italic-text {
+    font-style: italic;
+    color: #b89644;
+}
+
+/* Grid Layout */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+.cinematic-card {
+    position: relative;
+    height: 420px;
+    border-radius: 35px;
+    background: #111;
+    overflow: visible;
+    /* Important for 3D breakout */
+    cursor: pointer;
+}
+
+/* Staggered Height Concept */
+.cinematic-card:nth-child(even) {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .cinematic-card:nth-child(even) {
+        margin-top: 0;
+    }
+}
+
+.card-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    inset: 0;
+    border-radius: 45px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.card-image {
+    object-fit: cover;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cinematic-card:hover .card-image {
+    transform: scale(1.15);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+/* Content Layers */
+.card-layers {
+    position: absolute;
+    inset: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.top-layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.badge {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+
+.gold-badge {
+    background: #b89644;
+    color: #000;
+    box-shadow: 0 10px 25px rgba(184, 150, 68, 0.3);
+}
+
+.glass-badge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.bottom-layer {
+    transform: translateY(20px);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cinematic-card:hover .bottom-layer {
+    transform: translateY(0);
+}
+
+.meta-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.meta-tag {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.card-title {
+    color: #fff;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+.action-row {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.cinematic-card:hover .action-row {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-text {
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.arrow-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(184, 150, 68, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b89644;
+    transition: all 0.4s ease;
+}
+
+.cinematic-card:hover .arrow-circle {
+    background: #b89644;
+    color: #000;
+}
+
+/* Glass Reflection Effect */
+.glass-reflection {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0) 70%,
+            rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 45px;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.cinematic-card:hover {
+    z-index: 50;
+}
+
+/* Border Glow on Global Mouse Interaction */
+.cinematic-card::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 47px;
+    background: linear-gradient(45deg, transparent, rgba(184, 150, 68, 0.3), transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cinematic-card:hover::after {
+    opacity: 1;
+}

@@ -1,0 +1,237 @@
+.luxe-discovery-wrap {
+    padding: 120px 0;
+    background-color: #050505;
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+/* Mouse Follow Spotlight */
+.section-spotlight {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(184, 150, 68, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.discovery-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .discovery-bento-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Bento Cards Base */
+.bento-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+/* Highlight Card */
+.brand-highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+}
+
+.card-top-marker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+}
+
+.brand-headline {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 0.85;
+    margin: 40px 0;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #b89644, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.brand-subline {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+.brand-footer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.floating-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-stat strong {
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.floating-stat span {
+    font-size: 9px;
+    font-weight: 900;
+    color: #b89644;
+    letter-spacing: 3px;
+}
+
+.brand-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(184, 150, 68, 0.3), transparent);
+}
+
+/* Features Grid */
+.features-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 30px;
+}
+
+@media (max-width: 640px) {
+    .features-subgrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-tile {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.4s ease;
+}
+
+.feature-tile:nth-child(1) {
+    grid-column: span 2;
+}
+
+.feature-tile:hover {
+    border-color: rgba(184, 150, 68, 0.3);
+}
+
+.tile-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(184, 150, 68, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b89644;
+    margin-bottom: 25px;
+}
+
+.tile-subtitle {
+    display: block;
+    color: #b89644;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.feature-tile h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.feature-tile p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.tile-action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.feature-tile:hover .circle-btn {
+    background: #b89644;
+    color: #000;
+    border-color: #b89644;
+}
+
+/* CTA Mini Card */
+.cta-mini {
+    background: #b89644;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cta-inner p {
+    color: #000;
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+.cta-inner span {
+    color: #000 !important;
+    opacity: 0.7;
+}
+
+/* Background Grain */
+.grain-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+    z-index: 5;
+}

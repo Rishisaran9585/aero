@@ -1,0 +1,149 @@
+/* FeaturedDestinations.css */
+.featured-destinations-section {
+    background-color: #000;
+    padding: 100px 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.destination-luxury-card {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.luxury-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 32px;
+    overflow: hidden;
+    background: #111;
+}
+
+.luxury-image-wrapper img {
+    transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.destination-luxury-card:hover .luxury-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.luxury-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
+    z-index: 1;
+    opacity: 0.6;
+    transition: opacity 0.6s ease;
+}
+
+.destination-luxury-card:hover .luxury-overlay-gradient {
+    opacity: 0.9;
+}
+
+.floating-info-slab {
+    position: absolute;
+    bottom: 2rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    padding: 2rem;
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    z-index: 10;
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.destination-luxury-card:hover .floating-info-slab {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    border-color: rgba(234, 179, 8, 0.2);
+}
+
+.luxury-type {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #eab308;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.luxury-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.luxury-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+    font-family: var(--font-serif);
+}
+
+.luxury-location {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+}
+
+.luxury-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.luxury-price {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.luxury-action-btn {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #eab308;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.3s ease;
+}
+
+.destination-luxury-card:hover .luxury-action-btn {
+    gap: 0.6rem;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 1200px) {
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+}

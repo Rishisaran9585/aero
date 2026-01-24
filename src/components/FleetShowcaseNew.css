@@ -1,0 +1,248 @@
+.fleet-showcase-luxe {
+    padding: 15rem 0;
+    background: #050505;
+    position: relative;
+    overflow: hidden;
+}
+
+.fleet-main-frame {
+    position: relative;
+    width: 90%;
+    aspect-ratio: 16/10;
+    border-radius: 3rem;
+    overflow: hidden;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-auto-img {
+    width: 85%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 1));
+}
+
+.frame-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(184, 150, 68, 0.05), transparent 70%);
+}
+
+.fleet-sub-frame {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 60%;
+    aspect-ratio: 16/9;
+    background: #0d0d0d;
+    border: 10px solid #050505;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    z-index: 3;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-auto-img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+.fleet-stats-badge {
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 4;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.badge-icon {
+    width: 45px;
+    height: 45px;
+    background: #b89644;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.badge-val {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+}
+
+.badge-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+}
+
+.fleet-label {
+    display: block;
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.6em;
+    margin-bottom: 2.5rem;
+}
+
+.fleet-headline {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 800;
+    line-height: 0.85;
+    color: #fff;
+    margin-bottom: 3.5rem;
+    letter-spacing: -0.04em;
+}
+
+.italic-gold {
+    color: #b89644;
+    font-style: italic;
+}
+
+.fleet-desc {
+    font-size: 1.15rem;
+    color: #888;
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 520px;
+    margin-bottom: 5rem;
+    border-left: 2px solid #b89644;
+    padding-left: 2.5rem;
+}
+
+.fleet-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.fleet-feat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feat-ico {
+    color: #b89644;
+}
+
+.fleet-feat-card h5 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+}
+
+.fleet-feat-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.fleet-main-btn {
+    padding: 1.5rem 3rem;
+    background: #b89644;
+    border-radius: 100px;
+    color: #000;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: none;
+}
+
+.fleet-main-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(184, 150, 68, 0.3);
+}
+
+.trust-pips {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.pip-stack {
+    display: flex;
+}
+
+.pip {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 2px solid #050505;
+    margin-right: -15px;
+}
+
+.pip-text {
+    font-size: 10px;
+    color: #555;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.fleet-bg-text {
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    font-size: 18vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .fleet-showcase-luxe {
+        padding: 8rem 0;
+    }
+
+    .lg\:w-1\/2 {
+        width: 100%;
+    }
+
+    .fleet-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .fleet-sub-frame {
+        width: 80%;
+    }
+
+    .fleet-stats-badge {
+        left: 5%;
+    }
+}

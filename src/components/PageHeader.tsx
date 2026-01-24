@@ -7,8 +7,9 @@ import { Hotel, Plane, Ship, Bus, Palmtree, Waves, Search } from "lucide-react";
 import "./PageHeader.css";
 
 interface PageHeaderProps {
-    title: string | ReactNode;
+    title?: string | ReactNode;
     subtitle?: string;
+    topSubtitle?: string;
     image: string;
     scriptText?: string;
     showSearch?: boolean;
@@ -18,7 +19,6 @@ interface PageHeaderProps {
 const categories = [
     { icon: Hotel, label: "Hotels", id: "hotels" },
     { icon: Bus, label: "Car Rentals", id: "car-rentals" },
-    { icon: Plane, label: "Flights", id: "flights" },
     { icon: Palmtree, label: "Trips", id: "trips" },
     { icon: Ship, label: "Cruises", id: "cruises" },
     { icon: Waves, label: "Activities", id: "activities" },
@@ -27,6 +27,7 @@ const categories = [
 export default function PageHeader({
     title,
     subtitle,
+    topSubtitle,
     image,
     scriptText = "the world",
     showSearch = true,
@@ -38,15 +39,15 @@ export default function PageHeader({
         <div className="page-header-container">
             <section className="page-header-hero">
                 {/* Background Image */}
-                <div className="absolute inset-0 z-0">
-                    <Image
+                <div className="absolute inset-0 z-0 bg-stone-900">
+                    <img
                         src={image}
                         alt={typeof title === 'string' ? title : 'Page header image'}
-                        fill
-                        className="object-cover"
-                        priority
+                        className="w-full h-full object-cover scale-105"
+                        loading="eager"
                     />
-                    <div className="absolute inset-0 bg-black/30" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_100%)]" />
                 </div>
 
                 {/* Main Content */}
@@ -57,9 +58,17 @@ export default function PageHeader({
                         transition={{ duration: 0.8 }}
                         className="flex flex-col items-center w-full"
                     >
-                        <h1 className="mb-0 text-white tracking-tighter filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)] leading-none">
-                            {title}
-                        </h1>
+                        {topSubtitle && (
+                            <span className="page-header-top-subtitle">
+                                {topSubtitle}
+                            </span>
+                        )}
+
+                        {title && (
+                            <h1 className="hero-main-title">
+                                {title}
+                            </h1>
+                        )}
 
                         <span className="page-header-script">
                             {scriptText}
@@ -100,49 +109,6 @@ export default function PageHeader({
                 )}
             </section>
 
-            {/* Search Section Below Hero */}
-            {showSearch && (
-                <section className="page-header-search-section">
-                    <div className="search-container">
-                        <div className="search-field">
-                            <label>Destination</label>
-                            <input type="text" placeholder="Keyword Search" />
-                        </div>
-                        <div className="search-field">
-                            <label>Check In</label>
-                            <input type="text" placeholder="YYYY-MM-DD" onFocus={(e) => e.target.type = 'date'} onBlur={(e) => e.target.type = 'text'} />
-                        </div>
-                        <div className="search-field">
-                            <label>Check Out</label>
-                            <input type="text" placeholder="YYYY-MM-DD" onFocus={(e) => e.target.type = 'date'} onBlur={(e) => e.target.type = 'text'} />
-                        </div>
-                        <div className="search-field">
-                            <div className="grid grid-cols-2 gap-2">
-                                <div className="flex flex-col gap-2">
-                                    <label>Adults</label>
-                                    <select defaultValue="01">
-                                        <option>01</option>
-                                        <option>02</option>
-                                        <option>03</option>
-                                        <option>04</option>
-                                    </select>
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <label>Children</label>
-                                    <select defaultValue="00">
-                                        <option>00</option>
-                                        <option>01</option>
-                                        <option>02</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <button className="btn-large-search">
-                            SEARCH
-                        </button>
-                    </div>
-                </section>
-            )}
         </div>
     );
 }

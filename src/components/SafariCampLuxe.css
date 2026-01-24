@@ -1,0 +1,202 @@
+.camp-luxe-section {
+    padding: 15rem 0;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-image-container {
+    position: relative;
+    width: 85%;
+    aspect-ratio: 4/5;
+    border-radius: 4rem;
+    overflow: hidden;
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(184, 150, 68, 0.1);
+    z-index: 2;
+}
+
+.main-camp-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-overlay-gold {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.secondary-image-container {
+    position: absolute;
+    bottom: -15%;
+    right: -5%;
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 3rem;
+    overflow: hidden;
+    border: 8px solid #000;
+    box-shadow: 0 40px 80px -10px rgba(0, 0, 0, 0.8);
+    z-index: 3;
+}
+
+.dining-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-badge {
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    padding: 1.5rem 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 4;
+}
+
+.floating-badge span {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    color: #fff;
+}
+
+.accent-label {
+    display: block;
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    margin-bottom: 2rem;
+}
+
+.section-title-huge {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-weight: 800;
+    line-height: 0.9;
+    color: #fff;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.gold-text {
+    color: #b89644;
+    font-style: italic;
+}
+
+.section-desc {
+    font-size: 1.25rem;
+    color: #888;
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 500px;
+    margin-bottom: 5rem;
+}
+
+.features-grid-luxe {
+    display: grid;
+    gap: 3rem;
+}
+
+.feat-item {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.feat-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background: rgba(184, 150, 68, 0.1);
+    border: 1px solid rgba(184, 150, 68, 0.2);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b89644;
+    flex-shrink: 0;
+}
+
+.feat-info h4 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.feat-info p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.luxe-explore-btn {
+    padding: 1.5rem 3.5rem;
+    background: transparent;
+    border: 1px solid rgba(184, 150, 68, 0.5);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.luxe-explore-btn:hover {
+    background: #b89644;
+    color: #000;
+    border-color: #b89644;
+    transform: translateY(-5px);
+}
+
+.glow-orb {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(184, 150, 68, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.glow-orb-2 {
+    position: absolute;
+    bottom: 10%;
+    left: -5%;
+    width: 30vw;
+    height: 30vw;
+    background: radial-gradient(circle, rgba(184, 150, 68, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .camp-luxe-section {
+        padding: 8rem 0;
+    }
+
+    .secondary-image-container {
+        display: none;
+    }
+
+    .main-image-container {
+        width: 100%;
+        border-radius: 2.5rem;
+    }
+
+    .floating-badge {
+        left: 5%;
+    }
+}

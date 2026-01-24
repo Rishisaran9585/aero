@@ -1,0 +1,232 @@
+.regional-discovery-no-img {
+    padding: 120px 0;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.discovery-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 100px;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .discovery-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+/* Sidebar Styling */
+.header-sidebar {
+    position: relative;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 150px;
+}
+
+.section-tag {
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.main-headline {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 0.85;
+    margin-bottom: 40px;
+}
+
+.highlight-text {
+    color: #b89644;
+    font-style: italic;
+}
+
+.master-desc {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 350px;
+    margin-bottom: 50px;
+}
+
+.progress-indicators {
+    display: flex;
+    gap: 12px;
+}
+
+.indicator {
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.indicator.active {
+    background: #b89644;
+    width: 80px;
+}
+
+/* Interaction Stack Styling */
+.interaction-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.discovery-item {
+    background: #080808;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.discovery-item.is-active {
+    background: #0c0c0c;
+    border-color: rgba(184, 150, 68, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.item-main {
+    position: relative;
+    z-index: 5;
+}
+
+.item-id {
+    font-size: 10px;
+    font-weight: 900;
+    color: #b89644;
+    margin-bottom: 8px;
+    opacity: 0.6;
+}
+
+.item-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-group h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 2px;
+    transition: color 0.4s ease;
+}
+
+.discovery-item.is-active .title-group h3 {
+    color: #b89644;
+}
+
+.label-text {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.icon-wrapper {
+    color: rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+}
+
+.discovery-item.is-active .icon-wrapper {
+    color: #b89644;
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* Details Section */
+.item-details {
+    overflow: hidden;
+}
+
+.details-inner {
+    padding-top: 25px;
+}
+
+.region-p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.action-footer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.tour-link {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tour-link:hover {
+    color: #b89644;
+    gap: 18px;
+}
+
+.decorative-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(184, 150, 68, 0.3), transparent);
+}
+
+/* Hover Accent Wash */
+.hover-accent {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+.discovery-item.is-active .hover-accent {
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    .discovery-item {
+        padding: 30px;
+    }
+
+    .title-group h3 {
+        font-size: 1.8rem;
+    }
+}

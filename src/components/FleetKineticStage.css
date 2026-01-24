@@ -1,0 +1,239 @@
+.kinetic-stage-wrap {
+    padding: 15rem 0;
+    background: #050505;
+    position: relative;
+    overflow: hidden;
+}
+
+.stage-label {
+    display: block;
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.8em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.stage-headline {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3.5rem, 8vw, 7.5rem);
+    font-weight: 800;
+    line-height: 0.85;
+    color: #fff;
+    letter-spacing: -0.04em;
+}
+
+.italic-gold {
+    color: #b89644;
+    font-style: italic;
+}
+
+.kinetic-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+    margin-top: 15rem;
+}
+
+.kinetic-slide {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slide-content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 10rem;
+    align-items: center;
+    width: 100%;
+}
+
+.slide-content-grid.rev {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.slide-content-grid.rev .slide-visual-area {
+    order: 2;
+}
+
+.slide-content-grid.rev .slide-text-area {
+    order: 1;
+    text-align: right;
+}
+
+.slide-visual-area {
+    position: relative;
+}
+
+.visual-container {
+    position: relative;
+    border-radius: 4rem;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0a0a0a;
+    z-index: 2;
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+}
+
+.image-parallax-wrap {
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    top: -10%;
+}
+
+.kinetic-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kinetic-img.is-contain {
+    object-fit: contain;
+    padding: 4rem;
+}
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.kinetic-index-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.02);
+    line-height: 1;
+    z-index: 1;
+    font-family: var(--font-serif, serif);
+    pointer-events: none;
+}
+
+.cat-lbl {
+    display: block;
+    color: #b89644;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    margin-bottom: 2rem;
+}
+
+.auto-name {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    line-height: 1;
+}
+
+.auto-desc {
+    color: #777;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 500px;
+    margin-bottom: 4rem;
+}
+
+.rev .auto-desc {
+    margin-left: auto;
+}
+
+.spec-ribbon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.rev .spec-ribbon {
+    justify-content: flex-end;
+}
+
+.spec-pill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 1.5rem;
+    border-radius: 100px;
+}
+
+.spec-pill .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #b89644;
+}
+
+.spec-pill span {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ccc;
+}
+
+.kinetic-cta {
+    padding: 1.5rem 3.5rem;
+    background: transparent;
+    border: 1px solid rgba(184, 150, 68, 0.5);
+    border-radius: 100px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    display: inline-flex;
+    align-items: center;
+    gap: 2.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.kinetic-cta:hover {
+    background: #b89644;
+    color: #000;
+    border-color: #b89644;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1024px) {
+    .kinetic-stack {
+        gap: 15rem;
+    }
+
+    .slide-content-grid,
+    .slide-content-grid.rev {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .slide-content-grid.rev .slide-visual-area,
+    .slide-content-grid.rev .slide-text-area {
+        order: unset;
+        text-align: left;
+    }
+
+    .rev .auto-desc,
+    .rev .spec-ribbon {
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    .kinetic-index-bg {
+        font-size: 15rem;
+    }
+
+    .kinetic-stage-wrap {
+        padding: 10rem 0;
+    }
+}

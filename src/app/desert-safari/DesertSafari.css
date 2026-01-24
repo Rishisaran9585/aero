@@ -1,0 +1,148 @@
+.safari-page {
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Redesigned Inclusions Grid */
+.inclusions-bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 1024px) {
+    .inclusions-bento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .inclusions-bento {
+        grid-template-columns: 1fr;
+    }
+}
+
+.safari-inclusion-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 50px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.safari-inclusion-card:hover {
+    background: rgba(184, 150, 68, 0.05);
+    border-color: rgba(184, 150, 68, 0.3);
+    transform: translateY(-10px);
+}
+
+.safari-inclusion-card .icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(184, 150, 68, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b89644;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+
+.safari-inclusion-card:hover .icon-box {
+    background: #b89644;
+    color: #000;
+    transform: rotate(10deg);
+}
+
+/* Safari Options - Extraordinary Stack */
+.safari-option-card {
+    position: relative;
+    height: 600px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.safari-option-content {
+    position: absolute;
+    inset: 0;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.option-bg-image {
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.safari-option-card:hover .option-bg-image {
+    transform: scale(1.1);
+}
+
+.overlay-dark {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    z-index: 2;
+}
+
+.option-meta {
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.option-heading {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3rem, 7-vw, 5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 0.9;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.option-heading span {
+    color: #b89644;
+    font-style: italic;
+}
+
+/* CTA Styles */
+.safari-cta-wrap {
+    padding: 15rem 0;
+    background: #000;
+    position: relative;
+    text-align: center;
+}
+
+.cta-headline {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 900;
+    line-height: 0.8;
+    color: #fff;
+    margin-bottom: 60px;
+    letter-spacing: -0.05em;
+}
+
+/* Background Texture */
+.grain-tex {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 5;
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+}

@@ -30,15 +30,15 @@ const footerLinks = {
 
 export default function Footer() {
     return (
-        <section className="bg-black pt-10">
+        <section className="bg-transparent pt-10">
             <div className="w-full px-4 md:px-12 relative">
                 {/* Floating Banner */}
-                <div className="relative z-20 -mb-24">
+                <div className="relative z-20 -mb-16">
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
-                        className="bg-[#0A0A0A] rounded-[2.5rem] overflow-hidden relative flex items-center min-h-[280px] md:min-h-[340px] shadow-2xl border border-white/5"
+                        className="card-glass rounded-[2.5rem] overflow-hidden relative flex items-center min-h-[280px] md:min-h-[340px] shadow-2xl"
                     >
                         {/* Text Content */}
                         <div className="relative z-10 w-full md:w-3/5 p-8 md:p-14">
@@ -72,25 +72,25 @@ export default function Footer() {
                 </div>
 
                 {/* Main Footer Section */}
-                <div className="bg-black rounded-[2.5rem] pt-40 pb-10 px-10 md:px-20 mb-6 border-t border-white/[0.02]">
+                <div className="bg-transparent rounded-[2.5rem] pt-32 pb-6 px-10 md:px-20 mb-6 border-t border-white/[0.02]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-12">
                         {/* Left Side: Logo & Info */}
-                        <div className="lg:col-span-6 space-y-10">
-                            <div className="space-y-8">
-                                <div className="flex items-center gap-8 -ml-2">
+                        <div className="lg:col-span-6 space-y-6">
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4 -ml-2">
                                     <Link href="/" className="inline-block">
-                                        <div className="relative h-10 w-36 md:h-14 md:w-48 transition-transform duration-500 hover:scale-105">
+                                        <div className="relative h-8 w-32 md:h-12 md:w-48 transition-transform duration-500 hover:scale-105">
                                             <Image
-                                                src="/assets/logo-new.png"
+                                                src="/assets/att.png"
                                                 alt="Aerosafe Logo"
                                                 fill
                                                 className="object-contain object-left brightness-0 invert"
                                             />
                                         </div>
                                     </Link>
-                                    <div className="w-px h-8 bg-white/20"></div>
-                                    <Link href="https://firstdreamdestinations.com/" target="_blank" className="inline-block ml-8">
-                                        <div className="relative h-10 w-32 md:h-12 md:w-40 transition-transform duration-500 hover:scale-105">
+                                    <div className="w-px h-5 bg-white/20"></div>
+                                    <Link href="https://firstdreamdestinations.com/" target="_blank" className="inline-block">
+                                        <div className="relative h-6 w-24 md:h-10 md:w-40 transition-transform duration-500 hover:scale-105">
                                             <Image
                                                 src="/first-dream-logo.png"
                                                 alt="First Dream Destinations Logo"
@@ -168,7 +168,7 @@ export default function Footer() {
                     {/* Our Offices Section */}
                     <div className="pt-8 pb-8 mb-10">
                         {/* Section Header */}
-                        <div className="flex items-center justify-center gap-4 mb-16">
+                        <div className="flex items-center justify-center gap-4 mb-10">
                             <div className="h-px w-24 md:w-32 bg-white/10"></div>
                             <span className="text-secondary text-[11px] font-bold uppercase tracking-[0.3em]">Our Offices</span>
                             <div className="h-px w-24 md:w-32 bg-white/10"></div>

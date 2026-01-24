@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const navLinks = [
     { name: "Home", href: "/home1" },
-    { name: "Packages", href: "/packages" },
+    { name: "Packages", href: "/package1" },
     { name: "International Tours", href: "/international-tours" },
     { name: "UAE Tours", href: "/uae-tours" },
     { name: "Desert Safari", href: "/desert-safari" },
@@ -46,7 +46,7 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center gap-2 z-50 shrink-0">
                     <div className="relative h-14 w-44 md:h-18 md:w-56 transition-transform hover:scale-105">
                         <Image
-                            src="/assets/logo-new.png"
+                            src="/assets/att.png"
                             alt="Aerosafe Logo"
                             fill
                             className="object-contain brightness-0 invert"
@@ -70,7 +70,7 @@ export default function Navbar() {
                 {/* CTA */}
                 <div className="flex items-center gap-4 z-50 shrink-0">
                     <Button
-                        className="hidden lg:flex rounded-full px-6 bg-white/10 text-white hover:bg-secondary hover:text-black border border-white/20 backdrop-blur-sm transition-all text-xs tracking-widest uppercase font-bold"
+                        className="hidden lg:flex rounded-full px-8 py-6 bg-transparent text-white hover:bg-white hover:text-black border border-white/40 border-2 backdrop-blur-sm transition-all text-xs tracking-widest uppercase font-bold"
                     >
                         Book Now
                     </Button>

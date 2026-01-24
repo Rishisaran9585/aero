@@ -1,6 +1,7 @@
 "use client";
 
 import PageHeader from "@/components/PageHeader";
+import InternalHero from "@/components/InternalHero";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Clock, Star, Shield, Zap } from "lucide-react";
@@ -35,9 +36,9 @@ const extras = [
 export default function PackagesPage() {
     return (
         <div className="bg-black min-h-screen text-white">
-            <PageHeader
+            <InternalHero
                 title="PACKAGES"
-                scriptText="curated holidays"
+                subtitle="Curated Holidays"
                 image="https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?auto=format&fit=crop&w=1920&q=80"
             />
 

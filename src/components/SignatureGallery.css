@@ -1,0 +1,218 @@
+.signature-gallery-section {
+    padding: 120px 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.section-label {
+    display: block;
+    color: #b89644;
+    font-size: 11px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: var(--font-serif, serif);
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+}
+
+.italic-text {
+    font-style: italic;
+    color: #b89644;
+}
+
+/* Mosaic Grid Layout */
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+.gallery-card {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #111;
+    cursor: pointer;
+}
+
+.size-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.size-tall {
+    grid-row: span 2;
+}
+
+.size-wide {
+    grid-column: span 2;
+}
+
+.size-medium {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .mosaic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 300px;
+    }
+}
+
+@media (max-width: 640px) {
+    .mosaic-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 400px;
+    }
+
+    .size-large,
+    .size-wide,
+    .size-tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+.image-container {
+    position: absolute;
+    inset: 0;
+}
+
+.gallery-image {
+    object-fit: cover;
+    transition: transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.gallery-card:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+.overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.2) 0%,
+            transparent 40%,
+            rgba(0, 0, 0, 0.1) 60%,
+            rgba(0, 0, 0, 0.9) 100%);
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-card:hover .overlay-gradient {
+    opacity: 1;
+}
+
+/* Card Elements */
+.card-top {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.tag-badge {
+    background: rgba(184, 150, 68, 0.9);
+    color: #000;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rating-pill {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    z-index: 10;
+}
+
+.content-reveal {
+    transform: translateY(20px);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.gallery-card:hover .content-reveal {
+    transform: translateY(0);
+}
+
+.dest-name {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.price-text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+.explore-btn {
+    background: #b89644;
+    color: #000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.gallery-card:hover .explore-btn {
+    opacity: 1;
+}
+
+/* Glassy Border Reveal */
+.gallery-card::after {
+    content: '';
+    position: absolute;
+    inset: 15px;
+    border: 1px solid rgba(184, 150, 68, 0.3);
+    border-radius: 20px;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+}
+
+.gallery-card:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
