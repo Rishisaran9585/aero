@@ -1,8 +1,11 @@
 .aerosafe-editorial-section {
-    padding: 100px 0 60px 0;
+    padding: 20px 0;
     background-color: #000;
     position: relative;
     overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .editorial-header {
@@ -21,16 +24,17 @@
 }
 
 .editorial-main-title {
-    font-size: 6vw;
-    line-height: 0.9;
+    font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+    line-height: 1;
     font-weight: 900;
     color: #fff;
-    letter-spacing: -0.04em;
+    margin-bottom: 0;
+    letter-spacing: -0.02em;
 }
 
 @media (max-width: 768px) {
     .editorial-main-title {
-        font-size: 4rem;
+        font-size: 2.8rem;
     }
 }
 
@@ -44,23 +48,32 @@
 .editorial-composition {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 30px;
     align-items: flex-start;
+    margin-top: 15px;
 }
 
 .composition-main {
-    flex: 1.2;
-    min-width: 400px;
+    flex: 1.1;
+    min-width: 380px;
     position: relative;
+}
+
+@media (max-width: 1024px) {
+    .composition-main {
+        margin-top: 20px;
+        min-width: 100%;
+    }
 }
 
 .main-image-wrapper {
     width: 100%;
-    aspect-ratio: 4/5;
-    border-radius: 4rem;
+    aspect-ratio: 16/10;
+    border-radius: 1.5rem;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    max-height: 45vh;
 }
 
 .image-overlay {
@@ -83,17 +96,30 @@
 
 .composition-secondary {
     flex: 1;
-    min-width: 350px;
-    padding-top: 100px;
+    min-width: 380px;
+    padding-left: 0;
+}
+
+@media (max-width: 1024px) {
+    .composition-secondary {
+        margin-top: 0;
+        padding-left: 0;
+        min-width: 100%;
+    }
 }
 
 .secondary-image-wrapper {
     width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 50% 50% 50% 50%;
+    max-width: 380px;
+    aspect-ratio: 4/5;
+    border-radius: 1.5rem;
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    margin-left: auto;
+    /* Push to right or keep centered? Centered relative to column is fine */
+    margin-right: auto;
 }
 
 /* Flight Path */
@@ -107,8 +133,19 @@
 }
 
 .unified-plane-asset {
-    width: 500px;
-    opacity: 0.6;
+    width: 350px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .editorial-flight-path {
+        top: 20%;
+    }
+
+    .unified-plane-asset {
+        width: 180px;
+        opacity: 0.9;
+    }
 }
 
 /* Stats Row */
@@ -139,33 +176,30 @@
 .editorial-btn {
     background: #eab308;
     color: #000;
-    padding: 24px 48px;
+    padding: 16px 32px;
     border-radius: 2rem;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 12px;
+    letter-spacing: 0.05em;
+    font-size: 11px;
     display: flex;
     align-items: center;
-    box-shadow: 0 20px 40px rgba(234, 179, 8, 0.2);
+    box-shadow: 0 10px 20px rgba(234, 179, 8, 0.15);
 }
 
 /* Mobile Adjustments */
 @media (max-width: 1024px) {
     .editorial-composition {
         flex-direction: column;
+        gap: 40px;
     }
 
-    .floating-info-card {
-        position: relative;
-        bottom: 0;
-        right: 0;
-        margin-top: -60px;
-        margin-left: 40px;
-        width: calc(100% - 40px);
-    }
-
+    .composition-main,
     .composition-secondary {
-        padding-top: 40px;
+        min-width: 100%;
+    }
+
+    .main-image-wrapper {
+        aspect-ratio: 16/9;
     }
 }

@@ -3,14 +3,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Zap, Shield, Star, ArrowRight } from "lucide-react";
 
 export default function FleetExcellence() {
     return (
-        <section className="py-24 bg-black text-white overflow-hidden">
+        <section className="pt-10 pb-20 bg-black text-white overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center gap-20">
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                     {/* VISUAL SIDE - The Showroom Stage */}
                     <motion.div
@@ -18,9 +19,9 @@ export default function FleetExcellence() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         viewport={{ once: true }}
-                        className="lg:w-[55%] relative"
+                        className="lg:w-[50%] relative"
                     >
-                        <div className="relative aspect-[16/11] rounded-[3.5rem] overflow-hidden bg-[#0a0a0a] border border-white/5 shadow-2xl group flex items-center justify-center">
+                        <div className="relative aspect-[16/10] rounded-[3rem] overflow-hidden bg-[#0a0a0a] border border-white/5 shadow-2xl group flex items-center justify-center">
 
                             {/* Inner Stage Glow */}
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
@@ -54,29 +55,31 @@ export default function FleetExcellence() {
                     </motion.div>
 
                     {/* CONTENT SIDE */}
-                    <div className="lg:w-[45%]">
+                    <div className="lg:w-[50%]">
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                             viewport={{ once: true }}
                         >
-                            <span className="text-secondary text-xs font-black uppercase tracking-[0.6em] mb-6 block">Fleet Excellence</span>
-                            <h2 className="text-5xl md:text-7xl font-serif font-bold text-white mb-10 leading-[0.9] tracking-tighter">
+                            <span className="text-secondary text-xs font-black uppercase tracking-[0.6em] mb-4 block">Fleet Excellence</span>
+                            <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-[0.9] tracking-tighter">
                                 Any Group Size, <br />
                                 <span className="text-white italic">Any Distance.</span>
                             </h2>
-                            <p className="text-gray-400 text-lg font-light leading-relaxed mb-12 max-w-xl border-l border-white/10 pl-8">
-                                Our diverse range of vehicles, from luxury sedans to 50-seater coaches, ensures we have the perfect solution for every requirement. Every vehicle is maintained to the highest standards.
+                            <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-8 border-l border-white/10 pl-6 lg:pl-8">
+                                Our diverse range of vehicles, from luxury sedans to 50-seater coaches, ensures we have the perfect solution for every requirement.
                             </p>
 
-                            <Button className="bg-secondary text-black hover:bg-white px-12 py-8 rounded-2xl font-black text-xs uppercase tracking-widest transition-all group flex items-center gap-3 mb-20 shadow-[0_15px_30px_rgba(234,179,8,0.2)]">
-                                View All Vehicles
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                            </Button>
+                            <Link href="/fleet">
+                                <Button className="bg-secondary text-black hover:bg-white px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-widest transition-all group flex items-center gap-3 mb-8 lg:mb-12 shadow-[0_15px_30px_rgba(234,179,8,0.2)]">
+                                    View All Vehicles
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                                </Button>
+                            </Link>
 
                             {/* Precise Highlights Row */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
                                 {[
                                     { icon: Zap, title: "Fast & Precise", desc: "Always on time, every time." },
                                     { icon: Shield, title: "Ultra Secure", desc: "Highest safety standards." },

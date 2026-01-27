@@ -26,7 +26,7 @@ export default function PremiumTestimonials() {
     const [testimonialIndex, setTestimonialIndex] = useState(0);
 
     return (
-        <section className="py-24 relative overflow-hidden bg-black">
+        <section className="pt-20 pb-16 relative overflow-hidden bg-black">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-black pointer-events-none" />
             <div className="absolute top-10 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-[150px] pointer-events-none" />
             <div className="absolute bottom-10 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[150px] pointer-events-none" />
@@ -40,7 +40,7 @@ export default function PremiumTestimonials() {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="text-secondary text-xs font-bold uppercase tracking-[0.4em] mb-4 block">Client Voices</span>
-                        <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
                             What Our <br />
                             <span className="text-secondary">Clients Say</span>
                         </h2>
@@ -77,7 +77,7 @@ export default function PremiumTestimonials() {
                                 className="group relative"
                             >
                                 {/* Card Container */}
-                                <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 group-hover:border-secondary/50 rounded-[2rem] p-12 transition-all duration-500">
+                                <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 group-hover:border-secondary/50 rounded-[2rem] p-8 md:p-12 transition-all duration-500">
                                     {/* Quote Icon */}
                                     <div className="mb-8">
                                         <div className="inline-flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-secondary/30 to-secondary/10 border border-secondary/50">

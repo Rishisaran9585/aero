@@ -134,6 +134,54 @@ export const uaePackages: Package[] = [
         rating: 4.9,
         inclusions: ["Pick & Drop", "Snorkeling Gear", "Lunch"],
         category: 'uae'
+    },
+    {
+        slug: "yacht-charter",
+        title: "Luxury Yacht Charter",
+        duration: "3 Hours",
+        image: "https://images.unsplash.com/photo-1569263979104-865ab7dd8d36?q=80&w=800&auto=format&fit=crop",
+        description: "Cruise along the Dubai coastline in style aboard a private luxury yacht.",
+        highlights: ["Atlantis View", "Burj Al Arab", "Swimming"],
+        price: "AED 1,200",
+        rating: 5.0,
+        inclusions: ["Crew", "Soft Drinks", "Towels"],
+        category: 'uae'
+    },
+    {
+        slug: "hatta-safari",
+        title: "Hatta Mountain Safari",
+        duration: "Full Day",
+        image: "https://images.unsplash.com/photo-1549480376-7ec679fdbe82?q=80&w=800&auto=format&fit=crop",
+        description: "Discover the rugged beauty of Hatta with kayaking and mountain heritage village tour.",
+        highlights: ["Hatta Dam", "Heritage Village", "Kayaking"],
+        price: "AED 400",
+        rating: 4.7,
+        inclusions: ["4x4 Transport", "Lunch", "Guide"],
+        category: 'uae'
+    },
+    {
+        slug: "museum-future",
+        title: "Museum of the Future",
+        duration: "Half Day",
+        image: "https://images.unsplash.com/photo-1650352516766-3d297594d2c2?q=80&w=800&auto=format&fit=crop",
+        description: "Journey to 2071 in the most beautiful building on Earth.",
+        highlights: ["VIP Entry", "Observation Deck", "Robotics Lab"],
+        price: "AED 250",
+        rating: 4.8,
+        inclusions: ["Priority Tickets", "Transfers", "Digital Guide"],
+        category: 'uae'
+    },
+    {
+        slug: "helicopter-tour",
+        title: "Iconic Helicopter Tour",
+        duration: "17 Mins",
+        image: "https://images.unsplash.com/photo-1596707439366-419b6703b41d?q=80&w=800&auto=format&fit=crop",
+        description: "Witness the Palm Jumeirah and World Islands from a bird's eye view.",
+        highlights: ["Palm Jumeirah", "World Islands", "Burj Khalifa"],
+        price: "AED 850",
+        rating: 4.9,
+        inclusions: ["Flight", "Safety Briefing", "Lounge Access"],
+        category: 'uae'
     }
 ];
 

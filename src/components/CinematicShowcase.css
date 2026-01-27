@@ -1,5 +1,5 @@
 .cinematic-showcase-section {
-    padding: 120px 0;
+    padding: 100px 0;
     background: #000;
     perspective: 2000px;
 }
@@ -44,8 +44,8 @@
 
 .cinematic-card {
     position: relative;
-    height: 420px;
-    border-radius: 35px;
+    height: 360px;
+    border-radius: 25px;
     background: #111;
     overflow: visible;
     /* Important for 3D breakout */

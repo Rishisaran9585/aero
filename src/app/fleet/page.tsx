@@ -278,16 +278,16 @@ export default function FleetPage() {
         <div className="dream-fleet-container selection:bg-secondary selection:text-black">
 
             {/* 1. HERO SECTION - PACKAGE1 STYLE */}
-            <div className="fleet-hero-wrap">
+            <div className="snap-start">
                 <InternalHero
                     title="FLEET"
                     subtitle="Luxury Comfort"
-                    image="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1920&auto=format&fit=crop"
+                    image="/assets/fleet1.jpg"
                 />
             </div>
 
             {/* 2. FLEET DISTINCTION SECTION - LUXURY HIGHLIGHT */}
-            <section className="pt-0 pb-4 relative overflow-hidden bg-[#050505]">
+            <section className="py-16 md:py-24 relative overflow-hidden bg-[#050505]">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col lg:flex-row items-center gap-24">
                         {/* Visual Side */}
@@ -298,7 +298,7 @@ export default function FleetPage() {
                             viewport={{ once: true }}
                             className="lg:w-1/2 relative"
                         >
-                            <div className="relative aspect-[4/3] rounded-[4rem] overflow-hidden border border-white/5 shadow-2xl group">
+                            <div className="relative aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl group">
                                 <Image
                                     src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop"
                                     alt="Luxury Fleet Movement"
@@ -333,34 +333,34 @@ export default function FleetPage() {
                                 transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
                             >
-                                <span className="text-secondary text-xs font-bold uppercase tracking-[0.8em] mb-8 block">Distinction in Motion</span>
-                                <h2 className="text-5xl md:text-7xl font-serif font-bold text-white mb-10 leading-[0.9] tracking-tighter">
+                                <span className="text-secondary text-[10px] font-bold uppercase tracking-[0.6em] mb-4 block">Distinction in Motion</span>
+                                <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-[0.9] tracking-tighter">
                                     Driven by Comfort. <br />
                                     <span className="text-white italic">Powered by Trust.</span>
                                 </h2>
-                                <p className="text-gray-400 text-xl font-light leading-relaxed mb-12 max-w-xl border-l border-white/10 pl-10">
-                                    At the heart of our service is a commitment to making every journey seamless, safe, and superior. We don't just provide transportation; we curate the premium experience you deserve.
+                                <p className="text-gray-400 text-lg font-light leading-relaxed mb-8 max-w-xl border-l border-white/10 pl-8">
+                                    At the heart of our service is a commitment to making every journey seamless, safe, and superior. We curate the premium experience you deserve.
                                 </p>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div className="grid grid-cols-2 gap-8">
                                     {[
-                                        { icon: ShieldCheck, title: "Utmost Security", desc: "Rigorous safety protocols for every mile." },
-                                        { icon: Users, title: "Elite Chauffeurs", desc: "Professionals dedicated to your comfort." },
-                                        { icon: Zap, title: "Swift Dispatch", desc: "Punctuality is our non-negotiable vow." },
-                                        { icon: Maximize2, title: "Diverse Fleet", desc: "From sedans to 50-seater coaches." }
+                                        { icon: ShieldCheck, title: "Utmost Security", desc: "Rigorous safety." },
+                                        { icon: Users, title: "Elite Chauffeurs", desc: "Professionals." },
+                                        { icon: Zap, title: "Swift Dispatch", desc: "Punctuality." },
+                                        { icon: Maximize2, title: "Diverse Fleet", desc: "Complete range." }
                                     ].map((item, i) => (
                                         <motion.div
                                             key={i}
-                                            className="flex gap-6 group"
-                                            whileHover={{ x: 10 }}
+                                            className="flex gap-4 group"
+                                            whileHover={{ x: 5 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <div className="h-12 w-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-secondary/50 transition-all duration-500 shadow-xl">
-                                                <item.icon className="h-6 w-6 text-secondary group-hover:scale-110 transition-transform" />
+                                            <div className="h-10 w-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-secondary/50 transition-all shadow-xl">
+                                                <item.icon className="h-5 w-5 text-secondary" />
                                             </div>
                                             <div>
-                                                <h5 className="text-white font-bold text-sm mb-2 group-hover:text-secondary transition-colors">{item.title}</h5>
-                                                <p className="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest font-bold opacity-60 group-hover:opacity-100 transition-opacity">{item.desc}</p>
+                                                <h5 className="text-white font-bold text-xs mb-1 group-hover:text-secondary">{item.title}</h5>
+                                                <p className="text-gray-500 text-[8px] uppercase tracking-widest font-bold opacity-60">{item.desc}</p>
                                             </div>
                                         </motion.div>
                                     ))}
@@ -385,7 +385,7 @@ export default function FleetPage() {
             </section>
 
             {/* Premium Vehicle Carousel Section */}
-            <section className="pt-0 pb-4 relative overflow-hidden bg-[#050505]">
+            <section className="py-8 md:py-12 relative overflow-hidden bg-[#050505]">
                 <div className="container mx-auto px-4 relative z-20">
                     <div className="text-center mb-2">
                         <motion.span
@@ -412,18 +412,18 @@ export default function FleetPage() {
             </section>
 
             {/* 4. DRIVEN BY COMFORT - REFINED LAYOUT */}
-            <section className="comfort-section bg-[#050505] relative overflow-hidden pt-0 pb-0">
+            <section className="comfort-section bg-[#050505] relative overflow-hidden py-4 md:py-8">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row items-end gap-16 lg:gap-32">
                         {/* Staggered Image Collage Stage */}
-                        <div className="image-collage-stage flex gap-6 lg:w-1/2">
+                        <div className="image-collage-stage flex gap-4 lg:w-1/2">
                             {/* Left Column */}
-                            <div className="collage-col flex flex-col gap-6 flex-1">
+                            <div className="collage-col flex flex-col gap-4 flex-1">
                                 <motion.div
                                     initial={{ opacity: 0, y: 24 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    className="collage-item relative rounded-[2.5rem] overflow-hidden aspect-[1/1.2] bg-zinc-900 border border-white/5"
+                                    className="collage-item relative rounded-[2rem] overflow-hidden aspect-square bg-zinc-900 border border-white/5"
                                 >
                                     <Image
                                         src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=600"
@@ -437,7 +437,7 @@ export default function FleetPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.1 }}
                                     viewport={{ once: true }}
-                                    className="collage-item relative rounded-[2.5rem] overflow-hidden aspect-[1.4/1] bg-zinc-900 border border-white/5"
+                                    className="collage-item relative rounded-[2rem] overflow-hidden aspect-[4/3] bg-zinc-900 border border-white/5"
                                 >
                                     <Image
                                         src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?q=80&w=1200&auto=format&fit=crop"
@@ -447,13 +447,13 @@ export default function FleetPage() {
                                 </motion.div>
                             </div>
                             {/* Right Column (Staggered Down) */}
-                            <div className="collage-col flex flex-col gap-6 flex-1 mt-12 lg:mt-24">
+                            <div className="collage-col flex flex-col gap-4 flex-1 mt-4 lg:mt-6">
                                 <motion.div
                                     initial={{ opacity: 0, y: 24 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className="collage-item relative rounded-[2.5rem] overflow-hidden aspect-[1/1.5] bg-zinc-900 border border-white/5"
+                                    className="collage-item relative rounded-[2rem] overflow-hidden aspect-[3/4] bg-zinc-900 border border-white/5"
                                 >
                                     <Image
                                         src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1200&auto=format&fit=crop"
@@ -467,7 +467,7 @@ export default function FleetPage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3 }}
                                     viewport={{ once: true }}
-                                    className="collage-item relative rounded-[2.5rem] overflow-hidden aspect-[1.4/1] bg-zinc-900 border border-white/5"
+                                    className="collage-item relative rounded-[2rem] overflow-hidden aspect-[4/3] bg-zinc-900 border border-white/5"
                                 >
                                     <Image
                                         src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1200"
@@ -486,28 +486,28 @@ export default function FleetPage() {
                             viewport={{ once: true }}
                             className="lg:w-1/2"
                         >
-                            <span className="text-secondary font-black tracking-[0.6em] text-[11px] uppercase mb-8 block">Elite Advantage</span>
-                            <h2 className="text-5xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1] tracking-tighter">
+                            <span className="text-secondary font-black tracking-[0.5em] text-[10px] uppercase mb-4 block">Elite Advantage</span>
+                            <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-[1] tracking-tighter">
                                 Driven by Comfort. <br />
-                                <span className="text-white italic opacity-80 underline decoration-secondary decoration-4 underline-offset-[12px]">Powered by Trust.</span>
+                                <span className="text-white italic opacity-80 underline decoration-secondary decoration-2 underline-offset-[8px]">Powered by Trust.</span>
                             </h2>
-                            <p className="text-gray-400 text-xl font-light leading-relaxed mb-16 max-w-lg border-l-2 border-secondary/20 pl-10">
-                                At the heart of our service is a commitment to making every journey seamless, safe and superior. We bridge the gap between simple transportation and immersive storytelling.
+                            <p className="text-gray-400 text-lg font-light leading-relaxed mb-10 max-w-lg border-l-2 border-secondary/20 pl-8">
+                                At the heart of our service is a commitment to making every journey superior. We bridge the gap between simple transportation and immersive storytelling.
                             </p>
 
-                            <div className="flex flex-col gap-12">
+                            <div className="flex flex-col gap-6">
                                 {[
-                                    { icon: ShieldCheck, title: "Premium Service Priority", desc: "Enjoy a smooth, fast and effortless journey." },
-                                    { icon: Users, title: "Client First Philosophy", desc: "Our support is designed to meet your every need." },
-                                    { icon: Zap, title: "Safety as Standard", desc: "Highest tier safety protocols for every mile." }
+                                    { icon: ShieldCheck, title: "Premium Service", desc: "Enjoy a smooth and effortless journey." },
+                                    { icon: Users, title: "Client First", desc: "Support designed to meet your every need." },
+                                    { icon: Zap, title: "Safety Standard", desc: "Highest tier safety protocols." }
                                 ].map((feat, i) => (
-                                    <div key={i} className="flex gap-8 group">
-                                        <div className="h-16 w-16 min-w-[64px] rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-secondary/40 transition-all duration-500 shadow-2xl">
-                                            <feat.icon size={28} className="text-secondary" />
+                                    <div key={i} className="flex gap-6 group">
+                                        <div className="h-12 w-12 min-w-[48px] rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-secondary/40 transition-all shadow-2xl">
+                                            <feat.icon size={22} className="text-secondary" />
                                         </div>
                                         <div>
-                                            <h4 className="text-white font-bold text-xl mb-2">{feat.title}</h4>
-                                            <p className="text-gray-500 text-base leading-relaxed max-w-sm">{feat.desc}</p>
+                                            <h4 className="text-white font-bold text-lg mb-1">{feat.title}</h4>
+                                            <p className="text-gray-500 text-sm leading-relaxed max-w-sm">{feat.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -518,7 +518,7 @@ export default function FleetPage() {
             </section>
 
             {/* 5. POPULAR CARS - PREMIUM REDESIGN */}
-            <section className="popular-section pt-0 pb-2 bg-[#050505]">
+            <section className="popular-section py-8 md:py-12 bg-[#050505]">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-2 gap-8">
                         <div>
@@ -609,13 +609,13 @@ export default function FleetPage() {
             </section>
 
             {/* 6. HOW IT WORKS - FRESH REDESIGN */}
-            <section className="pt-0 pb-4 relative overflow-hidden bg-[#050505]">
+            <section className="py-8 md:py-12 relative overflow-hidden bg-[#050505]">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-2">
+                    <div className="text-center mb-8/12">
                         <motion.span
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="text-secondary text-[11px] font-black uppercase tracking-[0.63em] mb-4 block"
+                            className="text-secondary text-[10px] font-black uppercase tracking-[0.5em] mb-3 block"
                         >
                             THE PROCESS
                         </motion.span>
@@ -623,7 +623,7 @@ export default function FleetPage() {
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-6xl md:text-8xl font-serif font-bold text-white tracking-tighter"
+                            className="text-5xl md:text-7xl font-serif font-bold text-white tracking-tighter"
                         >
                             How It Works
                         </motion.h2>
@@ -631,7 +631,7 @@ export default function FleetPage() {
 
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
                         {/* Process Left */}
-                        <div className="flex flex-col gap-12 lg:w-1/4">
+                        <div className="flex flex-col gap-8 lg:w-1/4">
                             {[
                                 { icon: ShieldCheck, title: "Select Service", desc: "Choose from our wide range of tailored luxury services." },
                                 { icon: MapPin, title: "Timing & Detail", desc: "Pick your preferred timing and pickup point with ease." },
@@ -643,14 +643,14 @@ export default function FleetPage() {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: i * 0.15 }}
                                     viewport={{ once: true }}
-                                    className="flex flex-col gap-6 lg:items-end lg:text-right group"
+                                    className="flex flex-col gap-4 lg:items-end lg:text-right group"
                                 >
-                                    <div className="h-14 w-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary shadow-xl group-hover:border-secondary/40 transition-all duration-500">
-                                        <step.icon size={26} />
+                                    <div className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary shadow-xl group-hover:border-secondary/40 transition-all duration-500">
+                                        <step.icon size={20} />
                                     </div>
                                     <div>
-                                        <h4 className="text-white text-xl font-bold mb-2 uppercase tracking-wider">{step.title}</h4>
-                                        <p className="text-gray-500 text-sm font-light leading-relaxed max-w-xs">{step.desc}</p>
+                                        <h4 className="text-white text-lg font-bold mb-1 uppercase tracking-wider">{step.title}</h4>
+                                        <p className="text-gray-500 text-xs font-light leading-relaxed max-w-xs">{step.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -667,7 +667,7 @@ export default function FleetPage() {
                             >
                                 <Image
                                     src="/assets/kia.png"
-                                    width={700} height={400}
+                                    width={550} height={320}
                                     alt="Process Display"
                                     className="object-contain drop-shadow-[0_40px_100px_rgba(0,0,0,0.9)]"
                                 />
@@ -678,11 +678,11 @@ export default function FleetPage() {
                         </div>
 
                         {/* Process Right */}
-                        <div className="flex flex-col gap-12 lg:w-1/4">
+                        <div className="flex flex-col gap-8 lg:w-1/4">
                             {[
                                 { icon: Zap, title: "Add Extras", desc: "Enhance your journey with our premium luxury addons." },
                                 { icon: Phone, title: "Information", desc: "Provide minimal details to complete your profile safely." },
-                                { icon: ShieldCheck, title: "Confirm", desc: "Review and finalize your reservation in mere seconds." }
+                                { icon: ShieldCheck, title: "Confirm", desc: "Secure your booking with instant confirmation." }
                             ].map((step, i) => (
                                 <motion.div
                                     key={i}
@@ -690,14 +690,14 @@ export default function FleetPage() {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: (i + 3) * 0.15 }}
                                     viewport={{ once: true }}
-                                    className="flex flex-col gap-6 group"
+                                    className="flex flex-col gap-4 lg:items-start lg:text-left group"
                                 >
-                                    <div className="h-14 w-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary shadow-xl group-hover:border-secondary/40 transition-all duration-500">
-                                        <step.icon size={26} />
+                                    <div className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-secondary shadow-xl group-hover:border-secondary/40 transition-all duration-500">
+                                        <step.icon size={20} />
                                     </div>
                                     <div>
-                                        <h4 className="text-white text-xl font-bold mb-2 uppercase tracking-wider">{step.title}</h4>
-                                        <p className="text-gray-500 text-sm font-light leading-relaxed max-w-xs">{step.desc}</p>
+                                        <h4 className="text-white text-lg font-bold mb-1 uppercase tracking-wider">{step.title}</h4>
+                                        <p className="text-gray-500 text-xs font-light leading-relaxed max-w-xs">{step.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}

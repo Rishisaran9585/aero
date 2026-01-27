@@ -14,9 +14,9 @@ export default function AerosafeAdvantage() {
     });
 
     // Parallax Transforms
-    const y1 = useTransform(scrollYProgress, [0, 1], [0, -200]);
+    const y1 = useTransform(scrollYProgress, [0, 1], [0, -20]);
     const y2 = useTransform(scrollYProgress, [0, 1], [0, 200]);
-    const y3 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+    const y3 = useTransform(scrollYProgress, [0, 1], [0, -50]);
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 15]);
     const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
 
@@ -25,7 +25,7 @@ export default function AerosafeAdvantage() {
             <div className="container mx-auto px-4 relative z-10">
 
                 {/* 1. CINEMATIC HEADER BLOCK */}
-                <div className="editorial-header mb-32">
+                <div className="editorial-header mb-4 md:mb-6">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -40,10 +40,10 @@ export default function AerosafeAdvantage() {
                     </motion.div>
                 </div>
 
-                {/* 2. ASYMMETRICAL COMPOSITION */}
+                {/* 2. SIDE-BY-SIDE COMPOSITION */}
                 <div className="editorial-composition">
 
-                    {/* Primary Focus Image Cluster */}
+                    {/* Left Side: Image */}
                     <div className="composition-main">
                         <motion.div style={{ y: y1 }} className="main-image-wrapper">
                             <Image
@@ -56,33 +56,47 @@ export default function AerosafeAdvantage() {
                         </motion.div>
                     </div>
 
-                    {/* Secondary Narrative Cluster */}
+                    {/* Right Side: Narrative Text */}
                     <div className="composition-secondary">
-                        <div className="narrative-text mb-20">
+                        <div className="narrative-text">
                             <motion.h3
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                className="text-4xl md:text-5xl font-serif font-bold mb-8 italic"
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="text-2xl md:text-3xl font-serif font-bold mb-4 italic drop-shadow-2xl leading-tight text-white"
                             >
-                                "Where strategy meets <br /> <span className="text-secondary">serendipity.</span>"
+                                "Where strategy meets <br /> <span className="text-secondary drop-shadow-md">serendipity.</span>"
                             </motion.h3>
-                            <p className="text-gray-500 text-lg font-light leading-relaxed max-w-sm">
-                                We are more than an agency. We are curators of time. Every itinerary is a masterpiece of logistics and luxury.
+                            <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-6">
+                                We are more than an agency. We are curators of time. Every itinerary is a masterpiece of logistics and luxury, tailored to your exact specifications.
                             </p>
-                        </div>
 
-                        <motion.div style={{ y: y3 }} className="secondary-image-wrapper">
-                            <Image
-                                src="https://images.unsplash.com/photo-1578922746465-3a80a228f223?q=80&w=1200&auto=format&fit=crop"
-                                alt="Elite Experience"
-                                fill
-                                className="object-cover"
-                            />
-                            {/* Embedded Badge */}
-                            <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-secondary text-black flex items-center justify-center text-center p-4 font-black uppercase text-[8px] tracking-widest rotate-12 border-8 border-black">
-                                Verified <br /> Excellence
+                            {/* Features List */}
+                            <div className="grid grid-cols-1 gap-4 mb-6">
+                                <div className="flex items-start gap-3 group">
+                                    <div className="p-2 bg-white/5 rounded-xl border border-white/10 group-hover:bg-secondary/20 transition-colors">
+                                        <Globe className="w-5 h-5 text-secondary" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white font-bold text-lg mb-1">Global Reach</h4>
+                                        <p className="text-gray-500 text-xs leading-relaxed max-w-sm">Access to over 2000+ private terminals and exclusive resorts worldwide.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3 group">
+                                    <div className="p-2 bg-white/5 rounded-xl border border-white/10 group-hover:bg-secondary/20 transition-colors">
+                                        <Compass className="w-5 h-5 text-secondary" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-white font-bold text-lg mb-1">Curated Journeys</h4>
+                                        <p className="text-gray-500 text-xs leading-relaxed max-w-sm">Bespoke itineraries designed around your specific passions and timeline.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </motion.div>
+
+                            <button className="editorial-btn hover:scale-105 transition-transform">
+                                Discover More <ArrowUpRight className="ml-2 w-5 h-5" />
+                            </button>
+                        </div>
                     </div>
                 </div>
 

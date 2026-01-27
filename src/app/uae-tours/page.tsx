@@ -22,22 +22,26 @@ import CinematicShowcase from "@/components/CinematicShowcase";
 import RegionalDiscovery from "@/components/RegionalDiscovery";
 import LuxeDiscovery from "@/components/LuxeDiscovery";
 
+import EmiratesGuide from "@/components/EmiratesGuide";
+
 export default function UAEToursPage() {
     return (
         <div className="bg-black min-h-screen text-white selection:bg-secondary selection:text-black">
-            <InternalHero
-                title="UAE TOURS"
-                subtitle="Sightseeing & Traditions"
-                image="/assets/uae_luxury_hero.png"
-            />
+            <div className="snap-start">
+                <InternalHero
+                    title="UAE TOURS"
+                    subtitle="Sightseeing & Traditions"
+                    image="/assets/uae_luxury_hero.png"
+                />
+            </div>
 
             {/* 2. DUBAI CITY TOUR */}
-            <section className="py-32 container mx-auto px-4">
-                <div className="max-w-6xl mx-auto space-y-16">
+            <section className="py-8 md:py-12 container mx-auto px-4">
+                <div className="max-w-7xl mx-auto space-y-8">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-white/10 pb-8">
                         <div>
                             <span className="text-secondary font-black tracking-[0.4em] uppercase text-[10px] mb-2 block">Iconic Metropolis</span>
-                            <h2 className="text-4xl md:text-6xl font-serif font-bold tracking-tighter">Dubai City <span className="text-secondary italic">Tour.</span></h2>
+                            <h2 className="text-5xl md:text-7xl font-serif font-bold leading-none tracking-tighter uppercase">Dubai City <br /> <span className="text-secondary italic font-serif">Tour.</span></h2>
                         </div>
                         <div className="flex items-center gap-3 text-white/40 text-xs font-bold uppercase tracking-widest">
                             <MapPin size={16} className="text-secondary" /> 6 Signature Landmarks
@@ -47,18 +51,18 @@ export default function UAEToursPage() {
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                         {[
                             { name: "Burj Khalifa", img: "https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?q=80&w=800&auto=format&fit=crop", icon: Building2 },
-                            { name: "Dubai Marina", img: "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=800&auto=format&fit=crop", icon: Waves },
-                            { name: "Palm Jumeirah", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop", icon: Palmtree },
-                            { name: "Jumeirah Mosque", img: "https://images.unsplash.com/photo-1546412414-8035e1776c9a?q=80&w=800&auto=format&fit=crop", icon: Gem },
-                            { name: "Gold Souk", img: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop", icon: Zap },
-                            { name: "Al Fahidi Heritage", img: "https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=800&auto=format&fit=crop", icon: Compass }
+                            { name: "Dubai Marina", img: "/assets/marina.jpg", icon: Waves },
+                            { name: "Palm Jumeirah", img: "/assets/palm.jpg", icon: Palmtree },
+                            { name: "Jumeirah Mosque", img: "/assets/Jumeirah.jpg", icon: Gem },
+                            { name: "Gold Souk", img: "/assets/gold.jpg", icon: Zap },
+                            { name: "Al Fahidi Heritage", img: "/assets/fahidi.jpg", icon: Compass }
                         ].map((item, i) => (
                             <motion.div
                                 key={item.name}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.05 }}
-                                className="group relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-white/5 border border-white/5 shadow-xl"
+                                className="group relative aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden bg-white/5 border border-white/5 shadow-xl"
                             >
                                 <Image src={item.img} alt={item.name} fill className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -73,38 +77,38 @@ export default function UAEToursPage() {
             </section>
 
             {/* 3. ABU DHABI CITY TOUR */}
-            <section className="py-32 bg-white/[0.01] border-y border-white/5">
+            <section className="pt-4 md:pt-8 pb-16 md:pb-24 bg-white/[0.01] border-y border-white/5">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-6xl mx-auto space-y-16">
-                        <div className="flex flex-col md:flex-row-reverse justify-between items-end gap-6 border-b border-white/10 pb-8 text-right">
+                    <div className="max-w-7xl mx-auto space-y-6">
+                        <div className="flex flex-col md:flex-row-reverse justify-between items-end gap-4 border-b border-white/10 pb-6 text-right">
                             <div>
-                                <span className="text-secondary font-black tracking-[0.4em] uppercase text-[10px] mb-2 block">The Royal Capital</span>
-                                <h2 className="text-4xl md:text-6xl font-serif font-bold tracking-tighter">Abu Dhabi <span className="text-secondary italic">Legacy.</span></h2>
+                                <span className="text-secondary font-black tracking-[0.4em] uppercase text-[10px] mb-1 block">The Royal Capital</span>
+                                <h2 className="text-4xl md:text-6xl font-serif font-bold leading-none tracking-tighter uppercase">Abu Dhabi <br /> <span className="text-secondary italic font-serif">Legacy.</span></h2>
                             </div>
-                            <div className="flex items-center gap-3 text-white/40 text-xs font-bold uppercase tracking-widest">
-                                <Sparkles size={16} className="text-secondary" /> 4 Imperial Destinations
+                            <div className="flex items-center gap-3 text-white/40 text-[10px] font-bold uppercase tracking-widest">
+                                <Sparkles size={14} className="text-secondary" /> 4 Imperial Destinations
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                             {[
-                                { name: "Grand Mosque", img: "https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=800&auto=format&fit=crop", desc: "A marble masterpiece of Islamic architecture." },
-                                { name: "Emirates Palace", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?q=80&w=800&auto=format&fit=crop", desc: "The pinnacle of Arabian hospitality." },
-                                { name: "Yas Island", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop", desc: "The heart of high-speed entertainment." },
-                                { name: "Heritage Village", img: "/assets/heritage.png", desc: "A portal into the UAE's Bedouin roots." }
+                                { name: "Grand Mosque", img: "/assets/abudhabi/Sheikh Zayed Grand Mosque.jpg", desc: "Masterpiece." },
+                                { name: "Emirates Palace", img: "/assets/abudhabi/Emirates Palace.jpg", desc: "Hospitality." },
+                                { name: "Yas Island", img: "/assets/abudhabi/Yas Island.jpg", desc: "High-speed." },
+                                { name: "Heritage Village", img: "/assets/heritage_villlage.jpg", desc: "Bedouin roots." }
                             ].map((item, i) => (
                                 <motion.div
                                     key={item.name}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
-                                    className="group p-3 rounded-[2.5rem] bg-white/[0.03] border border-white/5 hover:border-secondary/30 transition-all shadow-xl"
+                                    className="group p-2 md:p-3 rounded-[2rem] bg-white/[0.03] border border-white/5 hover:border-secondary/30 transition-all shadow-xl"
                                 >
-                                    <div className="aspect-[3/4] rounded-[2rem] overflow-hidden relative mb-6">
+                                    <div className="aspect-square rounded-[1.5rem] overflow-hidden relative mb-4">
                                         <Image src={item.img} alt={item.name} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
                                     </div>
-                                    <div className="px-4 pb-6 text-center">
-                                        <h4 className="text-lg font-bold mb-2 tracking-tight group-hover:text-secondary transition-colors uppercase">{item.name}</h4>
-                                        <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest leading-relaxed">{item.desc}</p>
+                                    <div className="px-2 pb-4 text-center">
+                                        <h4 className="text-xs md:text-sm font-bold mb-1 tracking-tight group-hover:text-secondary transition-colors uppercase">{item.name}</h4>
+                                        <p className="text-[8px] text-gray-500 font-bold uppercase tracking-widest leading-relaxed">{item.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -113,11 +117,19 @@ export default function UAEToursPage() {
                 </div>
             </section>
 
-            {/* 4. THE NORTHERN EMIRATES - IMMERSIVE MOSAIC */}
-            <RegionalDiscovery />
+            <div>
+                <RegionalDiscovery />
+            </div>
+
+            {/* COMPLETE 7 EMIRATES GUIDE */}
+            <div className="snap-section">
+                <EmiratesGuide />
+            </div>
 
             {/* 5. TOUR PACKAGES - CINEMATIC SHOWCASE */}
-            <CinematicShowcase packages={uaePackages} />
+            <div className="snap-section">
+                <CinematicShowcase packages={uaePackages} />
+            </div>
 
         </div>
     );

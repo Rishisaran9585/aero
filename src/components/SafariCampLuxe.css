@@ -1,5 +1,5 @@
 .camp-luxe-section {
-    padding: 15rem 0;
+    padding: 3rem 0;
     background: #000;
     position: relative;
     overflow: hidden;
@@ -7,9 +7,9 @@
 
 .main-image-container {
     position: relative;
-    width: 85%;
-    aspect-ratio: 4/5;
-    border-radius: 4rem;
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(184, 150, 68, 0.1);
@@ -30,13 +30,13 @@
 
 .secondary-image-container {
     position: absolute;
-    bottom: -15%;
+    bottom: -10%;
     right: -5%;
     width: 50%;
     aspect-ratio: 1;
-    border-radius: 3rem;
+    border-radius: 2rem;
     overflow: hidden;
-    border: 8px solid #000;
+    border: 6px solid #000;
     box-shadow: 0 40px 80px -10px rgba(0, 0, 0, 0.8);
     z-index: 3;
 }
@@ -49,21 +49,21 @@
 
 .floating-badge {
     position: absolute;
-    top: 10%;
-    left: -10%;
+    top: 5%;
+    left: -5%;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    padding: 1.5rem 2.5rem;
-    border-radius: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
     z-index: 4;
 }
 
 .floating-badge span {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: 0.3em;
     color: #fff;
@@ -75,16 +75,16 @@
     font-size: 11px;
     font-weight: 900;
     letter-spacing: 0.5em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .section-title-huge {
     font-family: var(--font-serif, serif);
-    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-size: clamp(3rem, 6vw, 4.5rem);
     font-weight: 800;
     line-height: 0.9;
     color: #fff;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     letter-spacing: -0.02em;
 }
 
@@ -94,31 +94,31 @@
 }
 
 .section-desc {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #888;
-    line-height: 1.8;
+    line-height: 1.5;
     font-weight: 300;
     max-width: 500px;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .features-grid-luxe {
     display: grid;
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 .feat-item {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     align-items: flex-start;
 }
 
 .feat-icon-wrap {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     background: rgba(184, 150, 68, 0.1);
     border: 1px solid rgba(184, 150, 68, 0.2);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,19 +128,19 @@
 
 .feat-info h4 {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .feat-info p {
     color: #666;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
 
 .luxe-explore-btn {
-    padding: 1.5rem 3.5rem;
+    padding: 1rem 2.5rem;
     background: transparent;
     border: 1px solid rgba(184, 150, 68, 0.5);
     border-radius: 100px;

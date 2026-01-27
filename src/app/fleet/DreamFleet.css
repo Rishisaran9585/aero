@@ -2,7 +2,14 @@
     background: #050505;
     color: #fff;
     min-height: 100vh;
+    min-height: 100dvh;
     font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .dream-fleet-container {
+        min-height: auto;
+    }
 }
 
 /* Internal Hero Extended */
@@ -82,7 +89,7 @@
 
 .hero-car-display {
     max-width: 900px;
-    margin: 80px auto 0;
+    margin: 40px auto 0;
     position: relative;
 }
 
@@ -92,14 +99,14 @@
 
 /* Browse by Type */
 .browse-section {
-    padding: 120px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
 .browse-section h2 {
     font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     letter-spacing: -0.02em;
 }
 
@@ -204,7 +211,7 @@
 
 /* Driven by Comfort Section */
 .comfort-section {
-    padding: 150px 0;
+    padding: 60px 0;
 }
 
 .comfort-grid {
@@ -252,7 +259,7 @@
 
 /* Popular Cars Section */
 .popular-section {
-    padding: 150px 0;
+    padding: 80px 0;
 }
 
 .car-card {
@@ -310,7 +317,7 @@
 
 /* How It Works Section */
 .how-it-works {
-    padding: 150px 0;
+    padding: 80px 0;
     text-align: center;
     background: transparent;
 }

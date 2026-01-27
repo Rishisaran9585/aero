@@ -1,0 +1,27 @@
+.marquee-container {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    padding: 0.5rem 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+}
+
+.marquee-container:hover .marquee-track {
+    /* Animation pause handled by JS now */
+}
+
+.marquee-item {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.marquee-item:hover {
+    transform: translateY(-10px);
+}

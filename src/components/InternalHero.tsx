@@ -1,17 +1,30 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Package, MapPin, Palmtree, Car, FileText } from "lucide-react";
 import "./InternalHero.css";
 
 interface InternalHeroProps {
     title: string;
     subtitle?: string;
     image: string;
+    showCategories?: boolean;
 }
 
-export default function InternalHero({ title, subtitle, image }: InternalHeroProps) {
+const categories = [
+    { icon: Package, label: "Our Package", id: "package", href: "/package1" },
+    { icon: MapPin, label: "UAE Tours", id: "uae-tours", href: "/uae-tours" },
+    { icon: Palmtree, label: "Desert Safari", id: "desert-safari", href: "/desert-safari" },
+    { icon: Car, label: "Fleet", id: "fleet", href: "/fleet" },
+    { icon: FileText, label: "Visa", id: "visa", href: "/visa" },
+];
+
+export default function InternalHero({ title, subtitle, image, showCategories = true }: InternalHeroProps) {
+    const pathname = usePathname();
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -39,10 +52,9 @@ export default function InternalHero({ title, subtitle, image }: InternalHeroPro
             {/* Content Layer */}
             <div className="container mx-auto px-4 h-full relative z-10 flex flex-col items-center justify-center text-center">
                 <motion.div
-                    style={{ opacity }}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
+                    transition={{ duration: 0.8 }}
                     className="w-full"
                 >
                     <h1 className="internal-hero-title">
@@ -51,7 +63,7 @@ export default function InternalHero({ title, subtitle, image }: InternalHeroPro
 
                     {subtitle && (
                         <motion.span
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
                             className="internal-hero-script"
@@ -61,6 +73,33 @@ export default function InternalHero({ title, subtitle, image }: InternalHeroPro
                     )}
                 </motion.div>
             </div>
+
+            {/* Service Category Bar */}
+            {showCategories && (
+                <div className="page-header-categories-wrapper">
+                    <div className="page-header-categories">
+                        {categories.map((cat) => {
+                            const isActive = pathname === cat.href;
+                            return (
+                                <Link
+                                    key={cat.id}
+                                    href={cat.href}
+                                    className={`category-item ${isActive ? 'active' : ''}`}
+                                >
+                                    <cat.icon className="category-icon" />
+                                    <span className="category-label">{cat.label}</span>
+                                    {isActive && (
+                                        <motion.div
+                                            layoutId="category-active"
+                                            className="category-active-bg"
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
 
             {/* Decorative Scroll Indicator */}
             <motion.div

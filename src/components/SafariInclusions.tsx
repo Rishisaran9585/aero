@@ -12,7 +12,7 @@ const inclusions = [
         icon: Car,
         title: "4x4 Pickup",
         desc: "Doorstep service in premium off-road vehicles.",
-        img: "https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=800",
+        img: "/assets/im1.jpg",
         color: "#b89644"
     },
     {
@@ -20,7 +20,7 @@ const inclusions = [
         icon: Zap,
         title: "Dune Bashing",
         desc: "An adrenaline-fueled ride over the golden peaks.",
-        img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800",
+        img: "/assets/im2.jpg",
         color: "#d4af37"
     },
     {
@@ -28,7 +28,7 @@ const inclusions = [
         icon: Mountain,
         title: "Sandboarding",
         desc: "Slide down the dunes for a unique thrill.",
-        img: "https://images.unsplash.com/photo-1509316785289-025f5d846b35?q=80&w=800",
+        img: "/assets/im3.jpg",
         color: "#c5a019"
     },
     {
@@ -36,7 +36,7 @@ const inclusions = [
         icon: Palmtree,
         title: "Camel Ride",
         desc: "Experience the traditional 'ship of the desert'.",
-        img: "https://images.unsplash.com/photo-1516641396056-0ce60a35d93f?q=80&w=800",
+        img: "/assets/im4.jpg",
         color: "#b89644"
     }
 ];

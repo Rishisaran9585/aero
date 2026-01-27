@@ -100,14 +100,16 @@ export default function HotelsPage() {
 
     return (
         <div className="bg-black min-h-screen text-white overflow-x-hidden selection:bg-secondary selection:text-black" ref={containerRef}>
-            <PageHeader
-                title="HOTELS"
-                scriptText="luxury stays"
-                image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80"
-            />
+            <div className="snap-section">
+                <PageHeader
+                    title="HOTELS"
+                    scriptText="luxury stays"
+                    image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80"
+                />
+            </div>
 
             {/* ---------------- SECTION: TITLING ---------------- */}
-            <section className="py-12 lg:py-16 relative">
+            <section className="snap-section py-12 lg:py-16 relative flex flex-col justify-center">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -130,7 +132,7 @@ export default function HotelsPage() {
             </section>
 
             {/* ---------------- SECTION: HIGH-DENSITY SHOWCASE (4-COLUMN) ---------------- */}
-            <section className="pb-24 container mx-auto px-4">
+            <section className="snap-section py-20 container mx-auto px-4 flex flex-col justify-center">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                     {hotels.map((hotel, i) => (
                         <motion.div
@@ -178,7 +180,7 @@ export default function HotelsPage() {
             </section>
 
             {/* ---------------- SECTION: EXPANDING COLLAGE (FULL COLOR + SCREEN FIT) ---------------- */}
-            <section className="py-12 relative min-h-[100vh] flex items-center justify-center overflow-hidden" ref={collageRef}>
+            <section className="snap-section py-12 relative min-h-[100vh] flex items-center justify-center overflow-hidden" ref={collageRef}>
                 <div className="container mx-auto px-4 relative z-20 pointer-events-none">
                     <motion.div
                         style={{ scale, opacity }}
@@ -246,7 +248,7 @@ export default function HotelsPage() {
             </section>
 
             {/* ---------------- SECTION: INTERIOR WHISPERS (EXACT MATCH) ---------------- */}
-            <section className="py-24 bg-[#050505] border-y border-white/5 overflow-hidden">
+            <section className="snap-section py-20 lg:py-24 bg-[#050505] border-y border-white/5 overflow-hidden flex flex-col justify-center">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight">Interior <span className="text-secondary italic">Whispers</span></h2>
@@ -298,7 +300,7 @@ export default function HotelsPage() {
             </section>
 
             {/* ---------------- SECTION: FEATURES (CENTERED ALIGNMENT) ---------------- */}
-            <section className="py-32 lg:py-48 bg-black relative overflow-hidden flex items-center justify-center">
+            <section className="snap-section py-20 lg:py-32 bg-black relative overflow-hidden flex items-center justify-center">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center justify-center">
                         {/* Title Side */}

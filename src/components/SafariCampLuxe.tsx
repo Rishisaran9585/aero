@@ -46,7 +46,7 @@ export default function SafariCampLuxe() {
                             className="main-image-container"
                         >
                             <Image
-                                src="/assets/luxury_desert_camp_night.png"
+                                src="/assets/im6.jpg"
                                 alt="Luxury Desert Camp"
                                 width={1200}
                                 height={1500}
@@ -62,7 +62,7 @@ export default function SafariCampLuxe() {
                             className="secondary-image-container"
                         >
                             <Image
-                                src="/assets/luxury_desert_dining.png"
+                                src="/assets/im5.jpg"
                                 alt="Gourmet Dining"
                                 width={800}
                                 height={800}

@@ -1,6 +1,6 @@
 "use client";
 
-import PageHeader from "@/components/PageHeader";
+import InternalHero from "@/components/InternalHero";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -49,14 +49,16 @@ export default function ContactPage() {
 
     return (
         <div className="bg-black min-h-screen text-white">
-            <PageHeader
-                title="CONTACT"
-                scriptText="let's connect"
-                image="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=format&fit=crop&w=1920&q=80"
-            />
+            <div className="snap-start">
+                <InternalHero
+                    title="CONTACT"
+                    subtitle="let's connect"
+                    image="https://images.unsplash.com/photo-1577083288073-40892c0860a4?auto=crop&w=1920&q=80"
+                />
+            </div>
 
             {/* Main Contact Section */}
-            <section className="pt-20 pb-15">
+            <section className="snap-start snap-always w-full relative flex flex-col pt-20 pb-4 bg-black">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-7xl mx-auto">
                         {/* Left Side: Typography */}
@@ -64,7 +66,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="flex flex-col justify-start pt-10"
+                            className="flex flex-col justify-start pt-0"
                         >
                             <div className="relative z-10 inline-block pointer-events-none select-none">
                                 <h1 className="text-[4rem] md:text-[6rem] lg:text-[7.5rem] leading-[0.9] font-serif font-medium tracking-tight text-white relative z-10">
@@ -131,19 +133,19 @@ export default function ContactPage() {
             </section>
 
             {/* Find Us Section - Interactive Map */}
-            <section className="pt-20 pb-20 relative bg-white/[0.02]">
+            <section className="snap-start snap-always w-full relative flex flex-col py-10 bg-white/[0.02]">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center mb-16"
+                        className="text-center mb-10"
                     >
-                        <span className="text-secondary font-bold tracking-[0.3em] uppercase mb-4 block">Our Locations</span>
+                        <span className="text-secondary font-bold tracking-[0.3em] uppercase mb-2 block">Our Locations</span>
                         <h2 className="text-4xl md:text-6xl font-serif font-bold text-white">Find Us Globally</h2>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-7xl mx-auto items-center mb-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-7xl mx-auto items-center mb-10">
                         {/* Map Container - Dynamic Update */}
                         <div className="relative h-[500px] lg:h-[600px] w-full rounded-3xl overflow-hidden">
                             <iframe
@@ -200,55 +202,61 @@ export default function ContactPage() {
                     <div className="max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                             {/* Call Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 }}
-                                className="group bg-white/5 hover:bg-white/10 rounded-2xl p-6 flex items-center gap-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 backdrop-blur-sm cursor-pointer"
-                            >
-                                <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-secondary transition-colors">
-                                    <Phone className="w-6 h-6 text-secondary" />
-                                </div>
-                                <div className="flex-1">
-                                    <p className="text-gray-400 text-xs tracking-widest uppercase mb-1">Call India Office</p>
-                                    <p className="text-white text-lg font-bold group-hover:text-secondary transition-colors">+91 77362 34692</p>
-                                </div>
-                                <ChevronRight className="w-5 h-5 text-gray-600 group-hover:translate-x-1 transition-transform" />
-                            </motion.div>
+                            <a href="tel:+917736234692" className="block">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.1 }}
+                                    className="group bg-white/5 hover:bg-white/10 rounded-2xl p-6 flex items-center gap-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                                >
+                                    <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-secondary transition-colors">
+                                        <Phone className="w-6 h-6 text-secondary" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-gray-400 text-xs tracking-widest uppercase mb-1">Call India Office</p>
+                                        <p className="text-white text-lg font-bold group-hover:text-secondary transition-colors">+91 77362 34692</p>
+                                    </div>
+                                    <ChevronRight className="w-5 h-5 text-gray-600 group-hover:translate-x-1 transition-transform" />
+                                </motion.div>
+                            </a>
 
                             {/* WhatsApp Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 }}
-                                className="group bg-white/5 hover:bg-white/10 rounded-2xl p-6 flex items-center gap-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 backdrop-blur-sm cursor-pointer"
-                            >
-                                <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-secondary transition-colors">
-                                    <MessageSquare className="w-6 h-6 text-secondary" />
-                                </div>
-                                <div className="flex-1">
-                                    <p className="text-gray-400 text-xs tracking-widest uppercase mb-1">WhatsApp UAE</p>
-                                    <p className="text-white text-lg font-bold group-hover:text-secondary transition-colors">+971 55 355 0933</p>
-                                </div>
-                                <ChevronRight className="w-5 h-5 text-gray-600 group-hover:translate-x-1 transition-transform" />
-                            </motion.div>
+                            <a href="https://wa.me/971553550933" target="_blank" rel="noopener noreferrer" className="block">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.2 }}
+                                    className="group bg-white/5 hover:bg-white/10 rounded-2xl p-6 flex items-center gap-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                                >
+                                    <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-secondary transition-colors">
+                                        <MessageSquare className="w-6 h-6 text-secondary" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-gray-400 text-xs tracking-widest uppercase mb-1">WhatsApp UAE</p>
+                                        <p className="text-white text-lg font-bold group-hover:text-secondary transition-colors">+971 55 355 0933</p>
+                                    </div>
+                                    <ChevronRight className="w-5 h-5 text-gray-600 group-hover:translate-x-1 transition-transform" />
+                                </motion.div>
+                            </a>
 
                             {/* Email Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3 }}
-                                className="group bg-white/5 hover:bg-white/10 rounded-2xl p-6 flex items-center gap-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 backdrop-blur-sm cursor-pointer"
-                            >
-                                <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-secondary transition-colors">
-                                    <Mail className="w-6 h-6 text-secondary" />
-                                </div>
-                                <div className="flex-1">
-                                    <p className="text-gray-400 text-xs tracking-widest uppercase mb-1">Email Us</p>
-                                    <p className="text-white text-lg font-bold group-hover:text-secondary transition-colors">info@aerosafe.com</p>
-                                </div>
-                                <ChevronRight className="w-5 h-5 text-gray-600 group-hover:translate-x-1 transition-transform" />
-                            </motion.div>
+                            <a href="mailto:info@aerosafe.com" className="block">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.3 }}
+                                    className="group bg-white/5 hover:bg-white/10 rounded-2xl p-6 flex items-center gap-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 backdrop-blur-sm cursor-pointer"
+                                >
+                                    <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-secondary transition-colors">
+                                        <Mail className="w-6 h-6 text-secondary" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <p className="text-gray-400 text-xs tracking-widest uppercase mb-1">Email Us</p>
+                                        <p className="text-white text-lg font-bold group-hover:text-secondary transition-colors">info@aerosafe.com</p>
+                                    </div>
+                                    <ChevronRight className="w-5 h-5 text-gray-600 group-hover:translate-x-1 transition-transform" />
+                                </motion.div>
+                            </a>
                         </div>
 
                         {/* Office Hours & Stats */}

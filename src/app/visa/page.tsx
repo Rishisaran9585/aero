@@ -58,56 +58,58 @@ export default function VisaPage() {
     return (
         <div className="bg-[#050505] min-h-screen text-white selection:bg-secondary selection:text-black">
             {/* 1. HERO SECTION */}
-            <InternalHero
-                title="VISA SERVICES"
-                subtitle="Seamless Global Access"
-                image="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1920&auto=format&fit=crop"
-            />
+            <div className="snap-start">
+                <InternalHero
+                    title="VISA SERVICES"
+                    subtitle="Seamless Global Access"
+                    image="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1920&auto=format&fit=crop"
+                />
+            </div>
 
-            {/* 2. VISA ASSISTANCE INTRO - PREMIUM REDESIGN */}
-            <section className="py-32 relative overflow-hidden bg-[#050505]">
+            {/* 2. VISA ASSISTANCE INTRO - COMPACT REDESIGN */}
+            <section className="py-12 md:py-16 relative overflow-hidden bg-[#050505] flex items-center min-h-[80vh]">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-                        <div className="lg:col-span-7">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                        <div className="lg:col-span-6">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                             >
-                                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
+                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md">
                                     <div className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
-                                    <span className="text-secondary text-[10px] font-black uppercase tracking-[0.4em]">Expert Global Guidance</span>
+                                    <span className="text-secondary text-[10px] font-black uppercase tracking-[0.3em]">Expert Global Guidance</span>
                                 </div>
-                                <h2 className="text-6xl md:text-8xl font-serif font-bold text-white mb-10 leading-none tracking-tighter">
+                                <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-none tracking-tighter">
                                     Visa Assistance <br />
                                     <span className="italic text-secondary">Services.</span>
                                 </h2>
-                                <p className="text-gray-400 text-xl font-light leading-relaxed mb-16 max-w-2xl border-l-[3px] border-secondary/30 pl-12">
+                                <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-10 max-w-xl border-l-[3px] border-secondary/30 pl-8">
                                     Navigating international travel documentation can be complex. Aerosafe provides end-to-end support for tourist visa processing across multiple continents, ensuring your journey starts without a hitch.
                                 </p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {[
                                         { icon: Zap, title: "Express Filing", desc: "Prioritized processing for urgent international departures." },
                                         { icon: ShieldCheck, title: "Consular Audit", desc: "Multi-tier verification to ensure 100% document compliance." }
                                     ].map((item, i) => (
-                                        <div key={i} className="group p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-secondary/20 transition-all duration-500">
-                                            <div className="h-14 w-14 rounded-2xl bg-black border border-white/10 flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-black transition-all">
-                                                <item.icon size={24} />
+                                        <div key={i} className="group p-5 rounded-[1.5rem] bg-white/[0.02] border border-white/5 hover:border-secondary/20 transition-all duration-500">
+                                            <div className="h-10 w-10 rounded-xl bg-black border border-white/10 flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-black transition-all">
+                                                <item.icon size={20} />
                                             </div>
-                                            <h4 className="text-white font-bold text-lg mb-3">{item.title}</h4>
-                                            <p className="text-gray-500 text-sm font-light leading-relaxed">{item.desc}</p>
+                                            <h4 className="text-white font-bold text-base mb-2">{item.title}</h4>
+                                            <p className="text-gray-500 text-xs font-light leading-relaxed">{item.desc}</p>
                                         </div>
                                     ))}
                                 </div>
                             </motion.div>
                         </div>
-                        <div className="lg:col-span-5 relative">
+                        <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
                             <motion.div
                                 initial={{ opacity: 0, x: 50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1.2 }}
                                 viewport={{ once: true }}
-                                className="relative aspect-[4/5] rounded-[5rem] overflow-hidden border-[10px] border-white/5 shadow-2xl"
+                                className="relative w-full max-w-md aspect-[3/4] rounded-[3rem] overflow-hidden border-[8px] border-white/5 shadow-2xl"
                             >
                                 <Image
                                     src="/assets/visa1.jpg"
@@ -116,12 +118,12 @@ export default function VisaPage() {
                                     className="object-cover transition-transform duration-[3000ms] hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
-                                <div className="absolute top-10 right-10 flex flex-col items-center">
-                                    <div className="h-20 w-20 rounded-full bg-secondary flex items-center justify-center text-black">
-                                        <Globe size={32} />
+                                <div className="absolute top-6 right-6 flex flex-col items-center">
+                                    <div className="h-16 w-16 rounded-full bg-secondary flex items-center justify-center text-black">
+                                        <Globe size={28} />
                                     </div>
-                                    <div className="mt-4 bg-black/40 backdrop-blur-lg border border-white/10 px-4 py-1.5 rounded-full">
-                                        <span className="text-white text-[9px] font-black uppercase tracking-widest whitespace-nowrap">180+ Countries</span>
+                                    <div className="mt-3 bg-black/40 backdrop-blur-lg border border-white/10 px-3 py-1 rounded-full">
+                                        <span className="text-white text-[8px] font-black uppercase tracking-widest whitespace-nowrap">180+ Countries</span>
                                     </div>
                                 </div>
                             </motion.div>
@@ -130,15 +132,15 @@ export default function VisaPage() {
                 </div>
             </section>
 
-            {/* 3. UAE TOURIST VISA SECTION */}
-            <section className="py-24 bg-[#080808] relative overflow-hidden">
+            {/* 3. UAE TOURIST VISA SECTION - COMPACT FIT */}
+            <section className="snap-section py-12 md:py-16 bg-[#080808] relative overflow-hidden flex flex-col justify-center min-h-[50vh]">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-24">
-                        <span className="text-secondary text-xs font-black uppercase tracking-[0.5em] mb-4 block">SIGNATURE SERVICE</span>
-                        <h2 className="text-5xl md:text-8xl font-serif font-bold text-white tracking-tighter">UAE Tourist Visa</h2>
+                    <div className="text-center mb-10">
+                        <span className="text-secondary text-[10px] font-black uppercase tracking-[0.4em] mb-3 block">SIGNATURE SERVICE</span>
+                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-white tracking-tighter">UAE Tourist Visa</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {uaeVisas.map((visa, i) => (
                             <motion.div
                                 key={i}
@@ -146,29 +148,29 @@ export default function VisaPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group bg-[#0a0a0a] rounded-[3rem] border border-white/5 overflow-hidden hover:border-secondary/30 transition-all duration-500 shadow-2xl flex flex-col"
+                                className="group bg-[#0a0a0a] rounded-[2rem] border border-white/5 overflow-hidden hover:border-secondary/30 transition-all duration-500 shadow-xl flex flex-col"
                             >
-                                <div className="relative aspect-[4/5] overflow-hidden">
+                                <div className="relative aspect-[16/10] overflow-hidden">
                                     <Image src={visa.image} alt={visa.title} fill className="object-cover group-hover:scale-110 transition-all duration-[3000ms]" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                                    <div className="absolute top-6 left-6">
-                                        <div className="px-5 py-2 rounded-2xl bg-black/40 backdrop-blur-3xl border border-white/10 text-white text-[9px] font-black uppercase tracking-widest flex items-center gap-2">
-                                            <Clock size={12} className="text-secondary" />
+                                    <div className="absolute top-4 left-4">
+                                        <div className="px-3 py-1.5 rounded-xl bg-black/40 backdrop-blur-3xl border border-white/10 text-white text-[8px] font-black uppercase tracking-widest flex items-center gap-1.5">
+                                            <Clock size={10} className="text-secondary" />
                                             {visa.duration}
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-10 pt-8 flex-grow flex flex-col">
-                                    <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-secondary transition-colors leading-tight">
+                                <div className="p-6 flex-grow flex flex-col">
+                                    <h3 className="text-lg font-serif font-bold text-white mb-2 group-hover:text-secondary transition-colors leading-tight">
                                         {visa.title}
                                     </h3>
-                                    <p className="text-gray-500 text-sm font-light leading-relaxed mb-8 flex-grow opacity-60">
+                                    <p className="text-gray-500 text-xs font-light leading-relaxed mb-6 flex-grow opacity-60 line-clamp-3">
                                         {visa.desc}
                                     </p>
-                                    <button className="flex items-center gap-4 text-white text-[10px] font-black uppercase tracking-[0.2em] group/btn">
+                                    <button className="flex items-center gap-3 text-white text-[9px] font-black uppercase tracking-[0.2em] group/btn mt-auto">
                                         INQUIRE NOW
-                                        <div className="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover/btn:bg-secondary group-hover/btn:text-black group-hover/btn:border-secondary transition-all">
-                                            <ArrowUpRight size={18} />
+                                        <div className="h-8 w-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover/btn:bg-secondary group-hover/btn:text-black group-hover/btn:border-secondary transition-all">
+                                            <ArrowUpRight size={14} />
                                         </div>
                                     </button>
                                 </div>
@@ -179,7 +181,7 @@ export default function VisaPage() {
             </section>
 
             {/* 4. INTERNATIONAL VISAS SECTION */}
-            <section className="py-24 bg-[#050505] relative">
+            <section className="snap-section py-20 lg:py-24 bg-[#050505] relative flex flex-col justify-center">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-12">
                         <div>
@@ -227,7 +229,7 @@ export default function VisaPage() {
             </section>
 
             {/* 5. THE AEROCARE PROTOCOL - REIMAGINED (Vertical Flow, No Boxes) */}
-            <section className="py-24 bg-[#050505] relative overflow-hidden">
+            <section className="snap-section py-20 lg:py-24 bg-[#050505] relative overflow-hidden flex flex-col justify-center">
                 {/* Background Atmosphere */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[800px] bg-secondary/[0.02] blur-[150px] rounded-full -z-10" />
 

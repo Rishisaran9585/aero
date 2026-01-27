@@ -1,5 +1,5 @@
 .modern-package-section {
-    padding: 120px 0;
+    padding: 20px 0 80px 0;
     background-color: #000;
     position: relative;
     overflow: hidden;
@@ -18,32 +18,32 @@
 }
 
 .bg-text-outline {
-    font-size: 15vw;
+    font-size: 10vw;
     font-weight: 900;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(184, 150, 68, 0.15);
+    -webkit-text-stroke: 1px rgba(184, 150, 68, 0.1);
     text-transform: uppercase;
     letter-spacing: -2px;
 }
 
 .section-header {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     position: relative;
     z-index: 2;
 }
 
 .subtitle {
     color: #b89644;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.5em;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .main-title {
     font-family: var(--font-serif, serif);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     color: #fff;
     line-height: 1;
@@ -59,7 +59,7 @@
 .package-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 20px;
     position: relative;
     z-index: 2;
 }
@@ -79,8 +79,8 @@
 /* Card Styling */
 .modern-card {
     position: relative;
-    height: 600px;
-    border-radius: 40px;
+    height: 380px;
+    border-radius: 30px;
     overflow: hidden;
     background: #111;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -89,13 +89,13 @@
 /* Asymmetrical height variations on larger screens */
 @media (min-width: 1025px) {
     .card-variant-1 {
-        margin-top: 40px;
-        height: 560px;
+        margin-top: 20px;
+        height: 350px;
     }
 
     .card-variant-2 {
-        margin-top: -40px;
-        height: 640px;
+        margin-top: -20px;
+        height: 410px;
     }
 }
 
@@ -148,7 +148,7 @@
 }
 
 .bottom-badges {
-    bottom: 120px;
+    bottom: 100px;
     left: 30px;
 }
 
@@ -220,7 +220,7 @@
 
 .pkg-title {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1;

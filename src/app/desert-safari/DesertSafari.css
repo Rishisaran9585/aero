@@ -2,7 +2,14 @@
     background: #000;
     color: #fff;
     min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    .safari-page {
+        min-height: auto;
+    }
 }
 
 /* Redesigned Inclusions Grid */
@@ -106,7 +113,7 @@
 
 .option-heading {
     font-family: var(--font-serif, serif);
-    font-size: clamp(3rem, 7-vw, 5rem);
+    font-size: clamp(3rem, 7vw, 5rem);
     font-weight: 800;
     color: #fff;
     line-height: 0.9;

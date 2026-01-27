@@ -331,10 +331,10 @@ class Media {
 
             const arc = R - Math.sqrt(R * R - effectiveX * effectiveX);
             if (this.bend > 0) {
-                this.plane.position.y = -arc;
+                this.plane.position.y = -arc + 0.5;
                 this.plane.rotation.z = -Math.sign(x) * Math.asin(effectiveX / R);
             } else {
-                this.plane.position.y = arc;
+                this.plane.position.y = arc + 0.5;
                 this.plane.rotation.z = Math.sign(x) * Math.asin(effectiveX / R);
             }
         }
@@ -366,8 +366,8 @@ class Media {
             }
         }
         this.scale = this.screen.width < 768 ? this.screen.height / 1800 : this.screen.height / 1500;
-        this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
-        this.plane.scale.x = (this.viewport.width * (this.screen.width < 768 ? 550 : 700) * this.scale) / this.screen.width;
+        this.plane.scale.y = (this.viewport.height * (950 * this.scale)) / this.screen.height;
+        this.plane.scale.x = (this.viewport.width * (this.screen.width < 768 ? 550 : 750) * this.scale) / this.screen.width;
         this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
         this.padding = this.screen.width < 768 ? 2.0 : 1.5;
         this.width = this.plane.scale.x + this.padding;

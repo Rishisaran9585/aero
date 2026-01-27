@@ -56,13 +56,13 @@ export default function Home1Page() {
                 />
 
                 {/* TOUR CATEGORIES - Circular Gallery */}
-                <section className="py-[40px] md:py-[80px] bg-black overflow-hidden relative">
-                    <div className="container mx-auto px-4 mb-4 md:mb-12 text-center relative z-10">
-                        <span className="text-secondary uppercase tracking-[0.2em] text-[10px] md:text-xs font-bold mb-2 block">Wonderful Place For You</span>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-0">Explore by Category</h2>
+                <section className="snap-start bg-black relative flex flex-col items-center pt-10 md:pt-16 pb-4">
+                    <div className="container mx-auto px-4 text-center z-20 mb-8 md:mb-12">
+                        <span className="text-secondary uppercase tracking-[0.2em] text-[10px] md:text-xs font-bold block mb-1">Wonderful Place For You</span>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight">Explore by Category</h2>
                     </div>
 
-                    <div className="relative h-[500px] md:h-[650px] w-full px-4 mt-0">
+                    <div className="relative h-[380px] md:h-[520px] lg:h-[600px] w-full mt-0">
                         <CircularGallery
                             items={galleryItems}
                             bend={0.8}
@@ -77,7 +77,7 @@ export default function Home1Page() {
                 <EmiratesShowcase />
 
                 {/* SIGNATURE MOMENTS - ENRICHED CONTENT */}
-                <section className="py-32 relative overflow-hidden bg-white/[0.01]">
+                <section className="pt-10 pb-10 relative overflow-hidden bg-white/[0.01]">
                     <div className="container mx-auto px-4">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                             <motion.div
@@ -139,7 +139,7 @@ export default function Home1Page() {
                 <PremiumTestimonials />
 
                 {/* CUSTOM ITINERARY CTA */}
-                <section className="relative pt-[120px] pb-[60px] overflow-hidden group">
+                <section className="relative pt-10 pb-[60px] overflow-hidden group">
                     <div className="absolute inset-0 z-0">
                         <Image
                             src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1920&auto=format&fit=crop"

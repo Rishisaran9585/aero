@@ -62,25 +62,34 @@ export default function DesertSafariPage() {
     return (
         <main className="safari-page">
             {/* 1. HERO SECTION - SAME AS PACKAGE1 */}
-            <InternalHero
-                title="DESERT SAFARI"
-                subtitle="The Soul of Sands"
-                image="/assets/desert-safari-card.jpg"
-            />
+            <div className="snap-start">
+                <InternalHero
+                    title="DESERT SAFARI"
+                    subtitle="The Soul of Sands"
+                    image="/assets/desert-safari-card.jpg"
+                />
+            </div>
 
             <div className="relative z-10">
-
                 {/* 2. THE VISUAL SPLIT - DUAL IMAGE SECTION */}
-                <SafariVisualSplit />
+                <section>
+                    <SafariVisualSplit />
+                </section>
 
                 {/* 3. THE ANATOMY OF THRILL - PERSPECTIVE GRID */}
-                <SafariInclusions />
+                <div className="snap-section">
+                    <SafariInclusions />
+                </div>
 
                 {/* 4. CAMP LUXE - THE NIGHT REVEALED */}
-                <SafariCampLuxe />
+                <div className="snap-section">
+                    <SafariCampLuxe />
+                </div>
 
                 {/* 5. SAFARI CHOICES - PRISM PILLARS */}
-                <SafariPrismGallery />
+                <div className="snap-section">
+                    <SafariPrismGallery />
+                </div>
             </div>
 
             {/* Global Texture Overlay */}

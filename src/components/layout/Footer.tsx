@@ -9,7 +9,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 const footerLinks = {
     explore: [
         { name: "Home", href: "/" },
-        { name: "Packages", href: "/packages" },
+        { name: "Packages", href: "/package1" },
         { name: "Fleet", href: "/fleet" },
         { name: "Visa", href: "/visa" },
         { name: "Hotels", href: "/hotels" },
@@ -68,6 +68,12 @@ export default function Footer() {
                                 />
                             </div>
                         </div>
+                        {/* Watermark */}
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 select-none pointer-events-none w-full flex justify-center">
+                            <h1 className="text-[4rem] md:text-[7rem] lg:text-[10rem] font-black text-white/[0.03] tracking-tightest whitespace-nowrap text-center">
+                                AEROSAFE
+                            </h1>
+                        </div>
                     </motion.div>
                 </div>
 
@@ -75,7 +81,7 @@ export default function Footer() {
                 <div className="bg-transparent rounded-[2.5rem] pt-32 pb-6 px-10 md:px-20 mb-6 border-t border-white/[0.02]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-12">
                         {/* Left Side: Logo & Info */}
-                        <div className="lg:col-span-6 space-y-6">
+                        <div className="lg:col-span-5 space-y-6">
                             <div className="space-y-4">
                                 <div className="flex items-center gap-4 -ml-2">
                                     <Link href="/" className="inline-block">
@@ -112,18 +118,18 @@ export default function Footer() {
                             <div className="flex flex-wrap gap-10 md:gap-20">
                                 <div className="space-y-3">
                                     <h4 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em]">Phone number</h4>
-                                    <p className="text-white text-base font-medium tracking-tight hover:text-secondary transition-colors cursor-pointer">+971 4 123 4567</p>
+                                    <a href="tel:+971553550933" className="block text-white text-base font-medium tracking-tight hover:text-secondary transition-colors cursor-pointer">+971 55 355 0933</a>
                                 </div>
                                 <div className="space-y-3">
                                     <h4 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em]">Email</h4>
-                                    <p className="text-white text-base font-medium tracking-tight border-b border-white/20 pb-0.5 hover:text-secondary transition-colors cursor-pointer">info@aerosafe.ae</p>
+                                    <a href="mailto:info@aerosafe.com" className="block text-white text-base font-medium tracking-tight border-b border-white/20 pb-0.5 hover:text-secondary transition-colors cursor-pointer">info@aerosafe.com</a>
                                 </div>
                             </div>
                         </div>
 
                         {/* Right Side: Columns */}
-                        <div className="lg:col-span-6">
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+                        <div className="lg:col-span-7">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 md:gap-8">
                                 <div>
                                     <h3 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Quick links</h3>
                                     <ul className="space-y-4">
@@ -160,58 +166,72 @@ export default function Footer() {
                                         ))}
                                     </ul>
                                 </div>
+                                <div>
+                                    <h3 className="text-secondary text-[10px] font-bold uppercase tracking-[0.2em] mb-6 md:mb-8">Headquarters</h3>
+                                    <div className="space-y-4 md:space-y-6">
+                                        <div className="flex items-start gap-3 md:gap-4 justify-start">
+                                            <MapPin className="w-5 h-5 md:w-8 md:h-8 text-secondary mt-1 shrink-0" />
+                                            <h4 className="text-[1.25rem] sm:text-2xl md:text-3xl font-serif font-bold text-white leading-tight whitespace-nowrap">Dubai HQ</h4>
+                                        </div>
+
+                                        <div className="space-y-1 pl-1 text-gray-400 text-sm font-light leading-relaxed">
+                                            <p>Auto Center Building</p>
+                                            <p>Office A102, 22A St</p>
+                                            <p>Port Saeed, Dubai</p>
+                                        </div>
+
+                                        <div className="pl-1 pt-2">
+                                            <a
+                                                href="https://maps.google.com"
+                                                target="_blank"
+                                                className="inline-block text-[10px] font-bold uppercase tracking-wider text-secondary border-b border-secondary/40 pb-1 hover:text-white hover:border-white transition-all hover:pl-2"
+                                            >
+                                                Get Directions
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
 
-                    {/* Our Offices Section */}
+                    {/* Branch Offices Section */}
                     <div className="pt-8 pb-8 mb-10">
                         {/* Section Header */}
-                        <div className="flex items-center justify-center gap-4 mb-10">
-                            <div className="h-px w-24 md:w-32 bg-white/10"></div>
-                            <span className="text-secondary text-[11px] font-bold uppercase tracking-[0.3em]">Our Offices</span>
-                            <div className="h-px w-24 md:w-32 bg-white/10"></div>
+                        <div className="flex items-center justify-center gap-4 mb-16">
+                            <div className="h-px flex-1 bg-white/10 max-w-[100px]"></div>
+                            <span className="text-gray-600 text-[11px] font-bold uppercase tracking-[0.3em] whitespace-nowrap">Branch Offices</span>
+                            <div className="h-px flex-1 bg-white/10 max-w-[100px]"></div>
                         </div>
 
-                        {/* Offices Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 max-w-7xl mx-auto">
-                            {/* Dubai HQ */}
-                            <div className="space-y-6 md:pl-10 border-l border-white/5 md:border-none">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <MapPin className="w-5 h-5 text-secondary" />
-                                    <h4 className="text-secondary text-lg font-medium tracking-wide">Dubai HQ</h4>
+                        <div className="max-w-4xl mx-auto">
+                            {/* Branch Offices Grid */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                                {/* Chennai */}
+                                <div className="flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                                    <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-black transition-colors">
+                                        <MapPin className="w-5 h-5" />
+                                    </div>
+                                    <h5 className="text-xl font-bold text-white mb-4">Chennai, India</h5>
+                                    <div className="space-y-1 text-gray-400 text-sm font-light leading-relaxed">
+                                        <p>Plot No. 145-A</p>
+                                        <p>Alapakkam Block, VI St</p>
+                                        <p>Chennai – 600116</p>
+                                    </div>
                                 </div>
-                                <div className="space-y-1 pl-8">
-                                    <p className="text-gray-400 text-sm font-light">Auto Center Building</p>
-                                    <p className="text-gray-400 text-sm font-light">Office A102, 22A St</p>
-                                    <p className="text-gray-400 text-sm font-light">Port Saeed, Dubai – UAE</p>
-                                </div>
-                            </div>
 
-                            {/* Chennai Office */}
-                            <div className="space-y-6 md:border-l border-white/10 md:pl-10">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <MapPin className="w-5 h-5 text-secondary" />
-                                    <h4 className="text-secondary text-lg font-medium tracking-wide">Chennai Office</h4>
-                                </div>
-                                <div className="space-y-1 pl-8">
-                                    <p className="text-gray-400 text-sm font-light">Plot No. 145-A</p>
-                                    <p className="text-gray-400 text-sm font-light">Alapakkam Block, VI St</p>
-                                    <p className="text-gray-400 text-sm font-light">Chennai – 600116, India</p>
-                                </div>
-                            </div>
-
-                            {/* Trivandrum Office */}
-                            <div className="space-y-6 md:border-l border-white/10 md:pl-10">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <MapPin className="w-5 h-5 text-secondary" />
-                                    <h4 className="text-secondary text-lg font-medium tracking-wide">Trivandrum Office</h4>
-                                </div>
-                                <div className="space-y-1 pl-8">
-                                    <p className="text-gray-400 text-sm font-light whitespace-nowrap">TC49/103(2) HASNA, Navachethana Lane,</p>
-                                    <p className="text-gray-400 text-sm font-light whitespace-nowrap">Old Karakkamandapam, Memom P.O.,</p>
-                                    <p className="text-gray-400 text-sm font-light whitespace-nowrap">Trivandrum, Kerala, India – 695020</p>
+                                {/* Trivandrum */}
+                                <div className="flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                                    <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-black transition-colors">
+                                        <MapPin className="w-5 h-5" />
+                                    </div>
+                                    <h5 className="text-xl font-bold text-white mb-4">Trivandrum, India</h5>
+                                    <div className="space-y-1 text-gray-400 text-sm font-light leading-relaxed">
+                                        <p>TC49/103(2) HASNA</p>
+                                        <p>Old Karakkamandapam</p>
+                                        <p>Trivandrum – 695020</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

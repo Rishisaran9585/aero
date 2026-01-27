@@ -12,7 +12,7 @@ const options = [
         title: "Evening Safari",
         tag: "THE CLASSIC",
         desc: "Dune bashing, BBQ dinner, and live shows under the Arabian stars.",
-        image: "/assets/desert-safari-card.jpg",
+        image: "/assets/im8.jpg",
         icon: CloudMoon,
         subtitle: "Sunset & Starlight"
     },
@@ -21,7 +21,7 @@ const options = [
         title: "Morning Safari",
         tag: "THE PURIST",
         desc: "Beat the heat and experience the pristine golden dunes at dawn's first light.",
-        image: "https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=1200",
+        image: "/assets/im9.jpg",
         icon: Sun,
         subtitle: "Dawn Expedition"
     },
@@ -30,7 +30,7 @@ const options = [
         title: "Private Safari",
         tag: "THE EXCLUSIVE",
         desc: "A fully dedicated 4x4 and bespoke itinerary for your private entourage.",
-        image: "https://images.unsplash.com/photo-1509316785289-025f5d846b35?q=80&w=1200",
+        image: "/assets/im7.jpg",
         icon: Users,
         subtitle: "Bespoke Journey"
     },
@@ -39,7 +39,7 @@ const options = [
         title: "VIP Safari",
         tag: "THE ELITE",
         desc: "Premium lounge seating, silver table service, and the highest desert camp.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea904ac6605?q=80&w=1200",
+        image: "/assets/im10.jpg",
         icon: Crown,
         subtitle: "Sultan's Choice"
     }

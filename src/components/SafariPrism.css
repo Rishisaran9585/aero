@@ -1,5 +1,5 @@
 .safari-prism-section {
-    padding: 150px 0;
+    padding: 20px 0;
     background: #000;
     overflow: hidden;
 }
@@ -7,15 +7,15 @@
 .p-label {
     display: block;
     color: #b89644;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.6em;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .p-title {
     font-family: var(--font-serif, serif);
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
     color: #fff;
     line-height: 0.85;
@@ -29,9 +29,9 @@
 /* Prism Pillars Grid */
 .prism-container {
     display: flex;
-    height: 700px;
+    height: 480px;
     gap: 15px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -143,7 +143,7 @@
 .pillar-expanded-content {
     position: absolute;
     inset: 0;
-    padding: 60px;
+    padding: 30px 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
