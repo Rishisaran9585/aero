@@ -23,32 +23,32 @@ const uaeVisas = [
         title: "14 Days Tourist",
         duration: "14 Days",
         desc: "Ideal for short business trips or transit visits through the UAE.",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea904ac6605?q=80&w=1200"
+        image: "/assets/14_days_tourist.jpg"
     },
     {
         title: "30 Days Tourist",
         duration: "30 Days",
         desc: "The standard choice for tourists exploring Dubai and other emirates.",
-        image: "https://images.unsplash.com/photo-1546412414-e188526159bc?q=80&w=1200"
+        image: "/assets/30_days_tourist.jpg"
     },
     {
         title: "60 Days Tourist",
         duration: "60 Days",
         desc: "Extended stay for those who want to experience the complete UAE lifestyle.",
-        image: "https://images.unsplash.com/photo-1526431288437-3a4974533058?q=80&w=1200"
+        image: "/assets/60_days_tourist.jpg"
     },
     {
         title: "Visa Extension",
         duration: "Flexible",
         desc: "Extend your stay without the need to exit the country. Hassle-free renewal.",
-        image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200"
+        image: "/assets/visa_extension.jpg"
     },
 ];
 
 const internationalVisas = [
     { name: "Schengen Visa", region: "Europe", image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200" },
     { name: "UK Visa", region: "United Kingdom", image: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=1200" },
-    { name: "Singapore Visa", region: "Southeast Asia", image: "https://images.unsplash.com/photo-1525625230556-8e8ad16bd973?q=80&w=1200" },
+    { name: "Singapore Visa", region: "Southeast Asia", image: "/assets/singapore_visa.jpg" },
     { name: "Thailand Visa", region: "Southeast Asia", image: "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=1200" },
     { name: "Malaysia Visa", region: "Southeast Asia", image: "https://images.unsplash.com/photo-1528150177508-7cc0c36cda5c?q=80&w=1200" },
     { name: "Turkey Visa", region: "Europe/Asia", image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1200" },
