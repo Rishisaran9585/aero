@@ -170,108 +170,141 @@ const vehicleTypes = [
 
 const popularFleet = [
     {
-        name: "ROYAL VIP SUV",
-        type: "SUV",
+        name: "HONDA ODYSSEY",
+        type: "Minivan",
         capacity: "7 Seater",
-        image: "/assets/7seater.png",
-        tags: ["Leather Interior", "Premium Audio"],
-        price: "1500",
-        rating: "5.0",
-        desc: "Experience the ultimate in ground transportation with our flagship VIP SUV. A perfect blend of power and luxury for your Dubai journey."
-    },
-    {
-        name: "EXECUTIVE VAN",
-        type: "Van",
-        capacity: "7 Seater",
-        image: "/assets/7seater.png",
-        tags: ["Privacy Glass", "Ample Cargo"],
-        price: "900",
-        rating: "4.8",
-        desc: "First-class travel for groups. Our executive vans offer spacious interiors and privacy for corporate and family travel."
-    },
-    {
-        name: "ROYAL 5 SEATER",
-        type: "Luxury",
-        capacity: "5 Seater",
-        image: "/assets/5seater.png",
-        tags: ["Compact Luxury", "Smart Tech"],
-        price: "800",
+        image: "/assets/vehicle/Honda_Odessy.png",
+        tags: ["Spacious", "Family Favorite"],
+        price: "700",
         rating: "4.9",
-        desc: "Elegant and efficient for small groups or private city tours. The gold standard for modern urban transportation."
+        desc: "The ultimate family minivan combining comfort, safety, and modern technology for a smooth group journey."
     },
     {
-        name: "PREMIUM SEDAN",
-        type: "Sedan",
-        capacity: "4 Seater",
-        image: "/assets/kia.png",
-        tags: ["Smooth Ride", "Fuel Efficient"],
+        name: "HYUNDAI STARIA",
+        type: "MPV",
+        capacity: "9 Seater",
+        image: "/assets/vehicle/Hyundai_Staria.png",
+        tags: ["Futuristic", "Luxury Space"],
+        price: "850",
+        rating: "4.8",
+        desc: "A futuristic lounge on wheels. The Staria offers unparalleled space and comfort with a panoramic view of the city."
+    },
+    {
+        name: "TOYOTA HIACE",
+        type: "Van",
+        capacity: "13 Seater",
+        image: "/assets/vehicle/Toyota_Hiace.png",
+        tags: ["Reliable", "Group Travel"],
         price: "600",
         rating: "4.7",
-        desc: "Refined elegance for city transfers. The ideal choice for professional and punctual point-to-point transportation."
+        desc: "The gold standard for group transportation. Reliable, spacious, and perfect for city transfers and long journeys."
     },
     {
-        name: "STRETCH LIMO",
-        type: "Limo",
-        capacity: "10 Seater",
-        image: "/assets/stretch.png",
-        tags: ["Mini Bar", "Mood Lighting"],
-        price: "2500",
+        name: "GMC YUKON",
+        type: "SUV",
+        capacity: "7 Seater",
+        image: "/assets/vehicle/GMC_YUKON.png",
+        tags: ["Powerful", "Executive"],
+        price: "1200",
         rating: "5.0",
-        desc: "The pinnacle of event transportation. Elevate your special occasions with our fully equipped premium stretch limousine."
+        desc: "Command the road with the GMC Yukon. A powerful executive SUV that doesn't compromise on luxury or performance."
+    },
+    {
+        name: "MERCEDES SPRINTER",
+        type: "Luxury Van",
+        capacity: "15 Seater",
+        image: "/assets/vehicle/Mercedes_Sprinter.png",
+        tags: ["Premium", "Corporate"],
+        price: "1500",
+        rating: "5.0",
+        desc: "Premium corporate travel redefined. The Mercedes Sprinter offers high-end interiors for those who demand the best."
+    },
+    {
+        name: "KIA CARNIVAL",
+        type: "MPV",
+        capacity: "8 Seater",
+        image: "/assets/vehicle/Kia_carnival.png",
+        tags: ["Stylish", "Versatile"],
+        price: "750",
+        rating: "4.9",
+        desc: "Experience versatility and style. The Kia Carnival is perfect for both business trips and family adventures."
+    },
+    {
+        name: "TOYOTA LAND CRUISER",
+        type: "SUV",
+        capacity: "7 Seater",
+        image: "/assets/vehicle/Toyota_Land_cruiser.png",
+        tags: ["Off-road", "Iconic"],
+        price: "1100",
+        rating: "5.0",
+        desc: "The icon of the desert. Experience the power and heritage of the Land Cruiser on any terrain."
+    },
+    {
+        name: "NISSAN PATROL",
+        type: "SUV",
+        capacity: "7 Seater",
+        image: "/assets/vehicle/Nissan_Patrol.png",
+        tags: ["Rugged", "Luxury"],
+        price: "1100",
+        rating: "4.9",
+        desc: "The hero of all terrains in life. The Nissan Patrol combines rugged capability with a refined, luxurious interior."
+    },
+    {
+        name: "CITROEN SPACETOURER",
+        type: "MPV",
+        capacity: "9 Seater",
+        image: "/assets/vehicle/Citreon_Spacetourer.png",
+        tags: ["Modern", "Efficient"],
+        price: "800",
+        rating: "4.7",
+        desc: "Modern efficiency meets spacious design. The Spacetourer is the ideal choice for eco-conscious group travel."
     },
     {
         name: "EXECUTIVE COACH",
         type: "Coach",
         capacity: "18 Seater",
-        image: "/assets/18seater.png",
-        tags: ["Adjustable Seats", "PA System"],
+        image: "/assets/coach1.jpeg",
+        tags: ["Luxury Interior", "Climate Control"],
         price: "1800",
-        rating: "4.6",
-        desc: "Luxury group travel redefined. Our 18-seater coaches provide ergonomic comfort and advanced onboard features."
+        rating: "4.9",
+        desc: "First-class group travel with premium leather seating and advanced climate control for ultimate comfort."
     },
     {
         name: "PREMIUM COACH",
         type: "Coach",
-        capacity: "22 Seater",
-        image: "/assets/22seater.png",
-        tags: ["Climate Control", "USB Ports"],
-        price: "2200",
-        rating: "4.7",
-        desc: "Stay connected in style. The perfect mid-size solution for corporate outings and guided city tours."
+        capacity: "33 Seater",
+        image: "/assets/coach2.jpeg",
+        tags: ["Spacious", "High-End"],
+        price: "2500",
+        rating: "5.0",
+        desc: "The pinnacle of coach travel. Featuring a high-end interior designed for large groups who value luxury and space."
     },
     {
         name: "TOURING COACH",
         type: "Coach",
-        capacity: "33 Seater",
-        image: "/assets/33seater.png",
-        tags: ["Panoramic Views", "LCD Screens"],
+        capacity: "50 Seater",
+        image: "/assets/coach3.jpeg",
+        tags: ["Panoramic", "VIP"],
         price: "3500",
-        rating: "4.9",
-        desc: "Unmatched group experiences. Our touring coaches offer expansive views and premium entertainment for long-distance travel."
-    },
-    {
-        name: "LUXURY YACHT",
-        type: "Yacht",
-        capacity: "Selected",
-        image: "/assets/yachts.png",
-        tags: ["Sunset Cruise", "Bespoke Service"],
-        price: "5000",
         rating: "5.0",
-        desc: "The ultimate Dubai luxury. Experience bespoke service and breathtaking views of the coastline from our private yacht collection."
+        desc: "Explore in style with our VIP touring coach. Offers panoramic views and a state-of-the-art entertainment system."
     },
 ];
 
 export default function FleetPage() {
     const fleet = [
-        { name: "ROYAL VIP SUV", capacity: "7 Seater", image: "/assets/7seater.png", tags: ["Leather Interior", "Premium Audio"], desc: "Experience the ultimate in ground transportation with our flagship VIP SUV. A perfect blend of power and luxury for your Dubai journey." },
-        { name: "EXECUTIVE VAN", capacity: "7 Seater", image: "/assets/7seater.png", tags: ["Privacy Glass", "Ample Cargo"], desc: "First-class travel for groups. Our executive vans offer spacious interiors and privacy for corporate and family travel." },
-        { name: "ROYAL 5 SEATER", capacity: "5 Seater", image: "/assets/5seater.png", tags: ["Compact Luxury", "Smart Tech"], desc: "Elegant and efficient for small groups or private city tours. The gold standard for modern urban transportation." },
-        { name: "PREMIUM SEDAN", capacity: "4 Seater", image: "/assets/kia.png", tags: ["Smooth Ride", "Fuel Efficient"], desc: "Refined elegance for city transfers. The ideal choice for professional and punctual point-to-point transportation." },
-        { name: "STRETCH LIMO", capacity: "10 Seater", image: "/assets/stretch.png", tags: ["Mini Bar", "Mood Lighting"], desc: "The pinnacle of event transportation. Elevate your special occasions with our fully equipped premium stretch limousine." },
-        { name: "EXECUTIVE COACH", capacity: "18 Seater", image: "/assets/18seater.png", tags: ["Adjustable Seats", "PA System"], desc: "Luxury group travel redefined. Our 18-seater coaches provide ergonomic comfort and advanced onboard features." },
-        { name: "PREMIUM COACH", capacity: "22 Seater", image: "/assets/22seater.png", tags: ["Climate Control", "USB Ports"], desc: "Stay connected in style. The perfect mid-size solution for corporate outings and guided city tours." },
-        { name: "TOURING COACH", capacity: "33 Seater", image: "/assets/33seater.png", tags: ["Panoramic Views", "LCD Screens"], desc: "Unmatched group experiences. Our touring coaches offer expansive views and premium entertainment for long-distance travel." },
-        { name: "LUXURY YACHT", capacity: "Selected Guests", image: "/assets/yachts.png", tags: ["Sunset Cruise", "Bespoke Service"], desc: "The ultimate Dubai luxury. Experience bespoke service and breathtaking views of the coastline from our private yacht collection." },
+        { name: "HONDA ODYSSEY", capacity: "7 Seater", image: "/assets/vehicle/Honda_Odessy.png", tags: ["Family", "Comfort"], desc: "The ultimate family minivan combining comfort and safety." },
+        { name: "HYUNDAI STARIA", capacity: "9 Seater", image: "/assets/vehicle/Hyundai_Staria.png", tags: ["Futuristic", "Lounge"], desc: "A futuristic lounge on wheels with panoramic views." },
+        { name: "TOYOTA HIACE", capacity: "13 Seater", image: "/assets/vehicle/Toyota_Hiace.png", tags: ["Reliable", "Group"], desc: "The gold standard for group transportation." },
+        { name: "GMC YUKON", capacity: "7 Seater", image: "/assets/vehicle/GMC_YUKON.png", tags: ["Executive", "Powerful"], desc: "Command the road with this powerful executive SUV." },
+        { name: "MERCEDES SPRINTER", capacity: "15 Seater", image: "/assets/vehicle/Mercedes_Sprinter.png", tags: ["Premium", "Corporate"], desc: "Premium corporate travel with high-end interiors." },
+        { name: "KIA CARNIVAL", capacity: "8 Seater", image: "/assets/vehicle/Kia_carnival.png", tags: ["Stylish", "Versatile"], desc: "Experience versatility and style for business or family." },
+        { name: "TOYOTA LAND CRUISER", capacity: "7 Seater", image: "/assets/vehicle/Toyota_Land_cruiser.png", tags: ["Off-road", "Iconic"], desc: "The icon of the desert, powerful on any terrain." },
+        { name: "NISSAN PATROL", capacity: "7 Seater", image: "/assets/vehicle/Nissan_Patrol.png", tags: ["Rugged", "Luxury"], desc: "Rugged capability meets a refined, luxurious interior." },
+        { name: "CITROEN SPACETOURER", capacity: "9 Seater", image: "/assets/vehicle/Citreon_Spacetourer.png", tags: ["Modern", "Efficient"], desc: "Modern efficiency meets spacious design for group travel." },
+        { name: "EXECUTIVE COACH", capacity: "18 Seater", image: "/assets/coach1.jpeg", tags: ["Luxury", "Leather"], desc: "First-class group travel with premium leather seating." },
+        { name: "PREMIUM COACH", capacity: "33 Seater", image: "/assets/coach2.jpeg", tags: ["Spacious", "High-End"], desc: "The pinnacle of coach travel for large groups." },
+        { name: "TOURING COACH", capacity: "50 Seater", image: "/assets/coach3.jpeg", tags: ["Panoramic", "VIP"], desc: "Explore in style with our VIP touring coach." },
     ];
 
     return (

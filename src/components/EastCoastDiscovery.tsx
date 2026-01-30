@@ -2,41 +2,41 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Camera, Compass, Sparkles, MapPin, ChevronRight } from "lucide-react";
+import { ArrowUpRight, Compass, Waves, Anchor } from "lucide-react";
 import "./RegionalDiscovery.css";
 
-const regions = [
+const eastCoastRegions = [
     {
         id: "01",
-        name: "Sharjah",
-        label: "Cultural Capital",
-        desc: "Immense yourself in Islamic art and history through the museums and souks of Sharjah. A city where tradition is preserved in every stone.",
-        icon: Camera,
+        name: "Fujairah City",
+        label: "The Gateway",
+        desc: "A modern city nestled between the mountains and the sea. Home to historic forts and the massive Sheikh Zayed Mosque of Fujairah.",
+        icon: Anchor,
         accent: "rgba(184, 150, 68, 0.4)"
     },
     {
         id: "02",
-        name: "Ras Al Khaimah",
-        label: "Adventure Hub",
-        desc: "From the peak of Jebel Jais to the historic Dhayah Fort, experience the rugged terrain and adrenaline-fueled adventures of the north.",
-        icon: Compass,
+        name: "Al Aqah",
+        label: "Pristine Beaches",
+        desc: "The ultimate beach escape with crystal clear waters and the famous Snoopy Island. A paradise for snorkeling and diving enthusiasts.",
+        icon: Waves,
         accent: "rgba(255, 255, 255, 0.2)"
     },
     {
         id: "03",
-        name: "Ajman",
-        label: "Coastal Charm",
-        desc: "The smallest Emirate offers soul-soothing beaches and a glimpse into Bedouin roots. Experience the authentic pace of coastal life.",
-        icon: Sparkles,
+        name: "Dibba",
+        label: "Mountain Shorelines",
+        desc: "Where the Hajar mountains plunge directly into the sea. Explore the rugged beauty of northern Fujairah and the Musandam border.",
+        icon: Compass,
         accent: "rgba(184, 150, 68, 0.2)"
     }
 ];
 
-export default function RegionalDiscovery() {
+export default function EastCoastDiscovery() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="snap-section regional-discovery-no-img py-20 md:py-32 flex items-center min-h-screen">
+        <section className="snap-section regional-discovery-no-img py-20 md:py-32 flex items-center min-h-screen bg-white/[0.02]">
             <div className="container mx-auto px-4">
                 <div className="discovery-grid-layout">
 
@@ -48,18 +48,18 @@ export default function RegionalDiscovery() {
                             transition={{ duration: 1 }}
                             className="sticky-header"
                         >
-                            <span className="section-tag">REGIONAL DISCOVERY</span>
+                            <span className="section-tag">COASTAL ESCAPE</span>
                             <h2 className="main-headline">
                                 THE <br />
-                                <span className="highlight-text">NORTHERN</span> <br />
-                                EMIRATES.
+                                <span className="highlight-text">EAST</span> <br />
+                                COAST.
                             </h2>
                             <p className="master-desc">
-                                Exploring the diverse landscapes and cultural heritage beyond the metropolis.
+                                Discover the rugged beauty where the Hajar Mountains meet the Gulf of Oman.
                             </p>
 
                             <div className="progress-indicators">
-                                {regions.map((_, i) => (
+                                {eastCoastRegions.map((_, i) => (
                                     <div
                                         key={i}
                                         className={`indicator ${activeIndex === i ? 'active' : ''}`}
@@ -72,7 +72,7 @@ export default function RegionalDiscovery() {
 
                     {/* Right: Interactive Text Accordion */}
                     <div className="interaction-stack">
-                        {regions.map((region, i) => (
+                        {eastCoastRegions.map((region, i) => (
                             <motion.div
                                 key={region.id}
                                 className={`discovery-item ${activeIndex === i ? 'is-active' : ''}`}
@@ -104,7 +104,7 @@ export default function RegionalDiscovery() {
                                                 <p className="region-p">{region.desc}</p>
                                                 <div className="action-footer">
                                                     <button className="tour-link">
-                                                        View Full Details
+                                                        View East Coast Packages
                                                         <ArrowUpRight size={18} />
                                                     </button>
                                                     <div className="decorative-line" />

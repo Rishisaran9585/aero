@@ -30,6 +30,7 @@ import Image from "next/image";
 
 const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Umrah", href: "/umrah" },
     { name: "International", href: "/international-tours" },
     { name: "About Us", href: "/about" },
     { name: "Contact", href: "/contact" },

@@ -21,6 +21,7 @@ import Image from "next/image";
 import CinematicShowcase from "@/components/CinematicShowcase";
 import RegionalDiscovery from "@/components/RegionalDiscovery";
 import LuxeDiscovery from "@/components/LuxeDiscovery";
+import EastCoastDiscovery from "@/components/EastCoastDiscovery";
 
 import EmiratesGuide from "@/components/EmiratesGuide";
 
@@ -49,12 +50,12 @@ export default function UAEToursPage() {
 
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                             {[
-                                { name: "Burj Khalifa", img: "/assets/dubai/Burj Khalifa.jpg", icon: Building2 },
-                                { name: "Dubai Marina", img: "/assets/dubai/Dubai Marina.jpg", icon: Waves },
+                                { name: "Burj Al Arab", img: "/assets/dubai/Burj Al Arab.jpg", icon: Building2 },
                                 { name: "Palm Jumeirah", img: "/assets/dubai/Palm Jumeirah.jpg", icon: Palmtree },
-                                { name: "Jumeirah Mosque", img: "/assets/dubai/Jumeirah Mosque.jpg", icon: Gem },
-                                { name: "Gold Souk", img: "/assets/dubai/Gold Souk.jpg", icon: Zap },
-                                { name: "Al Fahidi Heritage", img: "/assets/dubai/Al Fahidi Historical District.jpg", icon: Compass }
+                                { name: "Zabeel Palace", img: "/assets/dubai/Zabeel Palace.jpg", icon: Building2 },
+                                { name: "Al Seef", img: "/assets/dubai/Al Seef.jpg", icon: Waves },
+                                { name: "Al Fahidi", img: "/assets/dubai/Al Fahidi Historical District.jpg", icon: Compass },
+                                { name: "Gold Souq", img: "/assets/dubai/Gold Souk.jpg", icon: Zap }
                             ].map((item, i) => (
                                 <motion.div
                                     key={item.name}
@@ -86,7 +87,7 @@ export default function UAEToursPage() {
                                 <h2 className="text-6xl md:text-8xl font-serif font-bold leading-none tracking-tighter uppercase">Abu Dhabi <br /> <span className="text-secondary italic font-serif">Legacy.</span></h2>
                             </div>
                             <div className="flex items-center gap-3 text-white/40 text-sm font-bold uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/10">
-                                <Sparkles size={18} className="text-secondary" /> 4 Imperial Destinations
+                                <Sparkles size={18} className="text-secondary" /> 5 Imperial Destinations
                             </div>
                         </div>
 
@@ -95,7 +96,8 @@ export default function UAEToursPage() {
                                 { name: "Grand Mosque", img: "/assets/abudhabi/Sheikh Zayed Grand Mosque.jpg", desc: "Masterpiece." },
                                 { name: "Emirates Palace", img: "/assets/abudhabi/Emirates Palace.jpg", desc: "Hospitality." },
                                 { name: "Yas Island", img: "/assets/abudhabi/Yas Island.jpg", desc: "High-speed." },
-                                { name: "Heritage Village", img: "/assets/heritage_villlage.jpg", desc: "Bedouin roots." }
+                                { name: "Louvre Abu Dhabi", img: "/assets/abudhabi/Louvre Abu Dhabi.jpg", desc: "Culture." },
+                                { name: "Ferrari World", img: "/assets/abudhabi/Ferrari World.jpg", desc: "Adventure." }
                             ].map((item, i) => (
                                 <motion.div
                                     key={item.name}
@@ -117,64 +119,8 @@ export default function UAEToursPage() {
                 </div>
             </section>
 
-            {/* 4. EMIRATES DUO FEATURE */}
-            <section className="snap-section py-20 md:py-32 overflow-hidden flex items-center min-h-[90vh]">
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                        className="relative h-[500px] md:h-[650px] rounded-[3rem] overflow-hidden border border-white/10 group"
-                    >
-                        <Image
-                            src="/assets/duo.jpg"
-                            alt="Emirates Duo"
-                            fill
-                            className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent" />
-
-                        <div className="absolute inset-0 p-8 md:p-20 flex flex-col justify-center items-start max-w-3xl">
-                            <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.3 }}
-                                className="space-y-6"
-                            >
-                                <div className="flex items-center gap-3">
-                                    <div className="h-px w-8 bg-secondary" />
-                                    <span className="text-secondary font-black tracking-[0.4em] uppercase text-[10px]">Premium Combination</span>
-                                </div>
-
-                                <h2 className="text-5xl md:text-8xl font-serif font-bold text-white leading-[0.9] tracking-tighter uppercase">
-                                    Emirates <br />
-                                    <span className="text-secondary italic">Duo.</span>
-                                </h2>
-
-                                <p className="text-gray-300 text-base md:text-lg max-w-md font-light leading-relaxed">
-                                    Why choose one when you can have both? Experience the futuristic skyline of Dubai and the majestic cultural legacy of Abu Dhabi in one absolute journey.
-                                </p>
-
-                                <Link
-                                    href="/packages/emirates-duo"
-                                    className="inline-flex items-center gap-4 bg-white text-black px-10 py-5 rounded-2xl font-bold text-sm tracking-tight hover:bg-secondary transition-all transform hover:scale-105 group/btn"
-                                >
-                                    EXPLORE THE PACKAGE
-                                    <ArrowUpRight size={18} className="group-hover/btn:rotate-45 transition-transform" />
-                                </Link>
-                            </motion.div>
-                        </div>
-
-                        {/* Decorative Badge */}
-                        <div className="absolute top-10 right-10 w-24 h-24 rounded-full border border-white/20 backdrop-blur-md flex items-center justify-center text-center p-4">
-                            <span className="text-[10px] font-black uppercase tracking-widest text-white leading-none">Dubai <br />+<br /> Abu Dhabi</span>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
             <RegionalDiscovery />
+            <EastCoastDiscovery />
 
             {/* COMPLETE 7 EMIRATES GUIDE */}
             <EmiratesGuide />
