@@ -58,13 +58,11 @@ export default function VisaPage() {
     return (
         <div className="bg-[#050505] min-h-screen text-white selection:bg-secondary selection:text-black">
             {/* 1. HERO SECTION */}
-            <div className="snap-start">
-                <InternalHero
-                    title="VISA SERVICES"
-                    subtitle="Seamless Global Access"
-                    image="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1920&auto=format&fit=crop"
-                />
-            </div>
+            <InternalHero
+                title="VISA SERVICES"
+                subtitle="Seamless Global Access"
+                image="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1920&auto=format&fit=crop"
+            />
 
             {/* 2. VISA ASSISTANCE INTRO - COMPACT REDESIGN */}
             <section className="py-12 md:py-16 relative overflow-hidden bg-[#050505] flex items-center min-h-[80vh]">

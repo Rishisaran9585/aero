@@ -12,8 +12,6 @@ import {
     Star,
     Compass,
     ArrowUpRight,
-    Sun,
-    Waves,
     Quote
 } from "lucide-react";
 import { uaePackages } from "@/data/packages";
@@ -22,137 +20,138 @@ export default function Package1Page() {
     return (
         <div className="bg-[#050505] min-h-screen text-white overflow-x-hidden selection:bg-secondary selection:text-black">
 
-            <div className="relative z-10">
-                <div className="snap-start">
-                    <InternalHero
-                        title="PACKAGES"
-                        subtitle="Boundless Journeys"
-                        image="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1920&auto=format&fit=crop"
-                    />
-                </div>
+            <div className="relative z-10 w-full">
+                <InternalHero
+                    title="PACKAGES"
+                    subtitle="Boundless Journeys"
+                    image="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1920&auto=format&fit=crop"
+                />
 
-                {/* Redesigned Intro Section */}
-                <section className="py-10 md:py-16 container mx-auto px-4 relative">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                        <div className="relative">
-                            <motion.span
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                className="text-secondary font-bold tracking-[0.4em] uppercase text-xs mb-6 block"
-                            >
-                                Tailored Experiences
-                            </motion.span>
-                            <motion.h2
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-none tracking-tighter"
-                            >
-                                Crafting your <br />
-                                <span className="text-secondary italic">perfect story.</span>
-                            </motion.h2>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 }}
-                                className="text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl"
-                            >
-                                Beyond just travel, we curate moments that stay with you forever. Our expert planners handle every detail, from luxury transfers to exclusive guided sessions.
-                            </motion.p>
+                {/* 1. INTRODUCTION SECTION */}
+                <section className="snap-section py-20 md:py-32 container mx-auto px-4 relative flex items-center min-h-screen">
+                    <div className="w-full">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                            <div className="relative">
+                                <motion.span
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    className="text-secondary font-bold tracking-[0.4em] uppercase text-xs mb-6 block"
+                                >
+                                    Tailored Experiences
+                                </motion.span>
+                                <motion.h2
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    className="text-6xl md:text-8xl font-serif font-bold mb-8 leading-none tracking-tighter"
+                                >
+                                    Crafting your <br />
+                                    <span className="text-secondary italic">perfect story.</span>
+                                </motion.h2>
+                                <motion.p
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.1 }}
+                                    className="text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl"
+                                >
+                                    Beyond just travel, we curate moments that stay with you forever. Our expert planners handle every detail, from luxury transfers to exclusive guided sessions.
+                                </motion.p>
 
-                            <div className="flex flex-col gap-6">
-                                {[
-                                    { icon: ShieldCheck, title: "Stress-Free Planning", desc: "End-to-end management of your entire itinerary." },
-                                    { icon: Star, title: "Elite Concierge", desc: "24/7 support throughout your journey." }
-                                ].map((item, i) => (
+                                <div className="flex flex-col gap-6">
+                                    {[
+                                        { icon: ShieldCheck, title: "Stress-Free Planning", desc: "End-to-end management of your entire itinerary." },
+                                        { icon: Star, title: "Elite Concierge", desc: "24/7 support throughout your journey." }
+                                    ].map((item, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.2 + i * 0.1 }}
+                                            className="flex gap-4 group"
+                                        >
+                                            <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-black transition-all duration-300">
+                                                <item.icon className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                                                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="relative">
+                                <div className="grid grid-cols-2 gap-4">
                                     <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.2 + i * 0.1 }}
-                                        className="flex gap-4 group"
+                                        initial={{ opacity: 0, y: 40 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        className="aspect-[4/5] rounded-[2rem] overflow-hidden relative group"
                                     >
-                                        <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-black transition-all duration-300">
-                                            <item.icon className="w-5 h-5" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-lg mb-1">{item.title}</h4>
-                                            <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                                        </div>
+                                        <Image src="/assets/burj.jpg" fill alt="Experience" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                                        <div className="absolute inset-0 bg-black/20" />
                                     </motion.div>
-                                ))}
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -40 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2 }}
+                                        className="aspect-[4/5] rounded-[2rem] overflow-hidden relative group mt-12"
+                                    >
+                                        <Image src="https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=800&auto=format&fit=crop" fill alt="Stay" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                                        <div className="absolute inset-0 bg-black/20" />
+                                    </motion.div>
+                                </div>
+                                {/* Decorative element */}
+                                <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-white/5 rounded-full pointer-events-none" />
                             </div>
                         </div>
 
-                        <div className="relative">
-                            <div className="grid grid-cols-2 gap-4">
+                        <div className="mt-20 flex flex-wrap justify-center gap-x-20 gap-y-12 border-t border-white/5 pt-16">
+                            {[
+                                { icon: Plane, label: "Flights", detail: "Global Connectivity" },
+                                { icon: Hotel, label: "Hotels", detail: "Handpicked Stays" },
+                                { icon: Compass, label: "Tours", detail: "Expert Guides" },
+                                { icon: Car, label: "Transfers", detail: "Seamless Travel" }
+                            ].map((item, i) => (
                                 <motion.div
-                                    initial={{ opacity: 0, y: 40 }}
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    className="aspect-[4/5] rounded-[2rem] overflow-hidden relative group"
+                                    transition={{ delay: i * 0.1 }}
+                                    className="flex items-center gap-6 group cursor-default"
                                 >
-                                    <Image src="/assets/burj.jpg" fill alt="Experience" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                                    <div className="absolute inset-0 bg-black/20" />
+                                    <div className="relative">
+                                        <item.icon className="w-10 h-10 text-secondary relative z-10 transition-transform duration-500 group-hover:rotate-[15deg] group-hover:scale-110" />
+                                    </div>
+                                    <div>
+                                        <h5 className="font-bold text-2xl mb-1 tracking-tight group-hover:text-secondary transition-colors">{item.label}</h5>
+                                        <p className="text-gray-500 text-[10px] uppercase tracking-[0.2em] font-bold">{item.detail}</p>
+                                    </div>
                                 </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, y: -40 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.2 }}
-                                    className="aspect-[4/5] rounded-[2rem] overflow-hidden relative group mt-12"
-                                >
-                                    <Image src="https://images.unsplash.com/photo-1541417904950-b855846fe074?q=80&w=800&auto=format&fit=crop" fill alt="Stay" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                                    <div className="absolute inset-0 bg-black/20" />
-                                </motion.div>
-                            </div>
-                            {/* Decorative element */}
-                            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-white/5 rounded-full pointer-events-none" />
+                            ))}
                         </div>
-                    </div>
-
-                    <div className="mt-20 flex flex-wrap justify-center gap-x-20 gap-y-12 border-t border-white/5 pt-16">
-                        {[
-                            { icon: Plane, label: "Flights", detail: "Global Connectivity" },
-                            { icon: Hotel, label: "Hotels", detail: "Handpicked Stays" },
-                            { icon: Compass, label: "Tours", detail: "Expert Guides" },
-                            { icon: Car, label: "Transfers", detail: "Seamless Travel" }
-                        ].map((item, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }}
-                                className="flex items-center gap-6 group cursor-default"
-                            >
-                                <div className="relative">
-                                    <item.icon className="w-10 h-10 text-secondary relative z-10 transition-transform duration-500 group-hover:rotate-[15deg] group-hover:scale-110" />
-                                </div>
-                                <div>
-                                    <h5 className="font-bold text-2xl mb-1 tracking-tight group-hover:text-secondary transition-colors">{item.label}</h5>
-                                    <p className="text-gray-500 text-[10px] uppercase tracking-[0.2em] font-bold">{item.detail}</p>
-                                </div>
-                            </motion.div>
-                        ))}
                     </div>
                 </section>
 
-                {/* UAE SECTION */}
-                <section className="pt-12 md:pt-16 pb-20 relative overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-8">
+                {/* 2. UAE HOLIDAY PACKAGES */}
+                <section className="snap-section py-20 md:py-32 relative overflow-hidden flex items-center min-h-screen">
+                    <div className="container mx-auto px-4 w-full">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-12">
                             <div>
-                                <span className="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Domestic Excellence</span>
-                                <h2 className="text-5xl md:text-7xl font-serif font-bold leading-none tracking-tighter">UAE Holiday <br /> <span className="text-secondary italic">Packages.</span></h2>
+                                <span className="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Domestic Excellence</span>
+                                <h2 className="text-6xl md:text-8xl font-serif font-bold leading-none tracking-tighter">UAE Holiday <br /> <span className="text-secondary italic">Packages.</span></h2>
                             </div>
-                            <p className="text-gray-500 max-w-sm text-sm uppercase tracking-widest font-bold">The Jewel of Arabia</p>
+                            <div className="h-px flex-1 bg-white/5 mx-12 hidden lg:block" />
+                            <p className="text-gray-500 max-w-sm text-sm uppercase tracking-widest font-bold">The Jewel of Arabia — Curated Luxury.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {uaePackages.map((pkg, i) => (
+                            {uaePackages.slice(0, 4).map((pkg, i) => (
                                 <motion.div
                                     key={pkg.slug}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.05 }}
-                                    className="group relative h-[380px] rounded-[2rem] overflow-hidden border border-white/5"
+                                    className="group relative h-[450px] rounded-[2.5rem] overflow-hidden border border-white/5"
                                 >
                                     <Image
                                         src={pkg.image}
@@ -203,12 +202,12 @@ export default function Package1Page() {
                     </div>
                 </section>
 
-                {/* STORY OF THE TRAIL - ENRICHED NARRATIVE */}
-                <section className="snap-section pt-10 pb-20 lg:pb-32 relative overflow-hidden flex flex-col justify-center">
+                {/* 3. STORY OF THE TRAIL */}
+                <section className="snap-section py-20 md:py-32 relative overflow-hidden flex flex-col justify-center min-h-screen">
                     <div className="container mx-auto px-4">
-                        <div className="text-center mb-20">
+                        <div className="text-center mb-24">
                             <span className="text-secondary font-bold tracking-[0.5em] uppercase text-xs mb-4 block italic">The Traveler's Log</span>
-                            <h2 className="text-5xl md:text-7xl font-serif font-bold leading-none tracking-tighter">Story of <br /> <span className="text-secondary italic">the Trail.</span></h2>
+                            <h2 className="text-6xl md:text-8xl font-serif font-bold leading-none tracking-tighter">Story of <br /> <span className="text-secondary italic">the Trail.</span></h2>
                         </div>
 
                         <div className="space-y-40">
@@ -234,8 +233,8 @@ export default function Package1Page() {
                                     className="lg:w-1/2"
                                 >
                                     <Quote size={40} className="text-secondary/20 mb-6" />
-                                    <h3 className="text-3xl font-serif font-bold mb-6 italic text-secondary">"The Gilded Skyline"</h3>
-                                    <p className="text-gray-400 text-lg font-light leading-relaxed mb-8">
+                                    <h3 className="text-4xl font-serif font-bold mb-6 italic text-secondary">"The Gilded Skyline"</h3>
+                                    <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-8">
                                         Watch as the Burj Khalifa pierces the golden veil of dusk. We curate the perfect vantage points at the world's most exclusive rooftop terraces to witness Dubai's transformation.
                                     </p>
                                     <div className="flex items-center gap-4 text-white/40 text-xs font-bold uppercase tracking-widest italic">
@@ -266,8 +265,8 @@ export default function Package1Page() {
                                     className="lg:w-1/2 text-right"
                                 >
                                     <Quote size={40} className="text-secondary/20 mb-6 ml-auto" />
-                                    <h3 className="text-3xl font-serif font-bold mb-6 italic text-secondary">"Soul of the Sand"</h3>
-                                    <p className="text-gray-400 text-lg font-light leading-relaxed mb-8">
+                                    <h3 className="text-4xl font-serif font-bold mb-6 italic text-secondary">"Soul of the Sand"</h3>
+                                    <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-8">
                                         In the heart of the Rub' al Khali, true luxury is the silence. Our private desert camps are positioned kilometers away from standard tourist tracks, offering an unfiltered connection to the stars.
                                     </p>
                                     <div className="flex items-center justify-end gap-4 text-white/40 text-xs font-bold uppercase tracking-widest italic">
@@ -278,8 +277,6 @@ export default function Package1Page() {
                         </div>
                     </div>
                 </section>
-
-
             </div>
         </div>
     );

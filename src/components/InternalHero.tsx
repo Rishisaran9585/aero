@@ -26,19 +26,10 @@ const categories = [
 export default function InternalHero({ title, subtitle, image, showCategories = true }: InternalHeroProps) {
     const pathname = usePathname();
     const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end start"]
-    });
-
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-
     return (
-        <div ref={containerRef} className="internal-hero-container">
+        <div ref={containerRef} className="internal-hero-container snap-start">
             {/* Background Layer */}
-            <motion.div style={{ y, scale }} className="internal-hero-bg">
+            <div className="internal-hero-bg">
                 <Image
                     src={image}
                     alt={title}
@@ -46,7 +37,7 @@ export default function InternalHero({ title, subtitle, image, showCategories = 
                     className="object-cover"
                     priority
                 />
-            </motion.div>
+            </div>
             <div className="internal-hero-overlay" />
 
             {/* Content Layer */}

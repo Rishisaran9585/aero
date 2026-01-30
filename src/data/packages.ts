@@ -67,7 +67,7 @@ export const uaePackages: Package[] = [
         slug: "emirates-duo",
         title: "Emirates Duo",
         duration: "Dubai + Abu Dhabi",
-        image: "/assets/Emirates Duo.jpg",
+        image: "/assets/duo.jpg",
         description: "The best of two worlds. Experience the glamour of Dubai and the rich cultural heritage of the capital.",
         highlights: ["Sheikh Zayed Mosque", "Ferrari World", "Louvre Abu Dhabi", "Warner Bros"],
         price: "AED 3,200",

@@ -30,7 +30,7 @@ const footerLinks = {
 
 export default function Footer() {
     return (
-        <section className="bg-transparent pt-10">
+        <section className="bg-transparent pt-6">
             <div className="w-full px-4 md:px-12 relative">
                 {/* Floating Banner */}
                 <div className="relative z-20 -mb-16">
@@ -38,7 +38,7 @@ export default function Footer() {
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
-                        className="card-glass rounded-[2.5rem] overflow-hidden relative flex items-center min-h-[280px] md:min-h-[340px] shadow-2xl"
+                        className="card-glass rounded-[2.5rem] overflow-hidden relative flex items-center min-h-[240px] md:min-h-[280px] shadow-2xl"
                     >
                         {/* Text Content */}
                         <div className="relative z-10 w-full md:w-3/5 p-8 md:p-14">
@@ -78,8 +78,8 @@ export default function Footer() {
                 </div>
 
                 {/* Main Footer Section */}
-                <div className="bg-transparent rounded-[2.5rem] pt-32 pb-6 px-10 md:px-20 mb-6 border-t border-white/[0.02]">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-12">
+                <div className="bg-transparent rounded-[2.5rem] pt-20 pb-4 px-10 md:px-20 mb-4 border-t border-white/[0.02]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-8">
                         {/* Left Side: Logo & Info */}
                         <div className="lg:col-span-5 space-y-6">
                             <div className="space-y-4">
@@ -115,7 +115,7 @@ export default function Footer() {
                             </div>
 
                             {/* Contact Info Grid */}
-                            <div className="flex flex-wrap gap-10 md:gap-20">
+                            <div className="flex flex-wrap gap-8 md:gap-12">
                                 <div className="space-y-3">
                                     <h4 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em]">Phone number</h4>
                                     <a href="tel:+971553550933" className="block text-white text-base font-medium tracking-tight hover:text-secondary transition-colors cursor-pointer">+971 55 355 0933</a>
@@ -129,9 +129,9 @@ export default function Footer() {
 
                         {/* Right Side: Columns */}
                         <div className="lg:col-span-7">
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 md:gap-8">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8 md:gap-8">
                                 <div>
-                                    <h3 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Quick links</h3>
+                                    <h3 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Quick links</h3>
                                     <ul className="space-y-4">
                                         {footerLinks.explore.map((link) => (
                                             <li key={link.name}>
@@ -143,7 +143,7 @@ export default function Footer() {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Experience</h3>
+                                    <h3 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Experience</h3>
                                     <ul className="space-y-4">
                                         {footerLinks.experience.map((link) => (
                                             <li key={link.name}>
@@ -155,7 +155,7 @@ export default function Footer() {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Legal</h3>
+                                    <h3 className="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">Legal</h3>
                                     <ul className="space-y-4">
                                         {footerLinks.legal.map((link) => (
                                             <li key={link.name}>
@@ -167,8 +167,8 @@ export default function Footer() {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className="text-secondary text-[10px] font-bold uppercase tracking-[0.2em] mb-6 md:mb-8">Headquarters</h3>
-                                    <div className="space-y-4 md:space-y-6">
+                                    <h3 className="text-secondary text-[10px] font-bold uppercase tracking-[0.2em] mb-4 md:mb-6">Headquarters</h3>
+                                    <div className="space-y-3 md:space-y-4">
                                         <div className="flex items-start gap-3 md:gap-4 justify-start">
                                             <MapPin className="w-5 h-5 md:w-8 md:h-8 text-secondary mt-1 shrink-0" />
                                             <h4 className="text-[1.25rem] sm:text-2xl md:text-3xl font-serif font-bold text-white leading-tight whitespace-nowrap">Dubai HQ</h4>
@@ -197,9 +197,9 @@ export default function Footer() {
 
 
                     {/* Branch Offices Section */}
-                    <div className="pt-8 pb-8 mb-10">
+                    <div className="pt-4 pb-4 mb-4">
                         {/* Section Header */}
-                        <div className="flex items-center justify-center gap-4 mb-16">
+                        <div className="flex items-center justify-center gap-4 mb-6">
                             <div className="h-px flex-1 bg-white/10 max-w-[100px]"></div>
                             <span className="text-gray-600 text-[11px] font-bold uppercase tracking-[0.3em] whitespace-nowrap">Branch Offices</span>
                             <div className="h-px flex-1 bg-white/10 max-w-[100px]"></div>
@@ -238,7 +238,7 @@ export default function Footer() {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="text-center pt-8 border-t border-white/5">
+                    <div className="text-center pt-6 border-t border-white/5">
                         <p className="text-gray-600 text-[9px] uppercase tracking-[0.4em] font-light">
                             &copy; {new Date().getFullYear()} Aerosafe Travel & Tourism L.L.C. All rights reserved.
                         </p>

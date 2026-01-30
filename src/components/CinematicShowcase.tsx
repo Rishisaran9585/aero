@@ -14,7 +14,7 @@ interface CinematicShowcaseProps {
 
 export default function CinematicShowcase({ packages }: CinematicShowcaseProps) {
     return (
-        <section className="cinematic-showcase-section">
+        <section className="snap-section cinematic-showcase-section py-20 md:py-32 flex items-center min-h-screen">
             <div className="container mx-auto px-4">
                 <div className="showcase-header text-center mb-24">
                     <motion.div

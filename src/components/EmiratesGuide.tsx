@@ -149,7 +149,7 @@ const emiratesData: EmirateData[] = [
             { name: "Sky Views", tag: "Adventure" },
             { name: "Global Village", tag: "Entertainment" },
             { name: "Miracle Garden", tag: "Nature" }
-        ].map(p => ({ ...p, image: getImage(p.name, p.tag), rating: "4.9" }))
+        ].map(p => ({ ...p, image: `/assets/dubai/${p.name}.jpg`, rating: "4.9" }))
     },
     {
         id: "sharjah",
@@ -177,7 +177,7 @@ const emiratesData: EmirateData[] = [
             // Nature
             { name: "Al Noor Island", tag: "Nature" },
             { name: "Wasit Wetland Centre", tag: "Nature" }
-        ].map(p => ({ ...p, image: getImage(p.name, p.tag), rating: "4.7" }))
+        ].map(p => ({ ...p, image: `/assets/sharjah/${p.name}.jpg`, rating: "4.7" }))
     },
     {
         id: "ajman",
@@ -195,7 +195,7 @@ const emiratesData: EmirateData[] = [
             // Urban
             { name: "City Centre Ajman", tag: "Shopping" },
             { name: "Ajman Marina", tag: "Lifestyle" }
-        ].map(p => ({ ...p, image: getImage(p.name, p.tag), rating: "4.5" }))
+        ].map(p => ({ ...p, image: `/assets/Ajman/${p.name}.jpg`, rating: "4.5" }))
     },
     {
         id: "uaq",
@@ -213,7 +213,7 @@ const emiratesData: EmirateData[] = [
             { name: "Dreamland Aqua Park", tag: "Waterpark" },
             // Marine
             { name: "Fishing Harbor", tag: "Marine" }
-        ].map(p => ({ ...p, image: getImage(p.name, p.tag), rating: "4.4" }))
+        ].map(p => ({ ...p, image: `/assets/Umm Al Quwain/${p.name}.jpg`, rating: "4.4" }))
     },
     {
         id: "rak",
@@ -235,7 +235,7 @@ const emiratesData: EmirateData[] = [
             // Desert
             { name: "Khatt Springs", tag: "Nature" },
             { name: "Bassata Desert Village", tag: "Desert" }
-        ].map(p => ({ ...p, image: getImage(p.name, p.tag), rating: "4.8" }))
+        ].map(p => ({ ...p, image: `/assets/Ras Al Khaimah/${p.name}.jpg`, rating: "4.8" }))
     },
     {
         id: "fujairah",
@@ -256,7 +256,7 @@ const emiratesData: EmirateData[] = [
             // Marine
             { name: "Scuba Diving Sites", tag: "Adventure" },
             { name: "Snorkeling Zones", tag: "Adventure" }
-        ].map(p => ({ ...p, image: getImage(p.name, p.tag), rating: "4.6" }))
+        ].map(p => ({ ...p, image: `/assets/Fujairah/${p.name}.jpg`, rating: "4.6" }))
     }
 ];
 
@@ -272,7 +272,7 @@ export default function EmiratesGuide() {
     }, [selectedEmirate, searchTerm]);
 
     return (
-        <section className="py-24 bg-[#050505] relative overflow-hidden">
+        <section className="snap-section py-24 bg-[#050505] relative overflow-hidden flex flex-col justify-center min-h-screen w-full">
             <style>{`.no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }`}</style>
 
             {/* Background Ambience */}

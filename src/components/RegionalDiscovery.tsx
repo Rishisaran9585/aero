@@ -36,7 +36,7 @@ export default function RegionalDiscovery() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="regional-discovery-no-img">
+        <section className="snap-section regional-discovery-no-img py-20 md:py-32 flex items-center min-h-screen">
             <div className="container mx-auto px-4">
                 <div className="discovery-grid-layout">
 

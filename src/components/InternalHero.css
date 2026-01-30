@@ -4,6 +4,7 @@
     height: 70vh;
     height: 70dvh;
     background: #000;
+    overflow: hidden;
 }
 
 .internal-hero-bg {
